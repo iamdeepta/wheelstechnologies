@@ -1,6 +1,13 @@
 import React from "react";
+import $ from "jquery";
 
 const Header = () => {
+  $(".sidebar__close-btn").on("click", function () {
+    $(".sidebar__area").addClass("sidebar-opened");
+    $(".body-overlay").addClass("opened");
+    console.log("Hello");
+  });
+
   return (
     <>
       <header>
