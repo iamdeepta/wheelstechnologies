@@ -14,6 +14,7 @@ const Team = () => {
     slidesToScroll: 1,
     cssEase: "linear",
   };
+
   return (
     <>
       <section className="team__area grey-bg-3 pt-120 pb-195 overflow-y-visible p-relative">
@@ -74,6 +75,8 @@ const Team = () => {
                   <Link className="read_more_btn_link" to="#">
                     <button className="btn btn-success read_more_btn"></button>
                   </Link>
+
+                  <div className="color_bg"></div>
                 </div>
               </div>
             </div>
@@ -100,6 +103,8 @@ const Team = () => {
                   <Link className="read_more_btn_link" to="#">
                     <button className="btn btn-success read_more_btn"></button>
                   </Link>
+
+                  <div className="color_bg"></div>
                 </div>
               </div>
             </div>
@@ -126,6 +131,8 @@ const Team = () => {
                   <Link className="read_more_btn_link" to="#">
                     <button className="btn btn-success read_more_btn"></button>
                   </Link>
+
+                  <div className="color_bg"></div>
                 </div>
               </div>
             </div>
@@ -152,6 +159,8 @@ const Team = () => {
                   <Link className="read_more_btn_link" to="#">
                     <button className="btn btn-success read_more_btn"></button>
                   </Link>
+
+                  <div className="color_bg"></div>
                 </div>
               </div>
             </div>
@@ -178,6 +187,8 @@ const Team = () => {
                   <Link className="read_more_btn_link" to="#">
                     <button className="btn btn-success read_more_btn"></button>
                   </Link>
+
+                  <div className="color_bg"></div>
                 </div>
               </div>
             </div>
