@@ -1,6 +1,19 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./css/team.css";
+import { Link } from "react-router-dom";
 
 const Team = () => {
+  let settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    cssEase: "linear",
+  };
   return (
     <>
       <section className="team__area grey-bg-3 pt-120 pb-195 overflow-y-visible p-relative">
@@ -37,7 +50,140 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="row">
+
+          <Slider {...settings}>
+            <div className="card-wrapper">
+              <div className="cards">
+                <div className="card-image">
+                  <img
+                    src="assets/img/icon/services/home-2/services-2.png"
+                    alt="image1"
+                    className="team_image"
+                  />
+
+                  <h4 className="team_title">Digital Marketing</h4>
+                  <p className="team_para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Culpa perferendis iusto quia molestias
+                  </p>
+
+                  <Link to="#" className="team_read_more">
+                    READ MORE
+                  </Link>
+
+                  <Link className="read_more_btn_link" to="#">
+                    <button className="btn btn-success read_more_btn"></button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-wrapper">
+              <div className="cards">
+                <div className="card-image">
+                  <img
+                    src="assets/img/icon/services/home-2/services-2.png"
+                    alt="image1"
+                    className="team_image"
+                  />
+
+                  <h4 className="team_title">Digital Marketing</h4>
+                  <p className="team_para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Culpa perferendis iusto quia molestias
+                  </p>
+
+                  <Link to="#" className="team_read_more">
+                    READ MORE
+                  </Link>
+
+                  <Link className="read_more_btn_link" to="#">
+                    <button className="btn btn-success read_more_btn"></button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-wrapper">
+              <div className="cards">
+                <div className="card-image">
+                  <img
+                    src="assets/img/icon/services/home-2/services-2.png"
+                    alt="image1"
+                    className="team_image"
+                  />
+
+                  <h4 className="team_title">Digital Marketing</h4>
+                  <p className="team_para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Culpa perferendis iusto quia molestias
+                  </p>
+
+                  <Link to="#" className="team_read_more">
+                    READ MORE
+                  </Link>
+
+                  <Link className="read_more_btn_link" to="#">
+                    <button className="btn btn-success read_more_btn"></button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-wrapper">
+              <div className="cards">
+                <div className="card-image">
+                  <img
+                    src="assets/img/icon/services/home-2/services-2.png"
+                    alt="image1"
+                    className="team_image"
+                  />
+
+                  <h4 className="team_title">Digital Marketing</h4>
+                  <p className="team_para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Culpa perferendis iusto quia molestias
+                  </p>
+
+                  <Link to="#" className="team_read_more">
+                    READ MORE
+                  </Link>
+
+                  <Link className="read_more_btn_link" to="#">
+                    <button className="btn btn-success read_more_btn"></button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-wrapper">
+              <div className="cards">
+                <div className="card-image">
+                  <img
+                    src="assets/img/icon/services/home-2/services-2.png"
+                    alt="image1"
+                    className="team_image"
+                  />
+
+                  <h4 className="team_title">Digital Marketing</h4>
+                  <p className="team_para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Culpa perferendis iusto quia molestias
+                  </p>
+
+                  <Link to="#" className="team_read_more">
+                    READ MORE
+                  </Link>
+
+                  <Link className="read_more_btn_link" to="#">
+                    <button className="btn btn-success read_more_btn"></button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Slider>
+
+          {/* <div className="row">
             <div className="col-xxl-12">
               <div
                 className="team__slider owl-carousel wow fadeInUp"
@@ -262,7 +408,7 @@ const Team = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

@@ -1,164 +1,194 @@
 import React from "react";
+import { useState } from "react";
+import ReactDOM from "react-dom";
+import "./css/sidebar.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [changePlusIconServices, setChangePlusIconServices] = useState(true);
+  const [changePlusIconBlog, setChangePlusIconBlog] = useState(true);
+  const [plusToCrossServices, setPlusToCrossServices] = useState(true);
+  const [plusToCrossBlog, setPlusToCrossBlog] = useState(true);
+
+  function closeSidebar() {
+    let element = document.getElementById("sidebar__area");
+    ReactDOM.findDOMNode(element).classList.remove("sidebar-opened");
+
+    let element1 = document.getElementById("body-overlay");
+    ReactDOM.findDOMNode(element1).classList.remove("opened");
+
+    //return setSidebarClose(true);
+  }
+
+  function servicesToggle() {
+    setChangePlusIconServices(!changePlusIconServices);
+    setPlusToCrossServices(!plusToCrossServices);
+  }
+
+  function blogToggle() {
+    setChangePlusIconBlog(!changePlusIconBlog);
+    setPlusToCrossBlog(!plusToCrossBlog);
+  }
   return (
     <>
-      <div classNameName="sidebar__area">
-        <div classNameName="sidebar__wrapper">
-          <div classNameName="sidebar__close">
-            <button classNameName="sidebar__close-btn" id="sidebar__close-btn">
+      <div className="sidebar__area" id="sidebar__area">
+        <div className="sidebar__wrapper">
+          <div className="sidebar__close">
+            <button
+              className="sidebar__close-btn"
+              id="sidebar__close-btn"
+              onClick={() => closeSidebar()}
+            >
               <span>
-                <i classNameName="fal fa-times"></i>
+                <i className="fal fa-times"></i>
               </span>
               <span>close</span>
             </button>
           </div>
-          <div classNameName="sidebar__content">
-            <div classNameName="logo mb-40">
+          <div className="sidebar__content">
+            <div className="logo mb-40">
               <a href="index.html">
                 <img src="assets/img/logo/logo.png" alt="logo" />
               </a>
             </div>
-            <div classNameName="mobile-menu mobile-menu-2">
-              <div className="mobile-menu mobile-menu-2 mean-container">
-                <div className="mean-bar">
-                  <a
-                    href="#nav"
-                    className="meanmenu-reveal"
-                    style={{ right: 0, left: "auto", display: "inline" }}
+            <div className="mobile-menu mobile-menu-2">
+              <ul id="mobile_menu_ul">
+                <li id="home_li">
+                  <Link
+                    className="link_a"
+                    id="home_link"
+                    to="/"
+                    onClick={() => closeSidebar()}
                   >
-                    <span>
-                      <span>
-                        <span></span>
-                      </span>
-                    </span>
-                  </a>
-                  <nav className="mean-nav">
-                    <ul style={{ display: "none" }}>
-                      <li className="has-dropdown">
-                        <a href="index.html">Home</a>
-                        <ul className="submenu" style={{ display: "none" }}>
-                          <li>
-                            <a href="index.html">Home 1</a>
-                          </li>
-                          <li>
-                            <a href="index-2.html">Home 2</a>
-                          </li>
-                          <li>
-                            <a href="index-3.html">Home 3</a>
-                          </li>
-                          <li>
-                            <a href="index-4.html">Home 4</a>
-                          </li>
-                          <li>
-                            <a href="index-5.html">Home 5</a>
-                          </li>
-                        </ul>
-                        <a
-                          className="mean-expand"
-                          href="index.html"
-                          style={{ fontSize: 18 }}
-                        >
-                          <i className="fal fa-plus"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="about.html">About</a>
-                      </li>
-                      <li className="has-dropdown">
-                        <a href="services.html">Services</a>
-                        <ul className="submenu" style={{ display: "none" }}>
-                          <li>
-                            <a href="services.html">Services</a>
-                          </li>
-                          <li>
-                            <a href="services-details.html">Services Details</a>
-                          </li>
-                        </ul>
-                        <a
-                          className="mean-expand"
-                          href="index.html"
-                          style={{ fontSize: 18 }}
-                        >
-                          <i className="fal fa-plus"></i>
-                        </a>
-                      </li>
-                      <li className="has-dropdown">
-                        <a href="blog.html">Blog</a>
-
-                        <ul className="submenu" style={{ display: "none" }}>
-                          <li>
-                            <a href="blog.html">Blog</a>
-                          </li>
-                          <li>
-                            <a href="blog-standard.html">Blog Standard</a>
-                          </li>
-                          <li>
-                            <a href="blog-details.html">Blog Details</a>
-                          </li>
-                        </ul>
-                        <a
-                          className="mean-expand"
-                          href="index.html"
-                          style={{ fontSize: 18 }}
-                        >
-                          <i className="fal fa-plus"></i>
-                        </a>
-                      </li>
-                      <li className="has-dropdown">
-                        <a href="about.html">Pages</a>
-                        <ul className="submenu" style={{ display: "none" }}>
-                          <li>
-                            <a href="faq.html">Faq</a>
-                          </li>
-                          <li>
-                            <a href="portfolio.html">Portfolio</a>
-                          </li>
-                          <li>
-                            <a href="portfolio-details.html">
-                              Portfolio Details
-                            </a>
-                          </li>
-                          <li>
-                            <a href="team.html">Team</a>
-                          </li>
-                          <li>
-                            <a href="team-details.html">Team Details</a>
-                          </li>
-                          <li>
-                            <a href="error.html">Error 404</a>
-                          </li>
-                          <li>
-                            <a href="sign-up.html">Sign Up</a>
-                          </li>
-                          <li>
-                            <a href="sign-in.html">Sign In</a>
-                          </li>
-                        </ul>
-                        <a
-                          className="mean-expand"
-                          href="index.html"
-                          style={{ fontSize: 18 }}
-                        >
-                          <i className="fal fa-plus"></i>
-                        </a>
-                      </li>
-                      <li className="mean-last">
-                        <a href="contact.html">Contact</a>
-                      </li>
-                    </ul>
-                  </nav>
+                    HOME
+                  </Link>
+                </li>
+                <li id="about_li">
+                  <Link
+                    className="link_a"
+                    id="about_link"
+                    to="/about"
+                    onClick={() => closeSidebar()}
+                  >
+                    ABOUT
+                  </Link>
+                </li>
+                <li id="services_li">
+                  <Link
+                    className="link_a"
+                    id="services_link"
+                    to="/services"
+                    onClick={() => closeSidebar()}
+                  >
+                    SERVICES
+                  </Link>
+                  <Link
+                    className="fa_plus_link"
+                    id="fa_plus_link_services"
+                    to="#"
+                    onClick={() => servicesToggle()}
+                  >
+                    <i
+                      className={
+                        plusToCrossServices
+                          ? "fal fa-plus fa-plus-inactive-services"
+                          : "fal fa-plus fa-plus-active-services"
+                      }
+                    ></i>
+                  </Link>
+                </li>
+                <div
+                  id="sub_services_div"
+                  className={
+                    changePlusIconServices
+                      ? "sub_services_div sub_services_inactive"
+                      : "sub_services_div sub_services_active"
+                  }
+                >
+                  <li className="sub_li" id="sub_services_li">
+                    <Link
+                      className="link_a"
+                      id="services_link"
+                      to="/services"
+                      onClick={() => closeSidebar()}
+                    >
+                      SERVICES
+                    </Link>
+                  </li>
+                  <li className="sub_li" id="sub_services_li">
+                    <Link
+                      className="link_a"
+                      id="services_link"
+                      to="/services-details"
+                      onClick={() => closeSidebar()}
+                    >
+                      SERVICES DETAILS
+                    </Link>
+                  </li>
                 </div>
-              </div>
+                <li id="blog_li">
+                  <Link
+                    className="link_a"
+                    id="blog_link"
+                    to="/blog"
+                    onClick={() => closeSidebar()}
+                  >
+                    BLOG
+                  </Link>
+                  <Link
+                    className="fa_plus_link"
+                    id="fa_plus_link_blog"
+                    to="#"
+                    onClick={() => blogToggle()}
+                  >
+                    <i
+                      className={
+                        plusToCrossBlog
+                          ? "fal fa-plus fa-plus-inactive-blog"
+                          : "fal fa-plus fa-plus-active-blog"
+                      }
+                    ></i>
+                  </Link>
+                </li>
+                <div
+                  id="sub_blog_div"
+                  className={
+                    changePlusIconBlog
+                      ? "sub_blog_div sub_blog_inactive"
+                      : "sub_blog_div sub_blog_active"
+                  }
+                >
+                  <li className="sub_li" id="sub_blog_li">
+                    <Link
+                      className="link_a"
+                      id="blog_link"
+                      to="/blog"
+                      onClick={() => closeSidebar()}
+                    >
+                      BLOG
+                    </Link>
+                  </li>
+                  <li className="sub_li" id="sub_blog_li">
+                    <Link
+                      className="link_a"
+                      id="blog_link"
+                      to="/blog-details"
+                      onClick={() => closeSidebar()}
+                    >
+                      BLOG DETAILS
+                    </Link>
+                  </li>
+                </div>
+              </ul>
             </div>
-            <div classNameName="sidebar__info mt-350">
+            <div className="sidebar__info mt-50">
               <a
                 href="index.html"
-                classNameName="w-btn w-btn-blue-2 w-btn-4 d-block mb-15 mt-15"
+                className="w-btn w-btn-blue-2 w-btn-4 d-block mb-15 mt-15"
               >
                 login
               </a>
-              <a href="index.html" classNameName="w-btn w-btn-blue d-block">
+              <a href="index.html" className="w-btn w-btn-blue d-block">
                 sign up
               </a>
             </div>
@@ -166,7 +196,11 @@ const Sidebar = () => {
         </div>
       </div>
       {/* <!-- sidebar area end -->       */}
-      <div classNameName="body-overlay"></div>
+      <div
+        className="body-overlay"
+        onClick={() => closeSidebar()}
+        id="body-overlay"
+      ></div>
       {/* sidebar area end */}
     </>
   );

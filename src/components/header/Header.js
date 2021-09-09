@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ReactDOM from "react-dom";
 //import $ from "jquery";
 
 const Header = () => {
@@ -8,6 +9,14 @@ const Header = () => {
   //     $(".body-overlay").addClass("opened");
   //     console.log("Hello");
   //   });
+
+  function sidebarOpen() {
+    let element = document.getElementById("sidebar__area");
+    ReactDOM.findDOMNode(element).classList.add("sidebar-opened");
+
+    let element1 = document.getElementById("body-overlay");
+    ReactDOM.findDOMNode(element1).classList.add("opened");
+  }
 
   return (
     <>
@@ -20,9 +29,9 @@ const Header = () => {
             <div className="row align-items-center">
               <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
                 <div className="logo">
-                  <a href="index.html">
+                  <Link to="/">
                     <img src="assets/img/logo/logo.png" alt="logo" />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block">
@@ -135,7 +144,10 @@ const Header = () => {
                       Get Started
                     </a>
                   </div>
-                  <div className="sidebar__menu d-lg-none">
+                  <div
+                    className="sidebar__menu d-lg-none"
+                    onClick={() => sidebarOpen()}
+                  >
                     <div
                       className="sidebar-toggle-btn sidebar-toggle-btn-2"
                       id="sidebar-toggle"
