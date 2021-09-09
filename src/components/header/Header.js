@@ -1,12 +1,13 @@
 import React from "react";
-import $ from "jquery";
+import { Link } from "react-router-dom";
+//import $ from "jquery";
 
 const Header = () => {
-  $(".sidebar__close-btn").on("click", function () {
-    $(".sidebar__area").addClass("sidebar-opened");
-    $(".body-overlay").addClass("opened");
-    console.log("Hello");
-  });
+  //   $(".sidebar__close-btn").on("click", function () {
+  //     $(".sidebar__area").addClass("sidebar-opened");
+  //     $(".body-overlay").addClass("opened");
+  //     console.log("Hello");
+  //   });
 
   return (
     <>
@@ -28,7 +29,7 @@ const Header = () => {
                 <div className="main-menu main-menu-2 pl-40">
                   <nav id="mobile-menu">
                     <ul>
-                      <li className="has-dropdown">
+                      {/* <li className="has-dropdown">
                         <a href="index.html">Home</a>
                         <ul className="submenu">
                           <li>
@@ -47,37 +48,40 @@ const Header = () => {
                             <a href="index-5.html">Home 5</a>
                           </li>
                         </ul>
+                      </li> */}
+                      <li>
+                        <Link to="/">Home</Link>
                       </li>
                       <li>
-                        <a href="about.html">About</a>
+                        <Link to="/about">About</Link>
                       </li>
                       <li className="has-dropdown">
-                        <a href="services.html">Services</a>
+                        <Link to="/services">Services</Link>
                         <ul className="submenu">
                           <li>
-                            <a href="services.html">Services</a>
+                            <Link to="/services">Services</Link>
                           </li>
                           <li>
-                            <a href="services-details.html">Services Details</a>
+                            <Link to="/services-details">Services Details</Link>
                           </li>
                         </ul>
                       </li>
                       <li className="has-dropdown">
-                        <a href="blog.html">Blog</a>
+                        <Link to="/blog">Blog</Link>
 
                         <ul className="submenu">
                           <li>
-                            <a href="blog.html">Blog</a>
+                            <Link to="/blog">Blog</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <a href="blog-standard.html">Blog Standard</a>
-                          </li>
+                          </li> */}
                           <li>
-                            <a href="blog-details.html">Blog Details</a>
+                            <Link to="/blog-details">Blog Details</Link>
                           </li>
                         </ul>
                       </li>
-                      <li className="has-dropdown">
+                      {/* <li className="has-dropdown">
                         <a href="about.html">Pages</a>
                         <ul className="submenu">
                           <li>
@@ -107,10 +111,10 @@ const Header = () => {
                             <a href="sign-in.html">Sign In</a>
                           </li>
                         </ul>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <a href="contact.html">Contact</a>
-                      </li>
+                      </li> */}
                     </ul>
                   </nav>
                 </div>

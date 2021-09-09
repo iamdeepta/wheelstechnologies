@@ -3,28 +3,28 @@ import React from "react";
 const Sidebar = () => {
   return (
     <>
-      <div className="sidebar__area sidebar-opened">
-        <div className="sidebar__wrapper">
-          <div className="sidebar__close">
-            <button className="sidebar__close-btn" id="sidebar__close-btn">
+      <div classNameName="sidebar__area">
+        <div classNameName="sidebar__wrapper">
+          <div classNameName="sidebar__close">
+            <button classNameName="sidebar__close-btn" id="sidebar__close-btn">
               <span>
-                <i className="fal fa-times"></i>
+                <i classNameName="fal fa-times"></i>
               </span>
               <span>close</span>
             </button>
           </div>
-          <div className="sidebar__content">
-            <div className="logo mb-40">
+          <div classNameName="sidebar__content">
+            <div classNameName="logo mb-40">
               <a href="index.html">
                 <img src="assets/img/logo/logo.png" alt="logo" />
               </a>
             </div>
-            <div className="mobile-menu mobile-menu-2">
-              <div class="mobile-menu mobile-menu-2 mean-container">
-                <div class="mean-bar">
+            <div classNameName="mobile-menu mobile-menu-2">
+              <div className="mobile-menu mobile-menu-2 mean-container">
+                <div className="mean-bar">
                   <a
                     href="#nav"
-                    class="meanmenu-reveal"
+                    className="meanmenu-reveal"
                     style={{ right: 0, left: "auto", display: "inline" }}
                   >
                     <span>
@@ -33,11 +33,11 @@ const Sidebar = () => {
                       </span>
                     </span>
                   </a>
-                  <nav class="mean-nav">
+                  <nav className="mean-nav">
                     <ul style={{ display: "none" }}>
-                      <li class="has-dropdown">
+                      <li className="has-dropdown">
                         <a href="index.html">Home</a>
-                        <ul class="submenu" style={{ display: "none" }}>
+                        <ul className="submenu" style={{ display: "none" }}>
                           <li>
                             <a href="index.html">Home 1</a>
                           </li>
@@ -55,19 +55,19 @@ const Sidebar = () => {
                           </li>
                         </ul>
                         <a
-                          class="mean-expand"
+                          className="mean-expand"
                           href="index.html"
                           style={{ fontSize: 18 }}
                         >
-                          <i class="fal fa-plus"></i>
+                          <i className="fal fa-plus"></i>
                         </a>
                       </li>
                       <li>
                         <a href="about.html">About</a>
                       </li>
-                      <li class="has-dropdown">
+                      <li className="has-dropdown">
                         <a href="services.html">Services</a>
-                        <ul class="submenu" style={{ display: "none" }}>
+                        <ul className="submenu" style={{ display: "none" }}>
                           <li>
                             <a href="services.html">Services</a>
                           </li>
@@ -76,17 +76,17 @@ const Sidebar = () => {
                           </li>
                         </ul>
                         <a
-                          class="mean-expand"
+                          className="mean-expand"
                           href="index.html"
                           style={{ fontSize: 18 }}
                         >
-                          <i class="fal fa-plus"></i>
+                          <i className="fal fa-plus"></i>
                         </a>
                       </li>
-                      <li class="has-dropdown">
+                      <li className="has-dropdown">
                         <a href="blog.html">Blog</a>
 
-                        <ul class="submenu" style={{ display: "none" }}>
+                        <ul className="submenu" style={{ display: "none" }}>
                           <li>
                             <a href="blog.html">Blog</a>
                           </li>
@@ -98,16 +98,16 @@ const Sidebar = () => {
                           </li>
                         </ul>
                         <a
-                          class="mean-expand"
+                          className="mean-expand"
                           href="index.html"
                           style={{ fontSize: 18 }}
                         >
-                          <i class="fal fa-plus"></i>
+                          <i className="fal fa-plus"></i>
                         </a>
                       </li>
-                      <li class="has-dropdown">
+                      <li className="has-dropdown">
                         <a href="about.html">Pages</a>
-                        <ul class="submenu" style={{ display: "none" }}>
+                        <ul className="submenu" style={{ display: "none" }}>
                           <li>
                             <a href="faq.html">Faq</a>
                           </li>
@@ -136,14 +136,14 @@ const Sidebar = () => {
                           </li>
                         </ul>
                         <a
-                          class="mean-expand"
+                          className="mean-expand"
                           href="index.html"
                           style={{ fontSize: 18 }}
                         >
-                          <i class="fal fa-plus"></i>
+                          <i className="fal fa-plus"></i>
                         </a>
                       </li>
-                      <li class="mean-last">
+                      <li className="mean-last">
                         <a href="contact.html">Contact</a>
                       </li>
                     </ul>
@@ -151,14 +151,14 @@ const Sidebar = () => {
                 </div>
               </div>
             </div>
-            <div className="sidebar__info mt-350">
+            <div classNameName="sidebar__info mt-350">
               <a
                 href="index.html"
-                className="w-btn w-btn-blue-2 w-btn-4 d-block mb-15 mt-15"
+                classNameName="w-btn w-btn-blue-2 w-btn-4 d-block mb-15 mt-15"
               >
                 login
               </a>
-              <a href="index.html" className="w-btn w-btn-blue d-block">
+              <a href="index.html" classNameName="w-btn w-btn-blue d-block">
                 sign up
               </a>
             </div>
@@ -166,7 +166,7 @@ const Sidebar = () => {
         </div>
       </div>
       {/* <!-- sidebar area end -->       */}
-      <div className="body-overlay opened"></div>
+      <div classNameName="body-overlay"></div>
       {/* sidebar area end */}
     </>
   );
