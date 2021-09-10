@@ -6,14 +6,26 @@ import "./css/team.css";
 import { Link } from "react-router-dom";
 
 const Team = () => {
-  let settings = {
-    // dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    cssEase: "linear",
-  };
+  let settings;
+  if (window.innerWidth <= 460) {
+    settings = {
+      // dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      cssEase: "linear",
+    };
+  } else {
+    settings = {
+      // dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      cssEase: "linear",
+    };
+  }
 
   return (
     <>

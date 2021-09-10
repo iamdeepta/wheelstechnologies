@@ -130,3 +130,49 @@
 .card-wrapper:not(:hover) .color_bg {
   transition: 0.5s;
 }
+
+@media screen and (max-width: 460px) {
+  /* .slick-slide {
+    width: 95vw !important;
+  } */
+
+  .slick-list {
+    margin-left: 0px !important;
+  }
+
+  .card-wrapper {
+    border-right: none !important;
+  }
+
+  .slick-active .card-wrapper {
+    transform: translateY(-50px);
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: white;
+    border: 0px solid white;
+  }
+
+  .slick-active .team_image {
+    transform: scale(1.3);
+    transition: 0.5s;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+
+  .slick-active .color_bg {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: 0.5s;
+  }
+
+  .read_more_btn_link,
+  .read_more_btn {
+    display: none !important;
+  }
+
+  .card-wrapper:hover .team_read_more {
+    color: #296599;
+    border-bottom: 1px solid #296599;
+  }
+}
