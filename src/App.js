@@ -7,6 +7,17 @@ import Blog from "./pages/blog/Blog.js";
 import Error404 from "./pages/error404/Error404.js";
 import { Route, Switch } from "react-router-dom";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./css/bootstrap.min.css";
+
+import "./css/animate.min.css";
+
+import "./css/backToTop.css";
+
+//import "./css/fontAwesome5Pro.css";
+
+//import "./css/elegantFont.css";
+import "./css/default.css";
+import "./css/style.css";
 
 const App = () => {
   return (

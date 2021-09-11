@@ -244,30 +244,30 @@
 
   ////////////////////////////////////////////////////
   // 11. Masonary Js
-  $(".grid").imagesLoaded(function () {
-    // init Isotope
-    var $grid = $(".grid").isotope({
-      itemSelector: ".grid-item",
-      percentPosition: true,
-      masonry: {
-        // use outer width of grid-sizer for columnWidth
-        columnWidth: ".grid-item",
-      },
-    });
+  //$(".grid").imagesLoaded(function () {
+  // init Isotope
+  // var $grid = $(".grid").isotope({
+  //   itemSelector: ".grid-item",
+  //   percentPosition: true,
+  //   masonry: {
+  // use outer width of grid-sizer for columnWidth
+  //     columnWidth: ".grid-item",
+  //   },
+  // });
 
-    // filter items on button click
-    $(".masonary-menu").on("click", "button", function () {
-      var filterValue = $(this).attr("data-filter");
-      $grid.isotope({ filter: filterValue });
-    });
+  // filter items on button click
+  // $(".masonary-menu").on("click", "button", function () {
+  //   var filterValue = $(this).attr("data-filter");
+  //   $grid.isotope({ filter: filterValue });
+  // });
 
-    //for menu active class
-    $(".masonary-menu button").on("click", function (event) {
-      $(this).siblings(".active").removeClass("active");
-      $(this).addClass("active");
-      event.preventDefault();
-    });
-  });
+  //for menu active class
+  //     $(".masonary-menu button").on("click", function (event) {
+  //       $(this).siblings(".active").removeClass("active");
+  //       $(this).addClass("active");
+  //       event.preventDefault();
+  //     });
+  //   });
 
   ////////////////////////////////////////////////////
   // 12. WoW Js
