@@ -96,151 +96,151 @@
 
   ////////////////////////////////////////////////////
   // 07. Testimonial Slider Js
-  $(".testimonial__slider").owlCarousel({
-    loop: true,
-    margin: 30,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    smartSpeed: 500,
-    items: 6,
-    navText: [
-      '<button><i class="fa fa-angle-left"></i>PREV</button>',
-      '<button>NEXT<i class="fa fa-angle-right"></i></button>',
-    ],
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      576: {
-        items: 1,
-      },
-      767: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-      },
-      1200: {
-        items: 2,
-      },
-      1600: {
-        items: 2,
-      },
-    },
-  });
+  //   $(".testimonial__slider").owlCarousel({
+  //     loop: true,
+  //     margin: 30,
+  //     autoplay: true,
+  //     autoplayTimeout: 3000,
+  //     smartSpeed: 500,
+  //     items: 6,
+  //     navText: [
+  //       '<button><i class="fa fa-angle-left"></i>PREV</button>',
+  //       '<button>NEXT<i class="fa fa-angle-right"></i></button>',
+  //     ],
+  //     nav: false,
+  //     dots: true,
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       576: {
+  //         items: 1,
+  //       },
+  //       767: {
+  //         items: 2,
+  //       },
+  //       992: {
+  //         items: 3,
+  //       },
+  //       1200: {
+  //         items: 2,
+  //       },
+  //       1600: {
+  //         items: 2,
+  //       },
+  //     },
+  //   });
 
   ////////////////////////////////////////////////////
   // 08. Testimonial Slider 3 Js
-  $(".testimonial__slider-3").owlCarousel({
-    loop: true,
-    margin: 30,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    smartSpeed: 500,
-    items: 6,
-    navText: [
-      '<button><i class="fa fa-angle-left"></i>PREV</button>',
-      '<button>NEXT<i class="fa fa-angle-right"></i></button>',
-    ],
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      576: {
-        items: 1,
-      },
-      767: {
-        items: 2,
-      },
-      992: {
-        items: 2,
-      },
-      1200: {
-        items: 3,
-      },
-      1600: {
-        items: 3,
-      },
-    },
-  });
+  //   $(".testimonial__slider-3").owlCarousel({
+  //     loop: true,
+  //     margin: 30,
+  //     autoplay: true,
+  //     autoplayTimeout: 3000,
+  //     smartSpeed: 500,
+  //     items: 6,
+  //     navText: [
+  //       '<button><i class="fa fa-angle-left"></i>PREV</button>',
+  //       '<button>NEXT<i class="fa fa-angle-right"></i></button>',
+  //     ],
+  //     nav: false,
+  //     dots: true,
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       576: {
+  //         items: 1,
+  //       },
+  //       767: {
+  //         items: 2,
+  //       },
+  //       992: {
+  //         items: 2,
+  //       },
+  //       1200: {
+  //         items: 3,
+  //       },
+  //       1600: {
+  //         items: 3,
+  //       },
+  //     },
+  //   });
 
   ////////////////////////////////////////////////////
   // 09. Testimonial Slider 5 Js
-  $(".testimonial__slider-5").owlCarousel({
-    loop: true,
-    margin: 30,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    smartSpeed: 500,
-    items: 6,
-    navText: [
-      '<button><i class="fa fa-angle-left"></i>PREV</button>',
-      '<button>NEXT<i class="fa fa-angle-right"></i></button>',
-    ],
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      576: {
-        items: 1,
-      },
-      767: {
-        items: 1,
-      },
-      992: {
-        items: 1,
-      },
-      1200: {
-        items: 1,
-      },
-      1600: {
-        items: 1,
-      },
-    },
-  });
+  //   $(".testimonial__slider-5").owlCarousel({
+  //     loop: true,
+  //     margin: 30,
+  //     autoplay: true,
+  //     autoplayTimeout: 3000,
+  //     smartSpeed: 500,
+  //     items: 6,
+  //     navText: [
+  //       '<button><i class="fa fa-angle-left"></i>PREV</button>',
+  //       '<button>NEXT<i class="fa fa-angle-right"></i></button>',
+  //     ],
+  //     nav: false,
+  //     dots: true,
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       576: {
+  //         items: 1,
+  //       },
+  //       767: {
+  //         items: 1,
+  //       },
+  //       992: {
+  //         items: 1,
+  //       },
+  //       1200: {
+  //         items: 1,
+  //       },
+  //       1600: {
+  //         items: 1,
+  //       },
+  //     },
+  //   });
 
   ////////////////////////////////////////////////////
   // 10. Team Slider Js
-  $(".team__slider ").owlCarousel({
-    loop: true,
-    margin: 30,
-    autoplay: false,
-    autoplayTimeout: 3000,
-    smartSpeed: 500,
-    items: 6,
-    navText: [
-      '<button><i class="fa fa-angle-left"></i>PREV</button>',
-      '<button>NEXT<i class="fa fa-angle-right"></i></button>',
-    ],
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      576: {
-        items: 1,
-      },
-      767: {
-        items: 2,
-      },
-      992: {
-        items: 3,
-      },
-      1200: {
-        items: 3,
-      },
-      1600: {
-        items: 3,
-      },
-    },
-  });
+  //   $(".team__slider ").owlCarousel({
+  //     loop: true,
+  //     margin: 30,
+  //     autoplay: false,
+  //     autoplayTimeout: 3000,
+  //     smartSpeed: 500,
+  //     items: 6,
+  //     navText: [
+  //       '<button><i class="fa fa-angle-left"></i>PREV</button>',
+  //       '<button>NEXT<i class="fa fa-angle-right"></i></button>',
+  //     ],
+  //     nav: false,
+  //     dots: true,
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       576: {
+  //         items: 1,
+  //       },
+  //       767: {
+  //         items: 2,
+  //       },
+  //       992: {
+  //         items: 3,
+  //       },
+  //       1200: {
+  //         items: 3,
+  //       },
+  //       1600: {
+  //         items: 3,
+  //       },
+  //     },
+  //   });
 
   ////////////////////////////////////////////////////
   // 11. Masonary Js
@@ -275,10 +275,10 @@
 
   ////////////////////////////////////////////////////
   // 13. Counter Js
-  $(".counter").counterUp({
-    delay: 10,
-    time: 2000,
-  });
+  //   $(".counter").counterUp({
+  //     delay: 10,
+  //     time: 2000,
+  //   });
 
   ////////////////////////////////////////////////////
   // 14. Parallax Js

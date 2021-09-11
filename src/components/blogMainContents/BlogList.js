@@ -7,16 +7,16 @@ const BlogList = () => {
     <>
       <div id="blog_card_section">
         <div id="blog_card_section_inside">
-          {i.map((item) => {
+          {i.map((item, index) => {
             return (
               <>
-                <div id="blogs_card_main_div">
+                <div id="blogs_card_main_div" key={index}>
                   <div
-                    class="card blogs_card"
+                    className="card blogs_card"
                     id="blogs_card'.$result['blogs_id'].'"
                   >
                     <img
-                      class="card-img-top"
+                      className="card-img-top"
                       src="/assets/img/page-title/page-title.jpg"
                       alt="blog images"
                     />
@@ -29,9 +29,9 @@ const BlogList = () => {
                       <span id="blog_tag_text">Blog</span>
                     </div>
 
-                    <div class="card-body" id="blogs_card_body">
-                      <h5 class="card-title">This is blog title</h5>
-                      <p class="card-text">This is blog description</p>
+                    <div className="card-body" id="blogs_card_body">
+                      <h5 className="card-title">This is blog title</h5>
+                      <p className="card-text">This is blog description</p>
                       <div id="blogs_card_bottom_div">
                         <p id="blogs_category_p">
                           <a id="blogs_category_a" href=".">
@@ -40,7 +40,7 @@ const BlogList = () => {
                         </p>
 
                         <span id="blogs_time_span">
-                          <i class="far fa-clock"></i>
+                          <i className="far fa-clock"></i>
                           <span id="blogs_time_text">9 minutes</span>
                         </span>
                       </div>

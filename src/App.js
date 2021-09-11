@@ -6,6 +6,7 @@ import ServicesDetails from "./pages/services/ServicesDetails.js";
 import Blog from "./pages/blog/Blog.js";
 import Error404 from "./pages/error404/Error404.js";
 import { Route, Switch } from "react-router-dom";
+//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
