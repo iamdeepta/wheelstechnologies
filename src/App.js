@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "./pages/home/Home.js";
-import About from "./pages/about/About.js";
-import Services from "./pages/services/Services.js";
-import ServicesDetails from "./pages/services/ServicesDetails.js";
-import Blog from "./pages/blog/Blog.js";
-import Error404 from "./pages/error404/Error404.js";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Services from "./pages/services/Services";
+import ServicesDetails from "./pages/services/ServicesDetails";
+import Blog from "./pages/blog/Blog";
+import Error404 from "./pages/error404/Error404";
 import { Route, Switch } from "react-router-dom";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./css/bootstrap.min.css";
