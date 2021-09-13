@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 //import $ from "jquery";
+import "./header.css";
 
 const Header = () => {
   //   $(".sidebar__close-btn").on("click", function () {
@@ -30,7 +31,11 @@ const Header = () => {
               <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
                 <div className="logo">
                   <Link to="/">
-                    <img src="assets/img/logo/logo.png" alt="logo" />
+                    <img
+                      src="images/logo.png"
+                      alt="logo"
+                      className="logo_img"
+                    />
                   </Link>
                 </div>
               </div>

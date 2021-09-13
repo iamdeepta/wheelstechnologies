@@ -74,3 +74,8 @@
   height: 0;
   transition: 0.3s linear;
 }
+
+.logo_image {
+  height: 40px;
+  width: 180px;
+}

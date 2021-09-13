@@ -48,7 +48,7 @@ const Sidebar = () => {
           <div className="sidebar__content">
             <div className="logo mb-40">
               <a href="index.html">
-                <img src="assets/img/logo/logo.png" alt="logo" />
+                <img src="images/logo.png" alt="logo" className="logo_image" />
               </a>
             </div>
             <div className="mobile-menu mobile-menu-2">
