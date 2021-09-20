@@ -23,7 +23,10 @@ const FeatureOne = () => {
                 className="about__thumb-3 wow fadeInLeft"
                 data-wow-delay=".3s"
               >
-                <img src="assets/img/about/home-2/about-1.png" alt="" />
+                <img
+                  src="assets/img/about/home-2/about-1.png"
+                  alt="features images"
+                />
               </div>
             </div>
             <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
@@ -41,10 +44,7 @@ const FeatureOne = () => {
                     standard guvnor gosh cras brilliant.
                   </p>
                 </div>
-                <a
-                  href="about.html"
-                  className="w-btn w-btn-blue w-btn-3 w-btn-1"
-                >
+                <a href="/" className="w-btn w-btn-blue w-btn-3 w-btn-1">
                   Get Started
                 </a>
               </div>
