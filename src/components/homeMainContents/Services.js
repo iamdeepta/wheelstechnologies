@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Services = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "homesection2Get3")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="services__area grey-bg-3 pt-120 mt-200 pb-60 p-relative">
@@ -44,28 +67,39 @@ const Services = () => {
             </div>
           </div>
           <div className="row">
-            <div
-              className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".3s"
-            >
-              <div className="services__inner services__inner-2 hover__active mb-30">
-                <div className="services__item-2 transition-3 white-bg ">
-                  <div className="services__icon-2">
-                    <img
-                      src="assets/img/icon/services/home-2/services-1.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="services__content-2">
-                    <h3 className="services__title-2">
-                      <a href="services-details.html">Development</a>
-                    </h3>
-                    <p>Absolutely bladdered he blimey guvnor agency. </p>
+            {data.map((item, index) => (
+              <div
+                className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
+                data-wow-delay={"." + index * 1.5}
+              >
+                <div
+                  className={
+                    index === 1
+                      ? "services__inner services__inner-2 hover__active active mb-30"
+                      : "services__inner services__inner-2 hover__active mb-30"
+                  }
+                >
+                  <div className="services__item-2 transition-3 white-bg ">
+                    <div className="services__icon-2">
+                      <img
+                        src={AppUrl.image_url + item.homesection2_image}
+                        alt={item.homsection2_title + " image"}
+                      />
+                    </div>
+                    <div className="services__content-2">
+                      <h3 className="services__title-2">
+                        <a href="services-details.html">
+                          {item.homesection2_title}
+                        </a>
+                      </h3>
+                      <p>{item.homesection2_description}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
+            ))}
+
+            {/* <div
               className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay=".5s"
             >
@@ -85,8 +119,8 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div
+            </div> */}
+            {/* <div
               className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay=".7s"
             >
@@ -106,7 +140,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

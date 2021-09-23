@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const FreeTrial = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "servicesection2Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          //console.log(response.data.servicesection2_list.split(","));
+          setData1(response.data.servicesection2_list.split(","));
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="cta__area blue-bg-10 pt-140 pb-130 p-relative fix z-index-1">
@@ -20,12 +44,9 @@ const FreeTrial = () => {
                   data-wow-delay=".3s"
                 >
                   <h2 className="section__title section__title-4">
-                    Our Free Trial for 14-days Today
+                    {data.servicesection2_title}
                   </h2>
-                  <p>
-                    Get the word out and sell more with sleek email messages
-                    that.
-                  </p>
+                  <p>{data.servicesection2_description}</p>
                 </div>
                 <div
                   className="cta__form mb-25 wow fadeInUp"
@@ -41,9 +62,12 @@ const FreeTrial = () => {
                   data-wow-delay=".7s"
                 >
                   <ul>
-                    <li>Product support</li>
+                    {data1.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                    {/* <li>Product support</li>
                     <li>Free trial</li>
-                    <li>Connect Customer</li>
+                    <li>Connect Customer</li> */}
                   </ul>
                 </div>
               </div>

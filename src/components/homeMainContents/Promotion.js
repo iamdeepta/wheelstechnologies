@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Promotion = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "homesection8Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="promotion__area promotion__bg pt-125 pb-125 p-relative">
@@ -29,9 +52,10 @@ const Promotion = () => {
                 data-wow-delay=".3s"
               >
                 <h3 className="promotion__title">
-                  Product goals? <br /> Let's make them happen.
+                  {data.homesection8_left_title1} <br />{" "}
+                  {data.homesection8_left_title2}
                 </h3>
-                <p>They’ve taken on a growing role Over the last few year.</p>
+                <p>{data.homesection8_left_description}</p>
                 <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
                   read more
                 </a>
@@ -43,9 +67,10 @@ const Promotion = () => {
                 data-wow-delay=".5s"
               >
                 <h3 className="promotion__title">
-                  Looking for enterprise <br /> solution.
+                  {data.homesection8_right_title1} <br />{" "}
+                  {data.homesection8_right_title2}
                 </h3>
-                <p>They’ve taken on a growing role Over the last few year.</p>
+                <p>{data.homesection8_right_description}</p>
                 <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
                   read more
                 </a>

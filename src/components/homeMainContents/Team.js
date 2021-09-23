@@ -1,11 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./css/team.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Team = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    getData();
+    getData1();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "homesection6Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "homesection6MainGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   let settings;
   if (window.innerWidth <= 460) {
     settings = {
@@ -49,23 +89,56 @@ const Team = () => {
                 className="section__title-wrapper mb-70 wow fadeInUp"
                 data-wow-delay=".3s"
               >
-                <span className="section__pre-title blue">Team</span>
+                <span className="section__pre-title blue">
+                  {data.homesection6_category}
+                </span>
                 <h2 className="section__title section__title-2">
-                  Our expert team thinking creative
+                  {data.homesection6_title}
                 </h2>
               </div>
             </div>
             <div className="col-xxl-8 col-xl-7 col-lg-7 col-md-5 col-sm-4">
               <div className="team__more text-sm-end mb-70">
                 <a href="team.html" className="w-btn w-btn-blue w-btn-7">
-                  View all team{" "}
+                  View all{" "}
                 </a>
               </div>
             </div>
           </div>
 
           <Slider {...settings}>
-            <div className="card-wrapper">
+            {data1.map((item, index) => (
+              <div className="card-wrapper" key={item.homesection6_main_id}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      src={AppUrl.image_url + item.homesection6_main_image}
+                      alt={item.homesection6_main_title + " image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">
+                      {item.homesection6_main_title}
+                    </h4>
+                    <p className="team_para">
+                      {item.homesection6_main_description}
+                    </p>
+
+                    <Link to="#" className="team_read_more">
+                      READ MORE
+                    </Link>
+
+                    <Link className="read_more_btn_link" to="#">
+                      <button className="btn btn-success read_more_btn"></button>
+                    </Link>
+
+                    <div className="color_bg"></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
                   <img
@@ -91,9 +164,9 @@ const Team = () => {
                   <div className="color_bg"></div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="card-wrapper">
+            {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
                   <img
@@ -119,9 +192,9 @@ const Team = () => {
                   <div className="color_bg"></div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="card-wrapper">
+            {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
                   <img
@@ -147,9 +220,9 @@ const Team = () => {
                   <div className="color_bg"></div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="card-wrapper">
+            {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
                   <img
@@ -175,35 +248,7 @@ const Team = () => {
                   <div className="color_bg"></div>
                 </div>
               </div>
-            </div>
-
-            <div className="card-wrapper">
-              <div className="cards">
-                <div className="card-image">
-                  <img
-                    src="assets/img/icon/services/home-2/services-2.png"
-                    alt="image1"
-                    className="team_image"
-                  />
-
-                  <h4 className="team_title">Digital Marketing</h4>
-                  <p className="team_para">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Culpa perferendis iusto quia molestias
-                  </p>
-
-                  <Link to="#" className="team_read_more">
-                    READ MORE
-                  </Link>
-
-                  <Link className="read_more_btn_link" to="#">
-                    <button className="btn btn-success read_more_btn"></button>
-                  </Link>
-
-                  <div className="color_bg"></div>
-                </div>
-              </div>
-            </div>
+            </div> */}
           </Slider>
 
           {/* <div className="row">

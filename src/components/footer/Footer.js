@@ -1,4 +1,5 @@
 import React from "react";
+import "./footer.css";
 
 const Footer = () => {
   return (
@@ -27,7 +28,11 @@ const Footer = () => {
                   <div className="footer__widget-title mb-25">
                     <div className="footer__logo">
                       <a href="index.html">
-                        <img src="assets/img/logo/logo.png" alt="logo" />
+                        <img
+                          src="images/logo.png"
+                          alt="logo"
+                          className="logo_img_footer"
+                        />
                       </a>
                     </div>
                   </div>

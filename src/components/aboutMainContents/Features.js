@@ -1,6 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Features = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    getData();
+    getData1();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "aboutsection2Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "aboutsection2MainGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
   return (
     <>
       <section className="about__area pb-45 pt-45 p-relative">
@@ -12,17 +51,17 @@ const Features = () => {
                   className="section__title-wrapper mb-25 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
-                  <h2 className="section__title">
-                    Awesome Prototyping Tool for UI/UX.
-                  </h2>
-                  <p>
-                    Starkers pardon you knees up is Elizabeth geeza Why, quain
-                    standard guvnor gosh cras brilliant.
-                  </p>
+                  <h2 className="section__title">{data.aboutsection2_title}</h2>
+                  <p>{data.aboutsection2_description}</p>
                 </div>
                 <ul className="wow fadeInUp" data-wow-delay=".5s">
-                  <li>Intergate With Popular Softwares item</li>
-                  <li>Instantly Create Your Crowdfunding Platform</li>
+                  {data1.map((item, index) => (
+                    <li key={item.aboutsection2_main_id}>
+                      {item.aboutsection2_main_title}
+                    </li>
+                  ))}
+                  {/* <li>Intergate With Popular Softwares item</li>
+                  <li>Instantly Create Your Crowdfunding Platform</li> */}
                 </ul>
                 <a href="contact.html" className="w-btn w-btn-3 w-btn-1">
                   Get Started
@@ -34,7 +73,10 @@ const Features = () => {
               data-wow-delay=".7s"
             >
               <div className="about__thumb-wrapper-2 ml-40 p-relative m-img">
-                <img src="assets/img/about/about-img.jpg" alt="" />
+                <img
+                  src={AppUrl.image_url + data.aboutsection2_image}
+                  alt={data.aboutsection2_title + " image"}
+                />
               </div>
             </div>
           </div>

@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Contact = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "homesection5Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="cta__area pt-145 pb-140 p-relative">
@@ -42,7 +65,8 @@ const Contact = () => {
               <div className="col-xxl-7 col-xl-8 col-lg-10 col-md-9">
                 <div className="cta__content-2">
                   <h3 className="cta__title cta__title-2">
-                    Effects to use in your <br /> creative web design projects{" "}
+                    {/* Effects to use in your <br /> creative web design projects{" "} */}
+                    {data.homesection5_title}
                   </h3>
                 </div>
               </div>

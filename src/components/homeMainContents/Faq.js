@@ -1,6 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Faq = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    getData();
+    getData1();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "homesection7Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "homesection7MainGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="faq__area pt-140 pb-140">
@@ -9,35 +49,52 @@ const Faq = () => {
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
               <div className="faq__wrapper wow fadeInUp" data-wow-delay=".3s">
                 <div className="accordion" id="accordionExample">
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        What to do if you can’t access ?
-                      </button>
-                    </h2>
+                  {data1.map((item, index) => (
                     <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse show"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample"
+                      className="accordion-item"
+                      key={item.homesection7_main_id}
                     >
-                      <div className="accordion-body">
-                        <p>
-                          Looking to start an online store and you're not sure
-                          where to begin? I'll guide will help you to navigate
-                          Would you like to boost your Twitter profile.
-                        </p>
+                      <h2
+                        className="accordion-header"
+                        id={"heading" + item.homesection7_main_id}
+                      >
+                        <button
+                          className={
+                            index === 0
+                              ? "accordion-button"
+                              : "accordion-button collapsed"
+                          }
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target={
+                            "#collapse" + item.homesection7_main_id
+                          }
+                          aria-expanded="true"
+                          aria-controls={
+                            "#collapse" + item.homesection7_main_id
+                          }
+                        >
+                          {item.homesection7_main_title}
+                        </button>
+                      </h2>
+                      <div
+                        id={"collapse" + item.homesection7_main_id}
+                        className={
+                          index === 0
+                            ? "accordion-collapse collapse show"
+                            : "accordion-collapse collapse"
+                        }
+                        aria-labelledby={"heading" + item.homesection7_main_id}
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div className="accordion-body">
+                          <p>{item.homesection7_main_description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="accordion-item">
+                  ))}
+
+                  {/* <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                       <button
                         className="accordion-button collapsed"
@@ -64,8 +121,8 @@ const Faq = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
-                  <div className="accordion-item border-none">
+                  </div> */}
+                  {/* <div className="accordion-item border-none">
                     <h2 className="accordion-header" id="headingThree">
                       <button
                         className="accordion-button collapsed pb-0 "
@@ -92,7 +149,7 @@ const Faq = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -103,32 +160,35 @@ const Faq = () => {
                   data-wow-delay=".5s"
                 >
                   <h2 className="section__title section__title-2">
-                    Loved and trusted by over 40k+ users!
+                    {data.homesection7_title}
                   </h2>
-                  <p>
-                    Over the last few years, podcasts have become a huge deal.
-                    They’ve taken on a growing role.
-                  </p>
+                  <p>{data.homesection7_description}</p>
                 </div>
                 <div className="faq__counter wow fadeInUp" data-wow-delay=".7s">
                   <ul>
                     <li>
                       <h3 className="pink">
-                        <span className="counter">876</span>
+                        <span className="counter">
+                          {data.homesection7_number1}
+                        </span>
                       </h3>
-                      <p>Happy Clients</p>
+                      <p>{data.homesection7_number1_title}</p>
                     </li>
                     <li>
                       <h3 className="blue">
-                        <span className="counter">156</span>
+                        <span className="counter">
+                          {data.homesection7_number2}
+                        </span>
                       </h3>
-                      <p>Projects</p>
+                      <p>{data.homesection7_number2_title}</p>
                     </li>
                     <li>
                       <h3 className="yellow">
-                        <span className="counter">430</span>
+                        <span className="counter">
+                          {data.homesection7_number3}
+                        </span>
                       </h3>
-                      <p>Trusted Users</p>
+                      <p>{data.homesection7_number3_title}</p>
                     </li>
                   </ul>
                 </div>

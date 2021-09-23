@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const FeatureOne = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "homesection3Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="about__area grey-bg-3 pt-40 pb-120 p-relative">
@@ -24,7 +47,7 @@ const FeatureOne = () => {
                 data-wow-delay=".3s"
               >
                 <img
-                  src="assets/img/about/home-2/about-1.png"
+                  src={AppUrl.image_url + data.homesection3_image}
                   alt="features images"
                 />
               </div>
@@ -35,14 +58,13 @@ const FeatureOne = () => {
                   className="section__title-wrapper section__title-wrapper-2 mb-55 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
-                  <span className="section__pre-title pink">Features</span>
+                  <span className="section__pre-title pink">
+                    {data.homesection3_category}
+                  </span>
                   <h2 className="section__title section__title-2">
-                    Get the perfect solution for your web.
+                    {data.homesection3_title}
                   </h2>
-                  <p>
-                    Starkers pardon you knees up is Elizabeth geeza Why, quain
-                    standard guvnor gosh cras brilliant.
-                  </p>
+                  <p>{data.homesection3_description}</p>
                 </div>
                 <a href="/" className="w-btn w-btn-blue w-btn-3 w-btn-1">
                   Get Started

@@ -1,6 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Details = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+  const [data2, setData2] = useState([]);
+  const [data3, setData3] = useState([]);
+
+  useEffect(() => {
+    getData();
+    getData1();
+    getData2();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "servicesdetailssection2Get")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "servicesdetailssection2MainGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData2() {
+    axios
+      .get(AppUrl.base_url + "servicesdetailssection1Get")
+      .then(function (response) {
+        if (response) {
+          setData2(response.data);
+          setData3(response.data.servicesdetailssection1_list.split(","));
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="services__details pt-115 pb-100">
@@ -13,12 +66,19 @@ const Details = () => {
                   data-wow-delay=".2s"
                 >
                   <div className="services__widget-title">
-                    <h4>Categories</h4>
+                    <h4>{data.servicesdetailssection2_title}</h4>
                   </div>
                   <div className="services__widget-content">
                     <div className="services__link">
                       <ul>
-                        <li>
+                        {data1.map((item, index) => (
+                          <li key={item.servicesdetailssection_main_id}>
+                            <a href="services-details.html">
+                              {item.servicesdetailssection2_main_title}
+                            </a>
+                          </li>
+                        ))}
+                        {/* <li>
                           <a href="services-details.html">Market Analysis</a>
                         </li>
                         <li>
@@ -35,7 +95,7 @@ const Details = () => {
                         </li>
                         <li>
                           <a href="services-details.html">Great Advices</a>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -78,38 +138,32 @@ const Details = () => {
             <div className="col-xl-8 col-lg-8">
               <div className="services__text">
                 <h3 className="wow fadeInUp" data-wow-delay=".2s">
-                  We give the best consulting
+                  {data2.servicesdetailssection1_title1}
                 </h3>
                 <p className="wow fadeInUp" data-wow-delay=".4s">
-                  That brown bread spiffing nice one zonked spiffing good time
-                  loo so I said bite your arm off argy-bargy, skive off amongst
-                  chip shop hanky panky blow off blower it's your round sloshed,
-                  spend a penny mush pukka barmy Harry plastered gutted mate no
-                  biggie. Argy-bargy chap a blinding shot twit bits and bobs the
-                  wireless Oxford bamboozled pardon you cheers baking cakes
-                  mufty.{" "}
+                  {data2.servicesdetailssection1_description1}{" "}
                 </p>
               </div>
               <div
                 className="services__img mb-45 w-img wow fadeInUp"
                 data-wow-delay=".6s"
               >
-                <img src="assets/img/services/details/services-01.jpg" alt="" />
+                <img
+                  src={AppUrl.image_url + data2.servicesdetailssection1_image}
+                  alt={data2.servicesdetailssection1_title1 + " image"}
+                />
               </div>
               <div className="services__text">
                 <h3 className="wow fadeInUp" data-wow-delay=".2s">
-                  We Unlock Potential
+                  {data2.servicesdetailssection1_title2}
                 </h3>
                 <p className="wow fadeInUp" data-wow-delay=".4s">
-                  Cheeky say horse play cup of char bubble and squeak blower
-                  pukka what a load of rubbish off his nut, a blinding shot
-                  pardon you young delinquent argy-bargy no biggie only a quid
-                  pardon me haggle, bleeding amongst the wireless easy peasy loo{" "}
-                  <span>
+                  {data2.servicesdetailssection1_description2}{" "}
+                  {/* <span>
                     {" "}
                     <a href="about.html">Charles I don't want no agro</a>
-                  </span>
-                  . Why gormless loo he lost his bottle wellies cup of tea
+                  </span> */}
+                  {/* . Why gormless loo he lost his bottle wellies cup of tea
                   pardon me lost the plot naff what a plonker, lurgy show off
                   show off pick your nose and blow off super knackered smashing
                   blower morish my lady, bodge codswallop bits and bobs bobby
@@ -117,12 +171,21 @@ const Details = () => {
                   your bike mate loo bugger all mate nancy boy me old mucker he
                   legged it, twit vagabond pardon me cockup gormless buggered
                   wellies, A bit of how's your father bum bag codswallop bleeder
-                  cracking goal absolutely bladdered.
+                  cracking goal absolutely bladdered. */}
                 </p>
               </div>
               <div className="services__list mb-40">
                 <ul>
-                  <li className="wow fadeInUp" data-wow-delay=".2s">
+                  {data3.map((item, index) => (
+                    <li
+                      key={index}
+                      className="wow fadeInUp"
+                      data-wow-delay={"." + (index + 1) * 1.3 + "s"}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                  {/* <li className="wow fadeInUp" data-wow-delay=".2s">
                     Set up in minutes
                   </li>
                   <li className="wow fadeInUp" data-wow-delay=".3s">
@@ -133,23 +196,15 @@ const Details = () => {
                   </li>
                   <li className="wow fadeInUp" data-wow-delay=".5s">
                     Customer support
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="services__text">
                 <h4 className="wow fadeInUp" data-wow-delay=".6s">
-                  Why gormless loo he lost his bottle wellies cup of tea pardon
-                  me lost the plot naff what a plonker lurgy show off show off
-                  pick your nose and blow.
+                  {data2.servicesdetailssection1_title3}
                 </h4>
                 <p className="wow fadeInUp" data-wow-delay=".8s">
-                  Horse play skive off I amongst bonnet hanky panky Richard
-                  brown bread grub I, sloshed nice one lavatory A bit of how's
-                  your father easy peasy daft jolly good is, spiffing golly gosh
-                  in my flat cup of char tomfoolery a vagabond James Bond. Mush
-                  down the pub victoria sponge zonked cracking goal off his nut
-                  the little rotter bits and bobs say starkers blower why I
-                  william give us a bell.
+                  {data2.servicesdetailssection1_description3}
                 </p>
               </div>
             </div>
