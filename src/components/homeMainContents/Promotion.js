@@ -56,9 +56,9 @@ const Promotion = () => {
                   {data.homesection8_left_title2}
                 </h3>
                 <p>{data.homesection8_left_description}</p>
-                <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
+                {/* <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
                   read more
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
@@ -71,9 +71,9 @@ const Promotion = () => {
                   {data.homesection8_right_title2}
                 </h3>
                 <p>{data.homesection8_right_description}</p>
-                <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
+                {/* <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
                   read more
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -133,6 +133,11 @@ const Team = () => {
                     </Link>
 
                     <div className="color_bg"></div>
+                    <img
+                      src="assets/img/hero/home-2/hero-2-thumb.png"
+                      alt={item.homesection6_main_title + " image"}
+                      className="team_image_main"
+                    />
                   </div>
                 </div>
               </div>

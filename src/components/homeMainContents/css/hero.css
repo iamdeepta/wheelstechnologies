@@ -1,0 +1,9 @@
+.hero_title {
+  font-size: 39px !important;
+}
+
+@media screen and (max-width: 460px) {
+  .hero_title {
+    font-size: 30px !important;
+  }
+}

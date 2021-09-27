@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
+import Typewriter from "typewriter-effect";
+import "./css/hero.css";
 
 const Hero = () => {
   const [data, setData] = useState([]);
+  //const i = ["hello", "world", "main seo"];
+  const [data1, setData1] = useState([]);
 
   useEffect(() => {
     getData();
+    getData1();
   }, []);
 
   function getData() {
@@ -15,6 +20,21 @@ const Hero = () => {
       .then(function (response) {
         if (response) {
           setData(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "homesection1MainGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
 
           //console.log(response.data);
         }
@@ -61,13 +81,26 @@ const Hero = () => {
                 <span className="hero__pre-title">
                   {data.homesection1_category}
                 </span>
-                <h2 className="hero__title-2">{data.homesection1_title}</h2>
+                <h2 className="hero__title-2 hero_title">
+                  {data.homesection1_title}{" "}
+                  <Typewriter
+                    options={{
+                      strings: data1.map(
+                        (item, index) => item.homesection1_main_title
+                      ),
+                      autoStart: true,
+                      loop: true,
+                      delay: 60,
+                      deleteSpeed: 60,
+                    }}
+                  />
+                </h2>
                 <p>{data.homesection1_description}</p>
                 <a
                   href="about.html"
                   className="w-btn w-btn-blue w-btn-7 w-btn-6"
                 >
-                  Discover Platform{" "}
+                  Contact Us{" "}
                 </a>
 
                 {/* <div className="hero__client mt-60">
@@ -125,7 +158,7 @@ const Hero = () => {
                   />
                   <img
                     className="hero-2-thumb-sm-3"
-                    src={AppUrl.image_url + data.homesection1_image3}
+                    src={AppUrl.image_url + data.homesection1_image4}
                     alt="hero-2-thumb-sm-3"
                   />
                   <img

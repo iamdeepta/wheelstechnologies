@@ -4,9 +4,11 @@ import AppUrl from "../../classes/AppUrl";
 
 const Services = () => {
   const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
 
   useEffect(() => {
     getData();
+    getData1();
   }, []);
 
   function getData() {
@@ -24,9 +26,24 @@ const Services = () => {
       });
   }
 
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "homesection2HeaderGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
-      <section className="services__area grey-bg-3 pt-120 mt-200 pb-60 p-relative">
+      <section className="services__area grey-bg-3 pt-120 mt-70 pb-60 p-relative">
         <div className="services__shape-2">
           <img
             className="services-2-circle"
@@ -46,9 +63,11 @@ const Services = () => {
                 className="section__title-wrapper mb-70 wow fadeInUp"
                 data-wow-delay=".3s"
               >
-                <span className="section__pre-title purple">Service</span>
+                <span className="section__pre-title purple">
+                  {data1.homesection2_header_category}
+                </span>
                 <h2 className="section__title section__title-2">
-                  Our new features we build great.
+                  {data1.homesection2_header_title}
                 </h2>
               </div>
             </div>
@@ -61,7 +80,7 @@ const Services = () => {
                   href="services.html"
                   className="w-btn w-btn-blue w-btn-6 w-btn-3"
                 >
-                  view all features
+                  view all services
                 </a>
               </div>
             </div>
@@ -74,7 +93,7 @@ const Services = () => {
               >
                 <div
                   className={
-                    index === 1
+                    index === 0
                       ? "services__inner services__inner-2 hover__active active mb-30"
                       : "services__inner services__inner-2 hover__active mb-30"
                   }

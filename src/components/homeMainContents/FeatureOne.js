@@ -67,7 +67,7 @@ const FeatureOne = () => {
                   <p>{data.homesection3_description}</p>
                 </div>
                 <a href="/" className="w-btn w-btn-blue w-btn-3 w-btn-1">
-                  Get Started
+                  Contact Us
                 </a>
               </div>
             </div>

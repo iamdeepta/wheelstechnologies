@@ -41,6 +41,13 @@
   transition: 0.5s;
   margin-top: 20px;
   margin-bottom: 70px;
+  opacity: 0;
+}
+
+.card-wrapper:hover .team_image_main {
+  opacity: 1;
+  transition: 0.5s;
+  margin-top: -85px;
 }
 
 .card-wrapper:hover .team_read_more {
@@ -83,6 +90,16 @@
   margin-top: 90px;
 }
 
+.team_image_main {
+  position: absolute;
+  z-index: 1;
+  margin-top: -80px;
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+  opacity: 0;
+}
+
 .team_read_more {
   border-bottom: 1px solid #296599;
   margin-top: 30px;
@@ -98,7 +115,7 @@
 }
 
 .read_more_btn {
-  background-color: #296599;
+  background-color: #296599 !important;
   width: 150px;
   height: 42px;
   border-radius: 10px;
