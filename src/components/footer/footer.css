@@ -5,6 +5,10 @@
   margin-top: -9px;
 }
 
+.emails {
+  color: #2f80ed;
+}
+
 @media screen and (max-width: 600px) {
   .logo_img_footer {
     margin-left: 0px;

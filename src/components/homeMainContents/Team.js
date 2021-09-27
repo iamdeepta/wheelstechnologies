@@ -134,7 +134,7 @@ const Team = () => {
 
                     <div className="color_bg"></div>
                     <img
-                      src="assets/img/hero/home-2/hero-2-thumb.png"
+                      src={AppUrl.image_url + item.homesection6_main_image1}
                       alt={item.homesection6_main_title + " image"}
                       className="team_image_main"
                     />

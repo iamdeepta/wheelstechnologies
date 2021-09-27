@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
           <div className="container">
             <div className="row">
               <div
-                className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
+                className="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-sm-6 wow fadeInUp"
                 data-wow-delay=".3s"
               >
                 <div className="footer__widget mb-50">
@@ -37,11 +38,34 @@ const Footer = () => {
                     </div>
                   </div>
                   <div className="footer__widget-content">
-                    <p>Ever since we started using we’ve , and more.</p>
+                    <p>
+                      Our ambition is to always give our customer a good
+                      experience, fast speed and consumer friendly design
+                    </p>
+                  </div>
+                  <div className="footer__widget-content">
+                    <p>
+                      For any support: <br />
+                      <a
+                        href="mailto:support@designhubtechnologies.com"
+                        className="emails"
+                      >
+                        support@designhubtechnologies.com
+                      </a>
+                    </p>
+                    <p className="email2">
+                      For sales queries: <br />
+                      <a
+                        href="mailto:sales@designhubtechnologies.com"
+                        className="emails"
+                      >
+                        sales@designhubtechnologies.com
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
-              <div
+              {/* <div
                 className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-6 wow fadeInUp"
                 data-wow-delay=".5s"
               >
@@ -68,30 +92,30 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div
                 className="col-xxl-3 col-xl-2 col-lg-2 col-md-4 col-sm-6 wow fadeInUp"
                 data-wow-delay=".7s"
               >
                 <div className="footer__widget mb-50 footer__pl-90">
-                  <div className="footer__widget-title mb-25">
+                  {/* <div className="footer__widget-title mb-25">
                     <h3>Customer</h3>
-                  </div>
+                  </div> */}
                   <div className="footer__widget-content">
                     <div className="footer__link footer__link-2">
                       <ul>
                         <li>
-                          <a href="index.html">Home</a>
+                          <Link to="/">Home</Link>
                         </li>
                         <li>
-                          <a href="index.html">Product</a>
+                          <Link to="/about">About</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="index.html">Pricing</a>
                         </li>
                         <li>
                           <a href="index.html">Integrations</a>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -102,24 +126,24 @@ const Footer = () => {
                 data-wow-delay=".9s"
               >
                 <div className="footer__widget mb-50">
-                  <div className="footer__widget-title mb-25">
+                  {/* <div className="footer__widget-title mb-25">
                     <h3>Product</h3>
-                  </div>
+                  </div> */}
                   <div className="footer__widget-content">
                     <div className="footer__link footer__link-2">
                       <ul>
                         <li>
-                          <a href="index.html">Getting Started</a>
+                          <Link to="/services">Services</Link>
                         </li>
                         <li>
-                          <a href="index.html">Style Guide</a>
+                          <Link to="/blogs">Blogs</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="index.html">Licences</a>
                         </li>
                         <li>
                           <a href="index.html">Changelog</a>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -137,7 +161,11 @@ const Footer = () => {
                     <div className="footer__social footer__social-2">
                       <ul>
                         <li>
-                          <a href="index.html">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.facebook.com/Designhub-Technologies-105073211942134"
+                          >
                             <i className="fab fa-facebook-f"></i>
                           </a>
                         </li>
@@ -147,8 +175,42 @@ const Footer = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="index.html">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.pinterest.com/f390d6356eefefc56fa719efea0988/_saved/"
+                          >
                             <i className="fab fa-pinterest-p"></i>
+                          </a>
+                        </li>
+
+                        <li className="mt-2">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.linkedin.com/company/designhub-technologies/"
+                          >
+                            <i className="fab fa-linkedin"></i>
+                          </a>
+                        </li>
+
+                        <li className="mt-2">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.instagram.com/designhubtechnologies/"
+                          >
+                            <i className="fab fa-instagram"></i>
+                          </a>
+                        </li>
+
+                        <li className="mt-2">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://t.me/designhubtechnologies"
+                          >
+                            <i className="fab fa-telegram"></i>
                           </a>
                         </li>
                       </ul>
@@ -167,7 +229,7 @@ const Footer = () => {
                   <div className="footer__copyright-wrapper footer__copyright-wrapper-2 text-center">
                     <p>
                       Copyright © 2021 All Rights Reserved passion by{" "}
-                      <a href="index.html">ThemePure</a>
+                      <Link to="/">Designhub Technologies</Link>
                     </p>
                   </div>
                 </div>

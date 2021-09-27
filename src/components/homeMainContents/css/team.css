@@ -98,6 +98,7 @@
   height: 200px;
   border-radius: 20px;
   opacity: 0;
+  object-fit: cover;
 }
 
 .team_read_more {
