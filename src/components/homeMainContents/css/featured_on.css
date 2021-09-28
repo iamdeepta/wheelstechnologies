@@ -1,0 +1,124 @@
+.featured_on_floating_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.featured_on_floating_purple {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.featured_on_floating_purple {
+  background-color: #58547e;
+  position: absolute;
+  z-index: 9;
+  top: 790px;
+  /* bottom: 20px; */
+  left: 2.2%;
+  width: 95vw;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.featured_on_floating_white {
+  background-color: white;
+  position: absolute;
+  z-index: 9;
+  top: 810px;
+  /* bottom: 7px; */
+  left: 3%;
+  width: 93.5vw;
+  height: 52px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 0px rgb(0.2, 0.2, 0.2, 0.2);
+}
+
+.featured_on_text {
+  margin-top: 6px;
+  margin-right: 10px;
+  color: #58547e;
+}
+
+.featured_on_image {
+  width: 120px;
+  height: 30px;
+}
+
+/* .featured_on_floating_purple {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.featured_on_floating_white {
+  opacity: 0;
+  transform: translateY(100px);
+} */
+
+.active_featured_on_floating_purple {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s;
+}
+
+.inactive_featured_on_floating_purple {
+  top: 1000px;
+  opacity: 1;
+  transition: 1.2s;
+}
+
+.active_featured_on_floating_white {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1.2s;
+}
+
+.inactive_featured_on_floating_white {
+  top: 1013px;
+  opacity: 1;
+  transition: 1s;
+}
+
+@media screen and (max-width: 460px) {
+  .featured_on_floating_purple {
+    top: 840px;
+    /* opacity: 0;
+    transform: translateY(100px); */
+  }
+
+  .featured_on_floating_white {
+    top: 860px;
+    /* bottom: 5px !important; */
+    left: 3.2%;
+    width: 93vw;
+    height: 60px;
+    /* opacity: 0;
+    transform: translateY(100px); */
+  }
+
+  .active_featured_on_floating_purple {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s;
+  }
+
+  .inactive_featured_on_floating_purple {
+    top: 900px;
+    opacity: 1;
+    transition: 1.5s;
+  }
+
+  .active_featured_on_floating_white {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1.5s;
+  }
+
+  .inactive_featured_on_floating_white {
+    top: 910px;
+    opacity: 1;
+    transition: 1s;
+  }
+}

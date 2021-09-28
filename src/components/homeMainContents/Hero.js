@@ -103,34 +103,38 @@ const Hero = () => {
                   Contact Us{" "}
                 </a>
 
-                {/* <div className="hero__client mt-60">
+                <div className="hero__client mt-60">
                   <ul>
                     <li>
                       <img
-                        src="assets/img/client/home-2/client-2-1.png"
-                        alt=""
+                        src="images/covidsurokkha1.png"
+                        alt="covidsurokkha logo"
+                        className="covidsurokkha_logo"
                       />
                     </li>
                     <li>
                       <img
-                        src="assets/img/client/home-2/client-2-2.png"
-                        alt=""
+                        src="images/ronylogo.png"
+                        alt="ronyrezaul logo"
+                        className="ronyrezaul_logo"
                       />
                     </li>
                     <li>
                       <img
-                        src="assets/img/client/home-2/client-2-3.png"
-                        alt=""
+                        src="images/cryptogenies1.PNG"
+                        alt="cryptogenies logo"
+                        className="cryptogenies_logo"
                       />
                     </li>
                     <li>
                       <img
-                        src="assets/img/client/home-2/client-2-4.png"
-                        alt=""
+                        src="images/shoesbyenvy.PNG"
+                        alt="shoes by envy logo"
+                        className="shoesbyenvy_logo"
                       />
                     </li>
                   </ul>
-                </div> */}
+                </div>
               </div>
             </div>
             <div className="col-xxl-6 offset-xxl-1 col-xl-6">
