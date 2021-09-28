@@ -55,6 +55,7 @@ const Team = () => {
       slidesToShow: 1,
       slidesToScroll: 1,
       cssEase: "linear",
+      autoplay: true,
     };
   } else {
     settings = {
@@ -64,6 +65,7 @@ const Team = () => {
       slidesToShow: 3,
       slidesToScroll: 1,
       cssEase: "linear",
+      autoplay: true,
     };
   }
 

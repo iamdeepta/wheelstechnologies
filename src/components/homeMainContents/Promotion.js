@@ -26,7 +26,7 @@ const Promotion = () => {
 
   return (
     <>
-      <section className="promotion__area promotion__bg pt-125 pb-125 p-relative">
+      <section className="promotion__area promotion__bg pt-80 pb-80 p-relative">
         <div className="promotion__shape">
           <img
             className="promotion-dot"
@@ -55,7 +55,7 @@ const Promotion = () => {
                   {data.homesection8_left_title1} <br />{" "}
                   {data.homesection8_left_title2}
                 </h3>
-                <p>{data.homesection8_left_description}</p>
+                {/* <p>{data.homesection8_left_description}</p> */}
                 {/* <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
                   read more
                 </a> */}
@@ -70,7 +70,7 @@ const Promotion = () => {
                   {data.homesection8_right_title1} <br />{" "}
                   {data.homesection8_right_title2}
                 </h3>
-                <p>{data.homesection8_right_description}</p>
+                {/* <p>{data.homesection8_right_description}</p> */}
                 {/* <a href="about.html" className="w-btn w-btn-8 w-btn-1-white">
                   read more
                 </a> */}

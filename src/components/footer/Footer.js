@@ -5,8 +5,15 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="footer__area grey-bg-3 pt-120 p-relative fix">
-        <div className="footer__shape">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+        <path
+          fill="#f4f9fd"
+          fill-opacity="1"
+          d="M0,256L60,218.7C120,181,240,107,360,96C480,85,600,139,720,176C840,213,960,235,1080,208C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+      <footer className="footer__area grey-bg-3 pt-1 p-relative fix">
+        {/* <div className="footer__shape">
           <img
             className="footer-circle-1 footer-2-circle-1"
             src="assets/img/icon/footer/home-1/circle-1.png"
@@ -17,7 +24,7 @@ const Footer = () => {
             src="assets/img/icon/footer/home-1/circle-2.png"
             alt=""
           />
-        </div>
+        </div> */}
         <div className="footer__top pb-65">
           <div className="container">
             <div className="row">
