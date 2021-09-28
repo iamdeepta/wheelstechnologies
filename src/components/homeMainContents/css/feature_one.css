@@ -1,0 +1,21 @@
+.feature_one_image1 {
+  width: 600px;
+  height: auto;
+  animation: floating_image1 4s linear infinite;
+  /* box-shadow: 0px 0px 10px 0px;
+  border-radius: 10px; */
+}
+
+@keyframes floating_image1 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

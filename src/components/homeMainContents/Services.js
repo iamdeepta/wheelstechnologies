@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
 import "./css/featured_on.css";
+import "./css/services.css";
 
 const Services = () => {
   const [data, setData] = useState([]);
@@ -128,6 +129,15 @@ const Services = () => {
                       </h3>
                       <p>{item.homesection2_description}</p>
                     </div>
+
+                    <a href=".">
+                      <span className="services_read_more_btn">
+                        <span className="read_more_btn_text">Read More</span>
+                        <span className="services_read_more_arrow">
+                          <i className="far fa-arrow-right"></i>
+                        </span>
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>

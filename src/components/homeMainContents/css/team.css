@@ -88,6 +88,9 @@
 
 .team_image {
   margin-top: 90px;
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .team_image_main {
@@ -175,6 +178,12 @@
     transition: 0.5s;
     margin-top: 20px;
     margin-bottom: 70px;
+    opacity: 0;
+  }
+
+  .slick-active .team_image_main {
+    opacity: 1;
+    transition: 1s;
   }
 
   .slick-active .color_bg {

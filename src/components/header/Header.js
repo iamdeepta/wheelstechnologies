@@ -26,6 +26,16 @@ const Header = () => {
           id="header-sticky"
           className="header__area header__border header__padding"
         >
+          <div className="header_top">
+            <div className="container header_top_inside">
+              <i className="fas fa-envelope"></i>
+              <span className="email1_text">
+                <a href="mailto:support@designhubtechnologies.com">
+                  Email: support@designhubtechnologies.com
+                </a>
+              </span>
+            </div>
+          </div>
           <div className="container">
             <div className="row align-items-center">
               <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">

@@ -141,7 +141,7 @@ const Hero = () => {
               <div className="hero__thumb-2 mt-80">
                 <div className="hero__thumb-inner p-relative ml-90">
                   <img
-                    className="hero-2-thumb"
+                    className="hero-2-thumb hero_image1"
                     src={AppUrl.image_url + data.homesection1_image1}
                     alt="hero-2-thumb"
                   />
@@ -151,17 +151,17 @@ const Hero = () => {
                     alt=""
                   /> */}
                   <img
-                    className="hero-2-thumb-sm"
+                    className="hero-2-thumb-sm hero_image2"
                     src={AppUrl.image_url + data.homesection1_image2}
                     alt="hero-2-thumb-sm"
                   />
                   <img
-                    className="hero-2-thumb-sm-2"
+                    className="hero-2-thumb-sm-2 hero_image3"
                     src={AppUrl.image_url + data.homesection1_image3}
                     alt="hero-2-thumb-sm-2"
                   />
                   <img
-                    className="hero-2-thumb-sm-3"
+                    className="hero-2-thumb-sm-3 hero_image4"
                     src={AppUrl.image_url + data.homesection1_image4}
                     alt="hero-2-thumb-sm-3"
                   />

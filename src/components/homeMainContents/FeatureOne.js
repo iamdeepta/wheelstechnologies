@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
+import "./css/feature_one.css";
 
 const FeatureOne = () => {
   const [data, setData] = useState([]);
@@ -49,6 +50,7 @@ const FeatureOne = () => {
                 <img
                   src={AppUrl.image_url + data.homesection3_image}
                   alt="features images"
+                  className="feature_one_image1"
                 />
               </div>
             </div>

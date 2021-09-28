@@ -26,6 +26,30 @@
   margin-right: 12px !important;
 }
 
+.hero_image1 {
+  width: 630px;
+  height: auto;
+  border-radius: 10px !important;
+}
+
+.hero_image2 {
+  width: 150px;
+  height: auto;
+  border-radius: 10px !important;
+}
+
+.hero_image3 {
+  width: 140px;
+  height: auto;
+  border-radius: 10px !important;
+}
+
+.hero_image4 {
+  width: 150px;
+  height: auto;
+  border-radius: 10px !important;
+}
+
 @media screen and (max-width: 460px) {
   .hero_title {
     font-size: 30px !important;

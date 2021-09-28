@@ -170,7 +170,11 @@ const Footer = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="index.html">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://twitter.com/designhubtech"
+                          >
                             <i className="fab fa-twitter"></i>
                           </a>
                         </li>
@@ -211,6 +215,16 @@ const Footer = () => {
                             href="https://t.me/designhubtechnologies"
                           >
                             <i className="fab fa-telegram"></i>
+                          </a>
+                        </li>
+
+                        <li className="mt-2">
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.youtube.com/channel/UC8u8awSKqhFjrmL48V2xCAA"
+                          >
+                            <i className="fab fa-youtube"></i>
                           </a>
                         </li>
                       </ul>

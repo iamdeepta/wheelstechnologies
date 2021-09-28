@@ -5,9 +5,46 @@
   margin-top: -9px;
 }
 
+.header_top {
+  background-color: rgb(113, 113, 235);
+  padding: 0px 0px;
+}
+
+/* .header_top_inside {
+  display: flex;
+
+  flex-direction: row;
+  padding: 5px 0px;
+} */
+
+.email1_text {
+  color: white;
+  margin-left: 5px;
+}
+
+.fa-envelope {
+  color: white;
+  margin-left: -50px !important;
+}
+
+/* .header_top_inside {
+  margin-left: 0px !important;
+} */
+
 @media screen and (max-width: 600px) {
   .logo_img {
     margin-left: 0px;
     margin-top: 0px;
+  }
+
+  .fa-envelope {
+    margin-left: 0px !important;
+  }
+  .header_top {
+    margin-bottom: 5px;
+  }
+
+  .header__padding {
+    padding: 0px 0px !important;
   }
 }
