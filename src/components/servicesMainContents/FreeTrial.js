@@ -53,8 +53,11 @@ const FreeTrial = () => {
                   data-wow-delay=".5s"
                 >
                   <form action="#">
-                    <input type="email" placeholder="Enter Your Email" />
-                    <button type="submit">Start Free Trial</button>
+                    <input
+                      type="email"
+                      placeholder="Enter Your Website's URL"
+                    />
+                    <button type="submit">Check Now</button>
                   </form>
                 </div>
                 <div

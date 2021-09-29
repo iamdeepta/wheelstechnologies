@@ -10,33 +10,33 @@
   flex-wrap: wrap;
 }
 
-.card:hover {
+.blogs_card:hover {
   background-color: white !important;
   box-shadow: 0px 0px 10px 0px gray !important;
   transition: 0.5s !important;
   margin-top: -50px;
 }
 
-.card:hover #blog_tag_div {
+.blogs_card:hover #blog_tag_div {
   background-color: #bed5eb !important;
   transition: 0.5s !important;
 }
 
-.card:hover #blog_tag_text {
+.blogs_card:hover #blog_tag_text {
   color: rgb(26, 18, 150) !important;
   transition: 0.5s !important;
   font-weight: bold !important;
 }
 
-.card:not(:hover) {
+.blogs_card:not(:hover) {
   transition: 0.5s !important;
 }
 
-.card:not(:hover) #blog_tag_div {
+.blogs_card:not(:hover) #blog_tag_div {
   transition: 0.5s !important;
 }
 
-.card:not(:hover) #blog_tag_text {
+.blogs_card:not(:hover) #blog_tag_text {
   transition: 0.5s !important;
 }
 
