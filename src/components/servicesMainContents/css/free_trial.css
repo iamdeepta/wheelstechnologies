@@ -1,0 +1,43 @@
+.seo_main_div {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.seo_url_text {
+  color: white;
+  font-size: 28px;
+}
+
+.seo_start_loading {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+  border-radius: 80%;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  /* border-left: 3px solid white;
+  border-right: 3px solid white; */
+  margin-top: -0px;
+  animation: seo_loading_rotate 1s linear infinite;
+  display: none;
+}
+
+@keyframes seo_loading_rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.seo_input_error {
+  color: rgb(240, 154, 128);
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 460px) {
+  .seo_url_text {
+    font-size: 17px;
+  }
+}

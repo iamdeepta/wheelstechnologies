@@ -1,7 +1,7 @@
 .testimonial_main_div {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 180px 0px;
   align-items: center;
   margin-bottom: 0px;
