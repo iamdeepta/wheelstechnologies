@@ -63,7 +63,6 @@
 .testimonial_card {
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 0px 0px 0px rgb(0.2, 0.2, 0.2, 0.2);
   padding-top: 70px;
   padding-bottom: 50px;
   text-align: center;
@@ -95,6 +94,12 @@
 
 .testimonial_designation {
   margin-top: -10px;
+}
+
+.slider_main .slick-list .slick-track .slick-active div .testimonial_card {
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgb(0.2, 0.2, 0.2, 0.2);
+  /* margin-right: 70px; */
 }
 
 .slider_main .slick-prev:before {

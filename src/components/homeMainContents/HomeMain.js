@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Hero from "./Hero.js";
+import FeaturedOn from "./FeaturedOn";
 import Services from "./Services.js";
 import FeatureOne from "./FeatureOne.js";
 import FeatureTwo from "./FeatureTwo.js";
@@ -21,6 +22,7 @@ const HomeMain = () => {
       <main>
         <Hero />
         <div ref={elemRef}>
+          <FeaturedOn />
           <Services />
         </div>
 
