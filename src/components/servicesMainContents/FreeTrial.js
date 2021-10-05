@@ -9,36 +9,66 @@ const FreeTrial = () => {
   const [input, setInput] = useState("");
   const [seo_input_error, setSeoInputError] = useState(false);
 
+  const [seo_total_score, setSeoTotalScore] = useState("");
+
   const seo_start_loading = useRef(null);
 
   useEffect(() => {
     getData();
   }, []);
 
-  // useEffect(() => {
-  //   getSeoData();
-  // }, []);
+  useEffect(() => {
+    getSeoDataTest();
+  });
 
-  // function getSeoData() {
-  //   fetch(
-  //     "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         "x-rapidapi-host": "seo-analysis.p.rapidapi.com",
-  //         "x-rapidapi-key":
-  //           "f810671fb5msh3c219e1dc3a3725p1965c7jsn84d272eb4e57",
-  //       },
-  //     }
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data.data);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
-  // }
+  function getSeoDataTest() {
+    fetch(
+      // "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
+      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://restabook.kwst.net/light/index4.html",
+      {
+        method: "GET",
+        // headers: {
+        //   "x-rapidapi-host": "seo-analysis.p.rapidapi.com",
+        //   "x-rapidapi-key":
+        //     "f810671fb5msh3c219e1dc3a3725p1965c7jsn84d272eb4e57",
+        // },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
+  function getSeoData() {
+    fetch(
+      // "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
+      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + input,
+      {
+        method: "GET",
+        // headers: {
+        //   "x-rapidapi-host": "seo-analysis.p.rapidapi.com",
+        //   "x-rapidapi-key":
+        //     "f810671fb5msh3c219e1dc3a3725p1965c7jsn84d272eb4e57",
+        // },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log(
+        //   data.lighthouseResult["categories"].performance.score * 100
+        // );
+        setSeoTotalScore(
+          data.lighthouseResult["categories"].performance.score * 100
+        );
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
   function getData() {
     axios
@@ -59,6 +89,8 @@ const FreeTrial = () => {
     if (input === "") {
       setSeoInputError(true);
     } else {
+      getSeoData();
+
       seo_start_loading.current.style.display = "block";
       setSeoInputError(false);
     }
@@ -130,12 +162,43 @@ const FreeTrial = () => {
                   <>
                     <div className="seo_main_div">
                       <h4 className="seo_url_text">URL: {input}</h4>
-                      <div
-                        className="seo_start_loading"
-                        ref={seo_start_loading}
-                      ></div>
+                      {seo_total_score === "" ? (
+                        <>
+                          <div
+                            className="seo_start_loading"
+                            ref={seo_start_loading}
+                          ></div>
+                        </>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </>
+                ) : (
+                  ""
+                )}
+                {seo_total_score !== "" ? (
+                  seo_total_score !== null ? (
+                    <>
+                      <div
+                        className={
+                          seo_total_score < 90
+                            ? seo_total_score < 50
+                              ? "seo_total_score_circle_red"
+                              : "seo_total_score_circle_orange"
+                            : "seo_total_score_circle_green"
+                        }
+                      >
+                        <div className="seo_total_score_circle_green_text">
+                          {seo_total_score + "%"}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="no_seo_score_found">
+                      No SEO Score Idetified, Sorry!
+                    </div>
+                  )
                 ) : (
                   ""
                 )}

@@ -36,6 +36,55 @@
   font-weight: bold;
 }
 
+.seo_total_score_circle_green {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(169, 228, 169);
+  border-radius: 50%;
+  border: 6px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: green;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+.seo_total_score_circle_orange {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(224, 212, 176);
+  border-radius: 50%;
+  border: 6px solid rgb(223, 194, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: rgb(223, 194, 32);
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+.seo_total_score_circle_red {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(238, 183, 167);
+  border-radius: 50%;
+  border: 6px solid rgb(167, 51, 30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: rgb(167, 51, 30);
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+.no_seo_score_found {
+  color: rgb(240, 154, 128);
+}
+
 @media screen and (max-width: 460px) {
   .seo_url_text {
     font-size: 17px;
