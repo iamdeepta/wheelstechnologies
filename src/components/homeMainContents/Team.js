@@ -126,7 +126,7 @@ const Team = () => {
                       {item.homesection6_main_description}
                     </p>
 
-                    <Link to="#" className="team_read_more">
+                    <Link to="./work-details" className="team_read_more">
                       READ MORE
                     </Link>
 

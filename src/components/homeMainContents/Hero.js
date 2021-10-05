@@ -172,7 +172,7 @@ const Hero = () => {
                   />
                   <img
                     className="hero-2-circle-2"
-                    src="assets/img/hero/home-2/hero-2-circle-2.png"
+                    src="assets/img/hero/home-2/hero-purple-circle.png"
                     alt="hero-2-circle-2"
                   />
                   <img

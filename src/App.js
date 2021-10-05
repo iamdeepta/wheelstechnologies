@@ -4,6 +4,7 @@ import About from "./pages/about/About";
 import Services from "./pages/services/Services";
 import ServicesDetails from "./pages/services/ServicesDetails";
 import Blog from "./pages/blog/Blog";
+import WorkDetails from "./pages/workDetails/WorkDetails";
 import Error404 from "./pages/error404/Error404";
 import { Route, Switch } from "react-router-dom";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -28,6 +29,7 @@ const App = () => {
         <Route exact path="/services" render={Services} />
         <Route exact path="/services-details" render={ServicesDetails} />
         <Route exact path="/blog" render={Blog} />
+        <Route exact path="/work-details" render={WorkDetails} />
         <Route render={Error404} />
       </Switch>
     </>

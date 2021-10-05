@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
 //import "./css/featured_on.css";
+import { Link } from "react-router-dom";
 import "./css/services.css";
 
 const Services = () => {
@@ -105,6 +106,7 @@ const Services = () => {
                       <img
                         src={AppUrl.image_url + item.homesection2_image}
                         alt={item.homsection2_title + " image"}
+                        className="services_icon"
                       />
                     </div>
                     <div className="services__content-2">
@@ -116,14 +118,14 @@ const Services = () => {
                       <p>{item.homesection2_description}</p>
                     </div>
 
-                    <a href=".">
+                    <Link to="/services-details">
                       <span className="services_read_more_btn">
                         <span className="read_more_btn_text">Read More</span>
-                        <span className="services_read_more_arrow">
-                          <i className="far fa-arrow-right"></i>
-                        </span>
+                        <div className="read_more_white_bg">
+                          <i className="far fa-arrow-right arrow_right"></i>
+                        </div>
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -50,6 +50,11 @@
   border-radius: 10px !important;
 }
 
+.hero-2-circle-2 {
+  height: 30px;
+  width: 30px;
+}
+
 @media screen and (max-width: 460px) {
   .hero_title {
     font-size: 30px !important;
