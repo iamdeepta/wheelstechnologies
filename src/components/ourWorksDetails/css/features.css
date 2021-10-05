@@ -39,10 +39,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #0099ff;
+
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
   transition: 0.5s;
   animation: work_details_features_circle 6s linear infinite;
+  background: rgb(128, 128, 187);
 }
 
 .work_details_features_square:hover span:nth-child(1) {
@@ -56,10 +57,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #0099ff;
+
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
   transition: 0.5s;
   animation: work_details_features_circle 4s linear infinite;
+  background: rgb(145, 145, 248);
 }
 
 .work_details_features_square:hover span:nth-child(2) {
@@ -73,10 +75,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #0099ff;
+  /* border: 2px solid #0099ff; */
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
   transition: 0.5s;
   animation: work_details_features_circle1 10s linear infinite;
+  background: white;
 }
 
 .work_details_features_square:hover span:nth-child(3) {
@@ -121,4 +124,60 @@
 
 .work_details_features_square:hover .work_details_features_content p {
   color: white;
+}
+
+@media screen and (max-width: 460px) {
+  .work_details_features_main_div {
+    text-align: center;
+    padding: 80px 12px;
+  }
+
+  .work_details_features_header::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 130px;
+    background-color: #0099ff;
+    margin-top: 50px;
+    margin-left: -250px;
+  }
+
+  .work_details_features_main_div h1 {
+    font-size: 28px;
+  }
+
+  .work_details_features_square_main_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .work_details_features_square {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .work_details_features_content {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  .work_details_features_content p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .work_details_features_content h2 {
+    font-size: 18px;
+  }
 }

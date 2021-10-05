@@ -3,9 +3,10 @@
   justify-content: space-evenly;
   flex-direction: row;
   padding: 80px 50px;
-  background-color: #f4f9fd;
+  background-color: #5f55ff;
   align-items: center;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 /* .work_details_details1_section::before {
@@ -34,7 +35,7 @@
   position: absolute;
   height: 8px;
   width: 0px;
-  background-color: #0099ff;
+  background-color: white;
   transition: 0.5s;
 }
 
@@ -48,7 +49,7 @@
   position: absolute;
   height: 8px;
   width: 0px;
-  background-color: #0099ff;
+  background-color: white;
   transition: 0.5s;
 }
 
@@ -62,7 +63,7 @@
   position: absolute;
   height: 8px;
   width: 0px;
-  background-color: #0099ff;
+  background-color: white;
   transition: 0.5s;
 }
 
@@ -75,34 +76,126 @@
   font-size: 36px;
   line-height: 39px;
   font-weight: bold;
-  color: #0099ff;
+  color: white;
 }
 
 .work_details_details1_project_by p:nth-child(2) {
   font-size: 28px;
   line-height: 39px;
+  color: rgb(223, 223, 223);
 }
 
 .work_details_details1_client p:nth-child(1) {
   font-size: 36px;
   line-height: 39px;
   font-weight: bold;
-  color: #0099ff;
+  color: white;
 }
 
 .work_details_details1_client p:nth-child(2) {
   font-size: 28px;
   line-height: 39px;
+  color: rgb(223, 223, 223);
 }
 
 .work_details_details1_website p:nth-child(1) {
   font-size: 36px;
   line-height: 39px;
   font-weight: bold;
-  color: #0099ff;
+  color: white;
 }
 
 .work_details_details1_website a {
   font-size: 28px;
   line-height: 39px;
+  color: rgb(223, 223, 223) !important;
+}
+
+@media screen and (max-width: 460px) {
+  .work_details_details1_section {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .work_details_details1_project_by::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80vw;
+    left: 40px;
+    background-color: lightgray;
+    transition: 0.5s;
+    margin-top: 3px;
+  }
+
+  .work_details_details1_project_by:hover::after {
+    width: 80vw;
+    transition: 0.5s;
+  }
+
+  .work_details_details1_client::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80vw;
+    left: 40px;
+    background-color: lightgray;
+    transition: 0.5s;
+    margin-top: 2px;
+  }
+
+  .work_details_details1_client:hover::after {
+    width: 80vw;
+    transition: 0.5s;
+  }
+
+  .work_details_details1_website::after {
+    display: none;
+  }
+
+  .work_details_details1_website:hover::after {
+    display: none;
+  }
+
+  .work_details_details1_project_by p:nth-child(1) {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .work_details_details1_project_by p:nth-child(2) {
+    font-size: 18px;
+    line-height: 36px;
+    color: rgb(223, 223, 223);
+  }
+
+  .work_details_details1_client p:nth-child(1) {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+    color: white;
+    margin-top: 25px;
+  }
+
+  .work_details_details1_client p:nth-child(2) {
+    font-size: 18px;
+    line-height: 36px;
+    color: rgb(223, 223, 223);
+  }
+
+  .work_details_details1_website p:nth-child(1) {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+    color: white;
+    margin-top: 25px;
+  }
+
+  .work_details_details1_website a {
+    font-size: 18px;
+    line-height: 36px;
+    color: rgb(223, 223, 223) !important;
+  }
 }

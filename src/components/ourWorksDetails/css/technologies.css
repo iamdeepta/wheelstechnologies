@@ -1,0 +1,97 @@
+.works_details_tech_slider {
+  margin-top: 30px;
+  margin-left: -50px;
+}
+
+.work_details_tech_header_text::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: -265px;
+}
+
+.works_details_tech_slider .slick-prev {
+  display: none !important;
+}
+
+.works_details_tech_slider .slick-next {
+  display: none !important;
+}
+
+.works_details_tech_icon {
+  color: rgb(201, 201, 201);
+  font-size: 32px;
+}
+
+.works_details_tech_text {
+  color: rgb(201, 201, 201) !important;
+  font-size: 32px;
+  margin-top: 5px;
+}
+
+.slick-current .works_details_tech_icon {
+  color: white;
+  font-size: 60px;
+  transition: 0.5s;
+}
+
+.slick-current .works_details_tech_text {
+  color: white !important;
+  font-size: 38px;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+.work_details_tech_section {
+  height: 500px;
+}
+
+/* .works_details_tech_slider
+  .slick-list
+  .slick-track
+  .slick-slide
+  .slick-active
+  div
+  .works_details_tech_content_div
+  .works_details_tech_content
+  .works_details_tech_icon {
+  color: red;
+  font-size: 60px;
+} */
+
+@media screen and (max-width: 460px) {
+  .works_details_tech_slider {
+    margin-top: -30px;
+    margin-left: 0px;
+  }
+
+  .work_details_tech_header_text::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: -172px;
+  }
+
+  .slick-current .works_details_tech_icon {
+    color: white;
+    font-size: 50px;
+    transition: 0.5s;
+  }
+
+  .slick-current .works_details_tech_text {
+    color: white !important;
+    font-size: 26px;
+    margin-top: 10px;
+    transition: 0.5s;
+  }
+
+  .work_details_tech_section {
+    height: 420px;
+  }
+}

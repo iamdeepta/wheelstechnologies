@@ -5,11 +5,17 @@ const Features = () => {
   return (
     <>
       <div className="work_details_features_main_div">
-        <h1 className="work_details_features_header">
+        <h1
+          className="work_details_features_header wow fadeInDown"
+          data-wow-delay=".3s"
+        >
           Features & Functionalities
         </h1>
         <div className="work_details_features_square_main_div">
-          <div className="work_details_features_square">
+          <div
+            className="work_details_features_square wow zoomIn"
+            data-wow-delay=".3s"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -23,7 +29,10 @@ const Features = () => {
               </p>
             </div>
           </div>
-          <div className="work_details_features_square">
+          <div
+            className="work_details_features_square wow zoomIn"
+            data-wow-delay=".6s"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -37,7 +46,10 @@ const Features = () => {
               </p>
             </div>
           </div>
-          <div className="work_details_features_square">
+          <div
+            className="work_details_features_square wow zoomIn"
+            data-wow-delay=".9s"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -51,7 +63,10 @@ const Features = () => {
               </p>
             </div>
           </div>
-          <div className="work_details_features_square">
+          <div
+            className="work_details_features_square wow zoomIn"
+            data-wow-delay="0.6s"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -65,7 +80,10 @@ const Features = () => {
               </p>
             </div>
           </div>
-          <div className="work_details_features_square">
+          <div
+            className="work_details_features_square wow fadeIn"
+            data-wow-delay="0.9s"
+          >
             <span></span>
             <span></span>
             <span></span>
