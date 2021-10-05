@@ -24,7 +24,7 @@ const FreeTrial = () => {
   function getSeoDataTest() {
     fetch(
       // "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
-      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://restabook.kwst.net/light/index4.html",
+      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=covidsurokkha.com",
       {
         method: "GET",
         // headers: {
@@ -86,7 +86,7 @@ const FreeTrial = () => {
   }
 
   function check_now() {
-    if (input === "") {
+    if (input === "" || input.substring(0, 4) !== "http") {
       setSeoInputError(true);
     } else {
       getSeoData();
@@ -121,7 +121,8 @@ const FreeTrial = () => {
                   {seo_input_error === true ? (
                     <>
                       <div className="seo_input_error">
-                        Please enter url first
+                        Please enter correct url (starts with http:// or
+                        https://)
                       </div>
                     </>
                   ) : (
