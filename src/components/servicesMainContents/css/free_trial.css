@@ -1,7 +1,40 @@
+/* :root {
+  --progress: 0%;
+}
+
+.progress-bar {
+  width: var(--progress) !important;
+} */
+.progress-bar {
+  width: 100%;
+}
+.progress_bar_inactive {
+  width: 0%;
+}
+.progress_bar_active {
+  /* animation: progress_increase 1s linear; */
+  /* width: 100%; */
+  transition: width linear;
+  transition-duration: 20s !important;
+}
+
+@keyframes progress_increase {
+  0% {
+    width: 0% !important;
+    transition: 0.5s;
+  }
+  100% {
+    width: 100% !important;
+    transition: 0.5s;
+  }
+}
+.progressbar_label {
+  color: black;
+}
 .seo_main_div {
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -85,6 +118,76 @@
   color: rgb(240, 154, 128);
 }
 
+.progress-bar {
+  background-color: rgb(135, 197, 42) !important;
+}
+
+.primary_reports {
+  margin-top: 50px;
+}
+
+.primary_reports1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first_contentful_paint_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 28%;
+}
+
+.fcp_text,
+.fcp_value {
+  font-size: 16px;
+  color: white;
+}
+
+.primary_reports1_table {
+  width: 40% !important;
+}
+
+.primary_reports1_table tr td {
+  color: white;
+  font-size: 16px;
+}
+.primary_reports1_table tr td {
+  text-align: start;
+}
+
+.summary_text {
+  color: white;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+  margin-left: 6px;
+}
+
+.opportunity_text {
+  color: white;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+  margin-left: 6px;
+  margin-top: 50px;
+}
+
+.accordion-button {
+  background-color: white !important;
+}
+
+.accordion {
+  margin-top: 5px;
+}
+
+.accordion-body p {
+  color: white;
+}
+
 @media screen and (max-width: 460px) {
   .seo_url_text {
     font-size: 17px;
@@ -133,5 +236,16 @@
     color: rgb(167, 51, 30);
     margin-left: 110px;
     margin-top: 30px;
+  }
+
+  .primary_reports1_table {
+    width: 100% !important;
+  }
+
+  .primary_reports1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }

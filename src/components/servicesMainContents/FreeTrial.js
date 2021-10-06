@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
 import "./css/free_trial.css";
+//import ReactDOM from "react-dom";
 
 const FreeTrial = () => {
   const [data, setData] = useState([]);
@@ -10,65 +11,167 @@ const FreeTrial = () => {
   const [seo_input_error, setSeoInputError] = useState(false);
 
   const [seo_total_score, setSeoTotalScore] = useState("");
+  const [fcp, setFcp] = useState("");
+  const [si, setSi] = useState("");
+  const [lcp, setLcp] = useState("");
+  const [tbt, setTbt] = useState("");
+  const [cls, setCls] = useState("");
+  const [tti, setTti] = useState("");
+  const [duplicate_js_title, setDuplicateJsTitle] = useState("");
+  const [duplicate_js_details, setDuplicateJsDetails] = useState("");
+  const [long_task, setLongTask] = useState("");
+  const [long_task_details, setLongTaskDetails] = useState("");
 
-  const seo_start_loading = useRef(null);
+  const [seo_progressbar, setSeoProgressBar] = useState(false);
+  const [seo_content, setSeoContent] = useState(false);
+
+  //const [progressbar_percentage, setProgressBarPercentage] = useState(0);
+
+  const [active_progressbar, setActiveProgressbar] = useState(false);
+
+  //const progress_bar_class = document.querySelector(".progress-bar");
+
+  //let progress_bar_id = document.getElementById("progress_bar_id");
+
+  //const progress_style = useRef(null);
+
+  //const seo_start_loading = useRef(null);
 
   useEffect(() => {
     getData();
   }, []);
 
+  // useEffect(() => {
+  //   progress_style.current.width = `${progressbar_percentage}%`;
+  //   setProgressBarPercentage(progressbar_percentage);
+  // }, [progressbar_percentage]);
+
   useEffect(() => {
-    getSeoDataTest();
-  });
+    //getSeoDataTest();
+  }, []);
 
   function getSeoDataTest() {
-    fetch(
-      // "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
-      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=covidsurokkha.com",
-      {
-        method: "GET",
-        // headers: {
-        //   "x-rapidapi-host": "seo-analysis.p.rapidapi.com",
-        //   "x-rapidapi-key":
-        //     "f810671fb5msh3c219e1dc3a3725p1965c7jsn84d272eb4e57",
-        // },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
+    //let progress = 0;
+    axios({
+      url: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://covidsurokkha.com",
+      onDownloadProgress(progressEvent) {
+        // progress = Math.round(
+        //   (progressEvent.loaded / progressEvent.total) * 100
+        // );
+        //setProgressBarPercentage(progress);
+      },
+    })
+      .then(function (response) {
+        if (response) {
+          console.log(
+            response.data.lighthouseResult["categories"].performance.score * 100
+          );
+          console.log(response.data);
+        }
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(function (error) {
+        console.log(error);
       });
   }
 
   function getSeoData() {
-    fetch(
-      // "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
-      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + input,
-      {
-        method: "GET",
-        // headers: {
-        //   "x-rapidapi-host": "seo-analysis.p.rapidapi.com",
-        //   "x-rapidapi-key":
-        //     "f810671fb5msh3c219e1dc3a3725p1965c7jsn84d272eb4e57",
-        // },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        // console.log(
-        //   data.lighthouseResult["categories"].performance.score * 100
-        // );
-        setSeoTotalScore(
-          data.lighthouseResult["categories"].performance.score * 100
-        );
+    //let progress = progressbar_percentage;
+    axios({
+      url:
+        "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" +
+        input,
+      onDownloadProgress(progressEvent) {
+        //progress = Math.round(progressEvent.loaded / (60 * 60));
+        //setProgressBarPercentage(progress);
+        //console.log(progress);
+        // documentStyles.setProperty("--progress", `${progress}%`);
+      },
+    })
+      .then(function (response) {
+        if (response) {
+          // console.log(
+          //   response.data.lighthouseResult["categories"].performance.score * 100
+          // );
+          setSeoTotalScore(
+            response.data.lighthouseResult["categories"].performance.score * 100
+          );
+          setFcp(
+            response.data.lighthouseResult["audits"]["first-contentful-paint"]
+              .displayValue
+          );
+
+          setSi(
+            response.data.lighthouseResult["audits"]["speed-index"].displayValue
+          );
+          setLcp(
+            response.data.lighthouseResult["audits"]["largest-contentful-paint"]
+              .displayValue
+          );
+          setTbt(
+            response.data.lighthouseResult["audits"]["total-blocking-time"]
+              .displayValue
+          );
+          setCls(
+            response.data.lighthouseResult["audits"]["cumulative-layout-shift"]
+              .displayValue
+          );
+          setTti(
+            response.data.lighthouseResult["audits"]["interactive"].displayValue
+          );
+          setDuplicateJsTitle(
+            response.data.lighthouseResult["audits"]["duplicated-javascript"]
+              .title
+          );
+          setDuplicateJsDetails(
+            response.data.lighthouseResult["audits"]["duplicated-javascript"]
+              .details.items
+          );
+          setLongTask(
+            response.data.lighthouseResult["audits"]["long-tasks"].title
+          );
+          setLongTaskDetails(
+            response.data.lighthouseResult["audits"]["long-tasks"].details.items
+          );
+          setSeoContent(true);
+          setSeoProgressBar(false);
+          //setProgressBarPercentage(0);
+          setActiveProgressbar(false);
+          // ReactDOM.findDOMNode(progress_bar_id).classList.add(
+          //   "progress_bar_inactive"
+          // );
+          // ReactDOM.findDOMNode(progress_bar_id).classList.remove(
+          //   "progress_bar_active"
+          // );
+        }
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(function (error) {
+        console.log(error);
       });
   }
+
+  //previously done without axios
+
+  // function getSeoData() {
+  //   fetch(
+  //     // "https://seo-analysis.p.rapidapi.com/seocheck_multiple3.1.php?api-call=1&external=1&keyword=covidsurokkha&url=https%3A%2F%2Fcovidsurokkha.com",
+  //     "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + input,
+  //     {
+  //       method: "GET"
+  //     }
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+
+  //       setSeoTotalScore(
+  //         data.lighthouseResult["categories"].performance.score * 100
+  //       );
+  //       setSeoContent(true);
+  //       setSeoProgressBar(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
+  // }
 
   function getData() {
     axios
@@ -86,12 +189,24 @@ const FreeTrial = () => {
   }
 
   function check_now() {
+    setSeoTotalScore("");
+    //progress_bar_class.classList.remove("progress_bar_inactive");
     if (input === "" || input.substring(0, 4) !== "http") {
       setSeoInputError(true);
     } else {
+      // ReactDOM.findDOMNode(progress_bar_id).classList.add(
+      //   "progress_bar_active"
+      // );
+      // ReactDOM.findDOMNode(progress_bar_id).classList.remove(
+      //   "progress_bar_inactive"
+      // );
+      setActiveProgressbar(true);
+      setSeoContent(false);
+      setSeoProgressBar(true);
+      setTimeout(() => {});
       getSeoData();
 
-      seo_start_loading.current.style.display = "block";
+      //seo_start_loading.current.style.display = "block";
       setSeoInputError(false);
     }
   }
@@ -163,46 +278,267 @@ const FreeTrial = () => {
                   <>
                     <div className="seo_main_div">
                       <h4 className="seo_url_text">URL: {input}</h4>
+
                       {seo_total_score === "" ? (
                         <>
-                          <div
+                          {/* <div
                             className="seo_start_loading"
                             ref={seo_start_loading}
-                          ></div>
+                          ></div> */}
+                          {seo_progressbar ? (
+                            <>
+                              <div class="progress">
+                                <div
+                                  id="progress_bar_id"
+                                  class={
+                                    active_progressbar
+                                      ? "progress-bar progress-bar-striped progress-bar-animated progress_bar_active"
+                                      : "progress-bar progress-bar-striped progress-bar-animated progress_bar_inactive"
+                                  }
+                                  role="progressbar"
+                                  aria-valuenow={100}
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                >
+                                  {/* <span className="progressbar_label">
+                                    {progressbar_percentage + "%"}
+                                  </span> */}
+                                </div>
+                              </div>
+                            </>
+                          ) : (
+                            <></>
+                          )}
                         </>
                       ) : (
-                        ""
+                        <>
+                          {seo_content ? (
+                            <>
+                              {seo_total_score !== null ? (
+                                <>
+                                  <div
+                                    className={
+                                      seo_total_score < 90
+                                        ? seo_total_score < 50
+                                          ? "seo_total_score_circle_red"
+                                          : "seo_total_score_circle_orange"
+                                        : "seo_total_score_circle_green"
+                                    }
+                                  >
+                                    <div className="seo_total_score_circle_green_text">
+                                      {seo_total_score + "%"}
+                                    </div>
+                                  </div>
+
+                                  <div className="primary_reports">
+                                    <h4 className="summary_text">Summary</h4>
+                                    <div className="primary_reports1">
+                                      <table className="table primary_reports1_table">
+                                        <tr>
+                                          <td>
+                                            <i className="fas fa-square"></i>
+                                            First Contentful Paint
+                                          </td>
+                                          <td>{fcp}</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <i className="fas fa-square"></i>
+                                            Speed Index
+                                          </td>
+                                          <td>{si}</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <i className="fas fa-square"></i>
+                                            Largest Contentful Paint
+                                          </td>
+                                          <td>{lcp}</td>
+                                        </tr>
+                                      </table>
+
+                                      <table className="table primary_reports1_table">
+                                        <tr>
+                                          <td>
+                                            <i className="fas fa-square"></i>
+                                            Time To Interactive
+                                          </td>
+                                          <td>{tti}</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <i className="fas fa-square"></i>
+                                            Total Blocking Time
+                                          </td>
+                                          <td>{tbt}</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <i className="fas fa-square"></i>
+                                            Cumulative Layout Shift
+                                          </td>
+                                          <td>{cls}</td>
+                                        </tr>
+                                      </table>
+                                      {/* <div className="first_contentful_paint_div">
+                                        <p className="fcp_text">
+                                          First Contentful Paint
+                                        </p>
+                                        <p className="fcp_value">{fcp}</p>
+                                      </div> */}
+                                    </div>
+
+                                    <h4 className="opportunity_text">
+                                      Opportunities
+                                    </h4>
+                                    <div
+                                      className="accordion"
+                                      id="accordionExample"
+                                    >
+                                      <div className="accordion-item">
+                                        <h2
+                                          className="accordion-header"
+                                          id="headingOne"
+                                        >
+                                          <button
+                                            className="accordion-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                          >
+                                            {duplicate_js_title}
+                                          </button>
+                                        </h2>
+                                        <div
+                                          id="collapseOne"
+                                          className="accordion-collapse collapse show"
+                                          aria-labelledby="headingOne"
+                                          data-bs-parent="#accordionExample"
+                                        >
+                                          <div className="accordion-body">
+                                            <p>{duplicate_js_details}</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="accordion-item">
+                                        <h2
+                                          className="accordion-header"
+                                          id="headingTwo"
+                                        >
+                                          <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo"
+                                          >
+                                            {long_task}
+                                          </button>
+                                        </h2>
+                                        <div
+                                          id="collapseTwo"
+                                          className="accordion-collapse collapse"
+                                          aria-labelledby="headingTwo"
+                                          data-bs-parent="#accordionExample"
+                                        >
+                                          <div className="accordion-body">
+                                            <p>{long_task_details}</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* <div className="accordion-item">
+                                        <h2
+                                          className="accordion-header"
+                                          id="headingThree"
+                                        >
+                                          <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree"
+                                          >
+                                            Accordion Item #3
+                                          </button>
+                                        </h2>
+                                        <div
+                                          id="collapseThree"
+                                          className="accordion-collapse collapse"
+                                          aria-labelledby="headingThree"
+                                          data-bs-parent="#accordionExample"
+                                        >
+                                          <div className="accordion-body">
+                                            <p>
+                                              It is shown by default, until the
+                                              collapse plugin adds the
+                                              appropriate classNamees that we
+                                              use to style each element. These
+                                              classNamees control the overall
+                                              appearance, as well as the showing
+                                              and hiding via CSS transitions.
+                                              You can modify any of this with
+                                              custom CSS or overriding our
+                                              default variables. It's also worth
+                                              noting that just about any HTML
+                                              can go within the though the
+                                              transition does limit overflow.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div> */}
+                                    </div>
+                                  </div>
+                                </>
+                              ) : (
+                                <div className="no_seo_score_found">
+                                  No SEO Score Idetified, Sorry!
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <></>
+                          )}
+                        </>
                       )}
                     </div>
                   </>
                 ) : (
                   ""
                 )}
-                {seo_total_score !== "" ? (
-                  seo_total_score !== null ? (
-                    <>
-                      <div
-                        className={
-                          seo_total_score < 90
-                            ? seo_total_score < 50
-                              ? "seo_total_score_circle_red"
-                              : "seo_total_score_circle_orange"
-                            : "seo_total_score_circle_green"
-                        }
-                      >
-                        <div className="seo_total_score_circle_green_text">
-                          {seo_total_score + "%"}
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="no_seo_score_found">
-                      No SEO Score Idetified, Sorry!
-                    </div>
-                  )
-                ) : (
-                  ""
-                )}
+
+                {/* <div class="progress">
+                  <div
+                    class={
+                      input !== ""
+                        ? "progress-bar progress-bar-striped progress-bar-animated progress_bar_active"
+                        : "progress-bar progress-bar-striped progress-bar-animated progress_bar_inactive"
+                    }
+                    role="progressbar"
+                    aria-valuenow={70}
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    
+                  </div>
+                </div> */}
+
+                {/* <div
+                  className={
+                    seo_total_score < 90
+                      ? seo_total_score < 50
+                        ? "seo_total_score_circle_green"
+                        : "seo_total_score_circle_green"
+                      : "seo_total_score_circle_green"
+                  }
+                >
+                  <div className="seo_total_score_circle_green_text">
+                    {seo_total_score + "%"}
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
