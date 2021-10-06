@@ -18,9 +18,9 @@ const FreeTrial = () => {
   const [cls, setCls] = useState("");
   const [tti, setTti] = useState("");
   const [duplicate_js_title, setDuplicateJsTitle] = useState("");
-  const [duplicate_js_details, setDuplicateJsDetails] = useState("");
+  //const [duplicate_js_details, setDuplicateJsDetails] = useState([]);
   const [long_task, setLongTask] = useState("");
-  const [long_task_details, setLongTaskDetails] = useState("");
+  //const [long_task_details, setLongTaskDetails] = useState([]);
 
   const [seo_progressbar, setSeoProgressBar] = useState(false);
   const [seo_content, setSeoContent] = useState(false);
@@ -46,33 +46,29 @@ const FreeTrial = () => {
   //   setProgressBarPercentage(progressbar_percentage);
   // }, [progressbar_percentage]);
 
-  useEffect(() => {
-    //getSeoDataTest();
-  }, []);
+  // useEffect(() => {
+  //   getSeoDataTest();
+  // }, []);
 
-  function getSeoDataTest() {
-    //let progress = 0;
-    axios({
-      url: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://covidsurokkha.com",
-      onDownloadProgress(progressEvent) {
-        // progress = Math.round(
-        //   (progressEvent.loaded / progressEvent.total) * 100
-        // );
-        //setProgressBarPercentage(progress);
-      },
-    })
-      .then(function (response) {
-        if (response) {
-          console.log(
-            response.data.lighthouseResult["categories"].performance.score * 100
-          );
-          console.log(response.data);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+  // function getSeoDataTest() {
+  //   axios({
+  //     url: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://covidsurokkha.com",
+  //     onDownloadProgress(progressEvent) {
+
+  //     },
+  //   })
+  //     .then(function (response) {
+  //       if (response) {
+  //         console.log(
+  //           response.data.lighthouseResult["categories"].performance.score * 100
+  //         );
+  //         console.log(response.data);
+  //       }
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // }
 
   function getSeoData() {
     //let progress = progressbar_percentage;
@@ -122,16 +118,16 @@ const FreeTrial = () => {
             response.data.lighthouseResult["audits"]["duplicated-javascript"]
               .title
           );
-          setDuplicateJsDetails(
-            response.data.lighthouseResult["audits"]["duplicated-javascript"]
-              .details.items
-          );
+          // setDuplicateJsDetails(
+          //   response.data.lighthouseResult["audits"]["duplicated-javascript"]
+          //     .details.items
+          // );
           setLongTask(
             response.data.lighthouseResult["audits"]["long-tasks"].title
           );
-          setLongTaskDetails(
-            response.data.lighthouseResult["audits"]["long-tasks"].details.items
-          );
+          // setLongTaskDetails(
+          //   response.data.lighthouseResult["audits"]["long-tasks"].details.items
+          // );
           setSeoContent(true);
           setSeoProgressBar(false);
           //setProgressBarPercentage(0);
@@ -418,7 +414,7 @@ const FreeTrial = () => {
                                           data-bs-parent="#accordionExample"
                                         >
                                           <div className="accordion-body">
-                                            <p>{duplicate_js_details}</p>
+                                            <p>Not applicable</p>
                                           </div>
                                         </div>
                                       </div>
@@ -445,7 +441,7 @@ const FreeTrial = () => {
                                           data-bs-parent="#accordionExample"
                                         >
                                           <div className="accordion-body">
-                                            <p>{long_task_details}</p>
+                                            <p>Not applicable</p>
                                           </div>
                                         </div>
                                       </div>

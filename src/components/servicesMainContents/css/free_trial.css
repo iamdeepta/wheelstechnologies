@@ -162,7 +162,7 @@
 .summary_text {
   color: white;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-bottom: 20px;
   margin-left: 6px;
 }
@@ -170,7 +170,7 @@
 .opportunity_text {
   color: white;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-bottom: 20px;
   margin-left: 6px;
   margin-top: 50px;
