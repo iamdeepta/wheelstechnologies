@@ -90,20 +90,20 @@ const Header = () => {
                           </li>
                         </ul>
                       </li>
-                      <li className="has-dropdown">
-                        <Link to="/blog">Blog</Link>
+                      <li className="">
+                        <Link to="/blog">Blogs</Link>
 
-                        <ul className="submenu">
+                        {/* <ul className="submenu">
                           <li>
                             <Link to="/blog">Blog</Link>
                           </li>
-                          {/* <li>
+                          <li>
                             <a href="blog-standard.html">Blog Standard</a>
-                          </li> */}
+                          </li>
                           <li>
                             <Link to="/blog-details">Blog Details</Link>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
                       {/* <li className="has-dropdown">
                         <a href="about.html">Pages</a>

@@ -60,9 +60,9 @@ input[name="blogs_searchbar"]:focus {
 
 .blogs_card {
   width: 22vw;
-  border-radius: 15px;
-  border: 0px transparent;
-  background-color: #e8f3ff;
+  border-radius: 15px !important;
+  border: 0px transparent !important;
+  background-color: #e8f3ff !important;
   cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ input[name="blogs_searchbar"]:focus {
   width: auto;
   height: 200px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 15px !important;
 }
 
 #blogs_date_div {

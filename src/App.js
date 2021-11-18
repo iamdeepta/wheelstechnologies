@@ -1,9 +1,11 @@
 import React from "react";
+import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
 import ServicesDetails from "./pages/services/ServicesDetails";
 import Blog from "./pages/blog/Blog";
+import BlogDetailsMain from "./pages/blog/BlogDetailsMain";
 import WorkDetails from "./pages/workDetails/WorkDetails";
 import Error404 from "./pages/error404/Error404";
 import { Route, Switch } from "react-router-dom";
@@ -20,18 +22,22 @@ import "./css/backToTop.css";
 import "./css/default.css";
 import "./css/style.css";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import BackToTop from "./components/backToTop/BackToTop";
 
 const App = () => {
   return (
     <>
+      <BackToTop />
+      <Header />
       <Switch>
-        <Route exact path="/" render={Home} />
-        <Route exact path="/about" render={About} />
-        <Route exact path="/services" render={Services} />
-        <Route exact path="/services-details" render={ServicesDetails} />
-        <Route exact path="/blog" render={Blog} />
-        <Route exact path="/work-details" render={WorkDetails} />
-        <Route render={Error404} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/services" component={Services} />
+        <Route exact path="/services-details" component={ServicesDetails} />
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/blog/:id" component={BlogDetailsMain} />
+        <Route exact path="/work-details" component={WorkDetails} />
+        <Route component={Error404} />
       </Switch>
       <MessengerCustomerChat pageId="105073211942134" appId="419551562969696" />
     </>
