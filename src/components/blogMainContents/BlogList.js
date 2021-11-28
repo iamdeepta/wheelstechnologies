@@ -13,7 +13,7 @@ const BlogList = () => {
 
   function getData() {
     axios
-      .get(AppUrl.base_url + "blogsectionGet3")
+      .get(AppUrl.base_url + "blogsectionGet")
       .then(function (response) {
         if (response) {
           setData(response.data);
