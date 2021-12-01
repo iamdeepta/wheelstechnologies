@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
+import "./css/features.css";
 
 const Features = () => {
   const [data, setData] = useState([]);
@@ -74,15 +75,65 @@ const Features = () => {
                     data-wow-delay={"." + (index + 1) * 1.5 + "s"}
                   >
                     <div className="features__icon mb-35">
-                      <span className="gradient-pink">
-                        {/* <i className="far fa-heart-rate"></i> */}
-                        <img
+                      {index === 0 && (
+                        <>
+                          <span className="gradient-pink">
+                            <i className="far fa-heart-rate"></i>
+                            {/* <img
+                          className="service_icon"
                           src={
                             AppUrl.image_url + item.servicesection1_main_image
                           }
                           alt={item.servicesection1_main_title + " image"}
-                        />
-                      </span>
+                        /> */}
+                          </span>
+                        </>
+                      )}
+
+                      {index === 1 && (
+                        <>
+                          <span className="gradient-blue">
+                            <i className="fal fa-chart-pie-alt"></i>
+                            {/* <img
+                          className="service_icon"
+                          src={
+                            AppUrl.image_url + item.servicesection1_main_image
+                          }
+                          alt={item.servicesection1_main_title + " image"}
+                        /> */}
+                          </span>
+                        </>
+                      )}
+
+                      {index === 2 && (
+                        <>
+                          <span className="gradient-yellow">
+                            <i className="fal fa-tag"></i>
+                            {/* <img
+                          className="service_icon"
+                          src={
+                            AppUrl.image_url + item.servicesection1_main_image
+                          }
+                          alt={item.servicesection1_main_title + " image"}
+                        /> */}
+                          </span>
+                        </>
+                      )}
+
+                      {index === 3 && (
+                        <>
+                          <span className="gradient-purple">
+                            <i className="fal fa-layer-group"></i>
+                            {/* <img
+                          className="service_icon"
+                          src={
+                            AppUrl.image_url + item.servicesection1_main_image
+                          }
+                          alt={item.servicesection1_main_title + " image"}
+                        /> */}
+                          </span>
+                        </>
+                      )}
                     </div>
                     <h3 className="features__title">
                       {item.servicesection1_main_title}

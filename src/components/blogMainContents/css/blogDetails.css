@@ -138,6 +138,9 @@ button[name="blogs_next"]:focus {
   text-align: left;
   padding: 25px 120px;
   margin-top: 0px;
+}
+
+#blog_detail_first_paragraph p {
   white-space: pre-line;
 }
 
@@ -358,5 +361,9 @@ button[name="blogs_next"]:focus {
   .next_prev_image {
     width: 150px !important;
     height: auto !important;
+  }
+
+  #our_blogs_text {
+    font-size: 25px !important;
   }
 }

@@ -4,7 +4,7 @@ import React from "react";
 //import Header from "../../components/header/Header.js";
 import Sidebar from "../../components/sidebar/Sidebar.js";
 import Error404Main from "../../components/error404MainContents/Error404Main.js";
-import Footer from "../../components/footer/Footer.js";
+//import Footer from "../../components/footer/Footer.js";
 
 const Error404 = () => {
   return (
@@ -15,7 +15,7 @@ const Error404 = () => {
       {/* {window.innerWidth <= 460 ? <Sidebar /> : ""} */}
       <Sidebar />
       <Error404Main />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

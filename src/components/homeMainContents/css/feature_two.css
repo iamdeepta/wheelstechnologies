@@ -1,0 +1,681 @@
+.homesection4_icon_image {
+  height: 70px;
+  width: 70px;
+  margin-top: -5px;
+}
+
+.secured_svg {
+  margin-top: -30px;
+}
+
+#secured_shield {
+  animation: secured_shield 0.9s ease-in-out alternate infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes secured_shield {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(-5deg);
+  }
+}
+
+#secured_shield_lock {
+  animation: secured_shield_lock 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_shield_lock {
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+#secured_man1_head {
+  animation: secured_man1_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_head {
+  100% {
+    transform: rotateZ(-15deg);
+  }
+}
+
+#secured_man1_body,
+#secured_man1_neck {
+  animation: secured_man1_body 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_body {
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+#secured_man1_left_hand {
+  animation: secured_man1_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_hand {
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+#secured_man1_left_sleeve {
+  animation: secured_man1_left_sleeve 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_left_sleeve {
+  100% {
+    transform: rotateZ(-8deg);
+  }
+}
+
+#secured_man1_right_sleeve,
+#secured_man1_right_hand {
+  animation: secured_man1_right_sleeve 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_right_sleeve {
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+#secured_man1_left_whole_leg {
+  animation: secured_man1_left_whole_leg 0.8s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_left_whole_leg {
+  100% {
+    transform: rotateZ(6deg) translateX(-10px);
+  }
+}
+
+/* #secured_man1_left_foot {
+  animation: secured_man1_left_foot 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_left_foot {
+  100% {
+    transform: rotateZ(-10deg);
+  }
+} */
+
+#secured_girl_head {
+  animation: secured_girl_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_girl_head {
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+#secured_girl_body,
+#secured_girl_neck {
+  animation: secured_girl_body 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_girl_body {
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+#secured_girl_right_whole_hand {
+  animation: secured_girl_right_whole_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes secured_girl_right_whole_hand {
+  100% {
+    transform: rotateZ(-12deg) translateX(5px);
+  }
+}
+
+#secured_girl_right_whole_leg {
+  animation: secured_girl_right_whole_leg 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes secured_girl_right_whole_leg {
+  100% {
+    transform: rotateZ(-7deg) translateY(4px);
+  }
+}
+
+#secured_girl_left_whole_leg {
+  animation: secured_girl_left_whole_leg 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes secured_girl_left_whole_leg {
+  100% {
+    transform: rotateZ(-7deg) translateY(-3px);
+  }
+}
+
+#secured_man2_head {
+  animation: secured_man2_head 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man2_head {
+  100% {
+    transform: rotateZ(-10deg) translateY(3px);
+  }
+}
+
+#secured_man2_body,
+#secured_man2_neck {
+  animation: secured_man2_body 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man2_body {
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+#secured_man2_left_whole_hand {
+  animation: secured_man2_left_whole_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man2_left_whole_hand {
+  100% {
+    transform: rotateZ(22deg) translateY(12px);
+  }
+}
+
+#secured_man2_left_whole_leg,
+#secured_man2_right_whole_leg,
+#secured_man2_laptop {
+  animation: secured_man2_left_whole_leg 0.7s linear alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man2_left_whole_leg {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+#secured_leaf1,
+#secured_leaf2,
+#secured_leaf3,
+#secured_leaf4,
+#secured_leaf5,
+#secured_leaf6,
+#secured_leaf10,
+#secured_leaf11,
+#secured_leaf12 {
+  animation: secured_leaf1 0.7s linear alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_leaf1 {
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
+
+#secured_leaf7,
+#secured_leaf8,
+#secured_leaf9,
+#secured_leaf13,
+#secured_leaf14,
+#secured_leaf15 {
+  animation: secured_leaf4 0.7s linear alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes secured_leaf4 {
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+#secured_man1_whole_line,
+#secured_pc1_whole_line,
+#secured_pc2_whole_line,
+#secured_pc3_whole_line {
+  animation: secured_man1_whole_line 0.8s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes secured_man1_whole_line {
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+
+.speed_svg {
+  margin-top: -30px;
+}
+
+#speed_rocket {
+  animation: speed_rocket 1.5s ease-in-out alternate infinite;
+  transform-origin: center;
+  /* transform-box: fill-box; */
+}
+
+@keyframes speed_rocket {
+  100% {
+    transform: translateY(-1300px) translateX(1300px);
+  }
+}
+
+#speed_rocket_fire {
+  animation: speed_rocket_fire 1.5s ease-in-out alternate infinite;
+  transform-origin: center;
+  /* transform-box: fill-box; */
+}
+
+@keyframes speed_rocket_fire {
+  100% {
+    transform: translateY(-300px) translateX(300px);
+  }
+}
+
+#speed_gear {
+  animation: speed_gear 1s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_gear {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+#speed_bag {
+  animation: speed_bag 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_bag {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+#speed_gallon {
+  animation: speed_gallon 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_gallon {
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+#speed_mobile_comments {
+  animation: speed_mobile_comments 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.6);
+}
+
+@keyframes speed_mobile_comments {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+#speed_money1,
+#speed_coin1 {
+  animation: speed_money1 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_money1 {
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+#speed_money2,
+#speed_coin2,
+#speed_coin7 {
+  animation: speed_money2 0.5s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_money2 {
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+#speed_money3,
+#speed_coin3,
+#speed_coin6 {
+  animation: speed_money3 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_money3 {
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+#speed_coin4,
+#speed_coin8 {
+  animation: speed_coin4 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes speed_coin4 {
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+#speed_mobile_box1 {
+  animation: speed_mobile_box1 0.6s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  opacity: 1;
+}
+
+@keyframes speed_mobile_box1 {
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+#speed_mobile_box2 {
+  animation: speed_mobile_box2 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  opacity: 1;
+}
+
+@keyframes speed_mobile_box2 {
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+#speed_mobile_box3 {
+  animation: speed_mobile_box3 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  opacity: 1;
+}
+
+@keyframes speed_mobile_box3 {
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+#speed_mobile_box4 {
+  animation: speed_mobile_box4 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  opacity: 1;
+}
+
+@keyframes speed_mobile_box4 {
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+.elegant_svg {
+  margin-top: -30px;
+  margin-left: -50px;
+}
+
+#elegant_gear,
+#elegant_gear1 {
+  animation: elegant_gear 0.7s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_gear {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#elegant_comments {
+  animation: elegant_comments 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_comments {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+#elegant_comments_dot1 {
+  animation: elegant_comments_dot1 0.5s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+@keyframes elegant_comments_dot1 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#elegant_comments_dot2 {
+  animation: elegant_comments_dot2 0.6s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+@keyframes elegant_comments_dot2 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#elegant_comments_dot3 {
+  animation: elegant_comments_dot3 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+@keyframes elegant_comments_dot3 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#elegant_head {
+  animation: elegant_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_head {
+  100% {
+    transform: translateY(20px) rotateZ(-10deg);
+  }
+}
+
+#elegant_body {
+  animation: elegant_body 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_body {
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+#elegant_left_hand {
+  animation: elegant_left_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_left_hand {
+  100% {
+    transform: translateY(30px) rotateZ(10deg) translateX(20px);
+  }
+}
+
+#elegant_right_hand {
+  animation: elegant_right_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_right_hand {
+  100% {
+    transform: translateX(80px);
+  }
+}
+
+/* #elegant_pc_para1 {
+  animation: elegant_pc_para1 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: translateX(-880px) translateY(100px);
+  opacity: 0;
+}
+
+@keyframes elegant_pc_para1 {
+  100% {
+    transform: translateX(80px) translateY(-10px);
+    opacity: 1;
+  }
+} */
+
+#elegant_pc_para2,
+#elegant_pc_pic1,
+#elegant_pc_pic2,
+#elegant_pc_pic3,
+#elegant_pc_para1,
+#elegant_pc_pic4,
+#elegant_pc_folder,
+#elegant_board_para1,
+#elegant_board_para2,
+#elegant_board_para3,
+#elegant_board_para4,
+#elegant_big_board_para1,
+#elegant_big_board_para2,
+#elegant_big_board_para3,
+#elegant_big_board_para4,
+#elegant_big_board_para5,
+#elegant_pad_para1,
+#elegant_pad_para2,
+#elegant_pad_para3,
+#elegant_pad_para4,
+#elegant_pad_para5 {
+  animation: elegant_pc_para2 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.2);
+  opacity: 0;
+}
+
+@keyframes elegant_pc_para2 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#elegant_board {
+  animation: elegant_board 0.8s ease-in-out alternate infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes elegant_board {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .secured_svg {
+    width: 100vw;
+    height: auto;
+    margin-left: -25px;
+  }
+
+  .speed_svg {
+    width: 100vw;
+    height: auto;
+    margin-left: -20px;
+  }
+
+  .elegant_svg {
+    width: 120vw;
+    height: auto;
+  }
+}

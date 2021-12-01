@@ -14,31 +14,35 @@ const BlogDetails = (props) => {
 
   const history = useHistory();
 
+  useEffect(() => {
+    getData();
+    getData1();
+    getData2();
+  }, [id]);
+
   function prevBlog(id, e) {
     //e.preventDefault();
     console.log("prev");
     setId(id);
+
+    //history.push("/blog/" + id);
     getData();
     getData1();
     getData2();
-    history.push("/blog/" + id);
+    window.location.href = "/blog/" + id;
   }
 
   function nextBlog(id, e) {
     //e.preventDefault();
 
     setId(id);
-    getData();
-    getData1();
-    getData2();
-    history.push("/blog/" + id);
-  }
 
-  useEffect(() => {
+    //history.push("/blog/" + id);
     getData();
     getData1();
     getData2();
-  }, [id]);
+    window.location.href = "/blog/" + id;
+  }
 
   function getData() {
     axios
@@ -126,7 +130,13 @@ const BlogDetails = (props) => {
                   data-aos="zoom-in"
                   data-aos-duration="1000"
                 >
-                  <p>{item.blogsection_description1}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: item.blogsection_description1,
+                    }}
+                  />
+                  {/* {item.blogsection_description1} */}
+                  {/* </p> */}
                 </div>
 
                 <div id="blog_detail_images">
@@ -166,7 +176,13 @@ const BlogDetails = (props) => {
                   data-aos="zoom-in"
                   data-aos-duration="1000"
                 >
-                  <p>{item.blogsection_description2}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: item.blogsection_description2,
+                    }}
+                  />
+                  {/* {item.blogsection_description2} */}
+                  {/* </p> */}
                 </div>
 
                 <img

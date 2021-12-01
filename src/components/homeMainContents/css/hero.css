@@ -3,17 +3,17 @@
 }
 
 .covidsurokkha_logo {
-  width: 140px;
+  width: 130px;
   height: auto;
 }
 
 .ronyrezaul_logo {
-  width: 80px;
+  width: 75px;
   height: auto;
 }
 
 .cryptogenies_logo {
-  width: 130px;
+  width: 120px;
   height: auto;
 }
 
@@ -21,6 +21,140 @@
   width: auto;
   height: 32px;
 }
+
+.bosphorus_logo {
+  width: 30px;
+}
+
+/* hero svg */
+.hero_svg {
+  margin-top: -200px;
+  margin-left: 70px;
+}
+
+#hero_head {
+  animation: hero_head 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_head {
+  100% {
+    transform: rotateZ(-6deg);
+  }
+}
+
+#hero_body {
+  animation: hero_body 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_body {
+  100% {
+    transform: translateY(-11px);
+  }
+}
+
+#hero_hand {
+  animation: hero_hand 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_hand {
+  100% {
+    transform: rotateZ(-6deg);
+  }
+}
+
+#hero_gear1 {
+  animation: hero_gear1 1s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_gear1 {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+#hero_gear2 {
+  animation: hero_gear2 1s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_gear2 {
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+#hero_flower {
+  animation: hero_flower 0.6s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_flower {
+  100% {
+    transform: rotateZ(-6deg);
+  }
+}
+
+#hero_user_bg {
+  animation: hero_user_bg 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_user_bg {
+  100% {
+    transform: translateY(-80px) translateX(80px);
+  }
+}
+
+#hero_user_icon {
+  animation: hero_user_icon 1.2s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_user_icon {
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+#hero_gallery1 {
+  animation: hero_gallery1 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_gallery1 {
+  100% {
+    transform: translateX(130px) translateY(36px);
+  }
+}
+
+#hero_gallery2 {
+  animation: hero_gallery2 2s linear alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hero_gallery2 {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* .hero__client ul li:not(:last-child) {
+  margin-right: 12px !important;
+} */
 
 .hero__client ul li:not(:last-child) {
   margin-right: 12px !important;
@@ -82,5 +216,12 @@
 
   .hero__client ul li:not(:last-child) {
     margin-right: 10px !important;
+  }
+
+  .hero_svg {
+    margin-top: 0px;
+    margin-left: -10px;
+    height: 400px;
+    width: 100vw;
   }
 }

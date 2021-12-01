@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
+import ServiceSvg from "./ServiceSvg";
+import "./css/details.css";
 
 const Details = () => {
   const [data, setData] = useState([]);
@@ -148,10 +150,11 @@ const Details = () => {
                 className="services__img mb-45 w-img wow fadeInUp"
                 data-wow-delay=".6s"
               >
-                <img
+                {/* <img
                   src={AppUrl.image_url + data2.servicesdetailssection1_image}
                   alt={data2.servicesdetailssection1_title1 + " image"}
-                />
+                /> */}
+                <ServiceSvg />
               </div>
               <div className="services__text">
                 <h3 className="wow fadeInUp" data-wow-delay=".2s">

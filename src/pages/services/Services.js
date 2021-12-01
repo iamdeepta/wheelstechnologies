@@ -4,7 +4,7 @@ import React from "react";
 //import Header from "../../components/header/Header.js";
 import Sidebar from "../../components/sidebar/Sidebar.js";
 import ServicesMain from "../../components/servicesMainContents/ServicesMain.js";
-import Footer from "../../components/footer/Footer.js";
+//import Footer from "../../components/footer/Footer.js";
 
 const Services = () => {
   return (
@@ -15,7 +15,7 @@ const Services = () => {
       {/* {window.innerWidth <= 460 ? <Sidebar /> : ""} */}
       <Sidebar />
       <ServicesMain />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

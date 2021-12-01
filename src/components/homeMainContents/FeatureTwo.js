@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
+import "./css/feature_two.css";
+import SecuredSvg from "./SecuredSvg";
+import ElegantSvg from "./ElegantSvg";
+//import ServiceSvg from "../servicesDetailsMainContents/ServiceSvg";
+import Speed from "./Speed";
 
 const FeatureTwo = () => {
   const [data, setData] = useState([]);
@@ -111,7 +116,7 @@ const FeatureTwo = () => {
                         }
                         id={item.homesection4_main_title + "-tab"}
                         data-bs-toggle="tab"
-                        data-bs-target={"#" + item.homesection4_main_title}
+                        data-bs-target={"#tab" + index}
                         type="button"
                         role="tab"
                         aria-controls={item.homesection4_main_title}
@@ -120,6 +125,7 @@ const FeatureTwo = () => {
                         {" "}
                         {/* <i className="icon_document_alt"></i>{" "} */}
                         <img
+                          className="homesection4_icon_image"
                           src={AppUrl.image_url + item.homesection4_main_icon}
                           alt={item.homesection4_main_title + " icon"}
                         />
@@ -171,13 +177,32 @@ const FeatureTwo = () => {
                           ? "tab-pane fade show active"
                           : "tab-pane fade"
                       }
-                      id={item1.homesection4_main_title}
+                      id={"tab" + index1}
                       role="tabpanel"
                       aria-labelledby={item1.homesection4_main_title + "-tab"}
                     >
                       <div className="features__thumb">
                         <div className="features__thumb-inner">
-                          <img
+                          {index1 === 0 && (
+                            <>
+                              <SecuredSvg />
+                            </>
+                          )}
+
+                          {index1 === 1 && (
+                            <>
+                              {/* <ServiceSvg /> */}
+                              <ElegantSvg />
+                            </>
+                          )}
+
+                          {index1 === 2 && (
+                            <>
+                              {/* <ServiceSvg /> */}
+                              <Speed />
+                            </>
+                          )}
+                          {/* <img
                             className="fea-thumb"
                             src={
                               AppUrl.image_url + item1.homesection4_main_image1
@@ -202,7 +227,7 @@ const FeatureTwo = () => {
                             className="fea-2-shape"
                             src="assets/img/icon/features/home-2/features-shape.png"
                             alt=""
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>

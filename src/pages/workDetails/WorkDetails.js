@@ -2,7 +2,7 @@ import React from "react";
 import WorksDetails from "../../components/ourWorksDetails/WorkDetails";
 //import BackToTop from "../../components/backToTop/BackToTop";
 //import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+//import Footer from "../../components/footer/Footer";
 import Sidebar from "../../components/sidebar/Sidebar";
 
 const WorkDetails = () => {
@@ -12,7 +12,7 @@ const WorkDetails = () => {
       {/* <Header /> */}
       <Sidebar />
       <WorksDetails />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

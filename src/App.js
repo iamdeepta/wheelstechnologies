@@ -23,6 +23,8 @@ import "./css/default.css";
 import "./css/style.css";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import BackToTop from "./components/backToTop/BackToTop";
+import Footer from "./components/footer/Footer.js";
+import "./App.css";
 
 const App = () => {
   return (
@@ -39,6 +41,7 @@ const App = () => {
         <Route exact path="/work-details" component={WorkDetails} />
         <Route component={Error404} />
       </Switch>
+      <Footer />
       <MessengerCustomerChat pageId="105073211942134" appId="419551562969696" />
     </>
   );

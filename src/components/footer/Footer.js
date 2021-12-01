@@ -37,7 +37,7 @@ const Footer = () => {
                     <div className="footer__logo">
                       <a href="index.html">
                         <img
-                          src="images/logo.png"
+                          src="/images/logo.png"
                           alt="logo"
                           className="logo_img_footer"
                         />

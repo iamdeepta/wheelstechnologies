@@ -8,10 +8,11 @@ import FreeTrial from "../servicesMainContents/FreeTrial";
 //import Contact from "./Contact.js";
 import Team from "./Team.js";
 //import Faq from "./Faq.js";
-//import Blog from "./Blog.js";
+import Blog from "./Blog.js";
 import Promotion from "./Promotion.js";
 import Testimonial from "./Testimonial.js";
 import useIsVisible from "../../customHooks/useIsVisible.js";
+import Newsletter from "./Newsletter.js";
 
 const HomeMain = () => {
   const elemRef = useRef();
@@ -35,10 +36,11 @@ const HomeMain = () => {
             <FreeTrial />
 
             <Team />
-            {/* <Faq />
-            <Blog /> */}
+            {/* <Faq /> */}
+            <Blog />
             <Promotion />
             <Testimonial />
+            <Newsletter />
           </>
         ) : (
           <></>
