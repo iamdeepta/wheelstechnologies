@@ -7,7 +7,7 @@ import FeatureTwo from "./FeatureTwo.js";
 import FreeTrial from "../servicesMainContents/FreeTrial";
 //import Contact from "./Contact.js";
 import Team from "./Team.js";
-//import Faq from "./Faq.js";
+import Faq from "./Faq.js";
 import Blog from "./Blog.js";
 import Promotion from "./Promotion.js";
 import Testimonial from "./Testimonial.js";
@@ -36,11 +36,13 @@ const HomeMain = () => {
             <FreeTrial />
 
             <Team />
-            {/* <Faq /> */}
+
             <Blog />
             <Promotion />
             <Testimonial />
             <Newsletter />
+
+            <Faq />
           </>
         ) : (
           <></>

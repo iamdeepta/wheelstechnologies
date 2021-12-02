@@ -1,10 +1,62 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/newsletter.css";
 import { gsap } from "gsap";
 import NewsletterSvg from "./NewsletterSvg";
+import AppUrl from "../../classes/AppUrl";
+import axios from "axios";
 
 const Newsletter = () => {
   const [newsEmail, setNewsEmail] = useState("");
+
+  const [data, setData] = useState([]);
+  //const [emailExist, setEmailExist] = useState(false);
+
+  useEffect(() => {
+    getData();
+  }, [newsEmail]);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "newsletterGetOne/" + newsEmail)
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  //add data
+  async function addNewsletter() {
+    const formData = new FormData();
+    formData.append("newsletter_email", newsEmail);
+
+    let result = await fetch(AppUrl.base_url + "newsletterAdd", {
+      method: "POST",
+      body: formData,
+    });
+
+    result = await result.json();
+
+    setNewsEmail("");
+
+    if (result.success) {
+      //toast.success(result.success);
+    } else {
+      console.log(result.error);
+    }
+  }
+
+  //   data.map((item) =>
+  //     item.newsletter_email === newsEmail
+  //       ? setEmailExist(true)
+  //       : setEmailExist(false)
+  //   );
+
   //gsap code for paper plane button
   document.querySelectorAll(".newsletter_btn").forEach((button) => {
     console.log("ok");
@@ -183,19 +235,43 @@ const Newsletter = () => {
                     type="text"
                     placeholder="Email address"
                     className="form-control newsletter_input"
+                    value={newsEmail}
                     onChange={(e) => setNewsEmail(e.target.value)}
                   />
                   {newsEmail.indexOf(".") > -1 &&
                   newsEmail.indexOf("@") > -1 ? (
                     <>
-                      <button class="newsletter_btn">
-                        <span class="default">Send</span>
-                        <span class="success">
-                          <i className="fa fa-check"></i> Sent
-                        </span>
-                        <div class="left"></div>
-                        <div class="right"></div>
-                      </button>
+                      {data.length < 1 ? (
+                        <>
+                          <button class="newsletter_btn">
+                            <span
+                              class="default"
+                              onClick={() => addNewsletter()}
+                            >
+                              Send
+                            </span>
+                            <span class="success">
+                              <i className="fa fa-check"></i> Subscribed
+                            </span>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <button
+                            class="newsletter_btn already_subscribed_btn"
+                            disabled={true}
+                          >
+                            <span class="danger">Subscribed!</span>
+                            <span class="success">
+                              <i className="fa fa-info"></i> Subscribed
+                            </span>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                          </button>
+                        </>
+                      )}
                     </>
                   ) : (
                     <>
@@ -204,7 +280,9 @@ const Newsletter = () => {
                         disabled={true}
                       >
                         <span class="default">Send</span>
-                        <span class="success">Sent</span>
+                        <span class="success">
+                          <i className="fa fa-check"></i> Subscribed
+                        </span>
                         <div class="left"></div>
                         <div class="right"></div>
                       </button>

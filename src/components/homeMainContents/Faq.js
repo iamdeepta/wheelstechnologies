@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
+import CountUp from "react-countup";
+import useIsVisible from "../../customHooks/useIsVisible.js";
+import HappyClientSvg from "./HappyClientSvg";
+import "./css/happy_clients.css";
 
 const Faq = () => {
+  const elemRef = useRef();
+  const isVisible = useIsVisible(elemRef);
+
   const [data, setData] = useState([]);
-  const [data1, setData1] = useState([]);
+  //const [data1, setData1] = useState([]);
 
   useEffect(() => {
     getData();
-    getData1();
+    //getData1();
   }, []);
 
   function getData() {
@@ -26,29 +33,96 @@ const Faq = () => {
       });
   }
 
-  function getData1() {
-    axios
-      .get(AppUrl.base_url + "homesection7MainGet")
-      .then(function (response) {
-        if (response) {
-          setData1(response.data);
+  // function getData1() {
+  //   axios
+  //     .get(AppUrl.base_url + "homesection7MainGet")
+  //     .then(function (response) {
+  //       if (response) {
+  //         setData1(response.data);
 
-          //console.log(response.data);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+  //       }
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // }
 
   return (
     <>
       <section className="faq__area pt-140 pb-140">
         <div className="container">
           <div className="row">
+            <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
+              <div className="faq__content">
+                <div
+                  className="section__title-wrapper section__title-wrapper-2 mb-35 wow fadeInUp"
+                  data-wow-delay=".5s"
+                  ref={elemRef}
+                >
+                  <h2 className="section__title section__title-2">
+                    {data.homesection7_title}
+                  </h2>
+                  <p>{data.homesection7_description}</p>
+                </div>
+                <div className="faq__counter wow fadeInUp" data-wow-delay=".7s">
+                  <ul>
+                    <li>
+                      <h3 className="pink">
+                        {isVisible && (
+                          <>
+                            <span className="counter">
+                              <CountUp
+                                end={data.homesection7_number1}
+                                duration={3}
+                              />
+                              {""}+
+                            </span>
+                          </>
+                        )}
+                      </h3>
+                      <p>{data.homesection7_number1_title}</p>
+                    </li>
+                    <li>
+                      <h3 className="blue">
+                        {isVisible && (
+                          <>
+                            <span className="counter">
+                              <CountUp
+                                end={data.homesection7_number2}
+                                duration={3}
+                              />
+                              {""}+
+                            </span>
+                          </>
+                        )}
+                      </h3>
+                      <p>{data.homesection7_number2_title}</p>
+                    </li>
+                    <li>
+                      <h3 className="yellow">
+                        {isVisible && (
+                          <>
+                            <span className="counter">
+                              <CountUp
+                                end={data.homesection7_number3}
+                                duration={1}
+                              />
+                              {""}+
+                            </span>
+                          </>
+                        )}
+                      </h3>
+                      <p>{data.homesection7_number3_title}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-              <div className="faq__wrapper wow fadeInUp" data-wow-delay=".3s">
-                <div className="accordion" id="accordionExample">
+              <div className=" wow fadeInUp" data-wow-delay=".3s">
+                <HappyClientSvg />
+                {/* <div className="accordion" id="accordionExample">
                   {data1.map((item, index) => (
                     <div
                       className="accordion-item"
@@ -94,7 +168,7 @@ const Faq = () => {
                     </div>
                   ))}
 
-                  {/* <div className="accordion-item">
+                  <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                       <button
                         className="accordion-button collapsed"
@@ -121,8 +195,8 @@ const Faq = () => {
                         </p>
                       </div>
                     </div>
-                  </div> */}
-                  {/* <div className="accordion-item border-none">
+                  </div>
+                  <div className="accordion-item border-none">
                     <h2 className="accordion-header" id="headingThree">
                       <button
                         className="accordion-button collapsed pb-0 "
@@ -149,49 +223,8 @@ const Faq = () => {
                         </p>
                       </div>
                     </div>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-            <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
-              <div className="faq__content">
-                <div
-                  className="section__title-wrapper section__title-wrapper-2 mb-35 wow fadeInUp"
-                  data-wow-delay=".5s"
-                >
-                  <h2 className="section__title section__title-2">
-                    {data.homesection7_title}
-                  </h2>
-                  <p>{data.homesection7_description}</p>
-                </div>
-                <div className="faq__counter wow fadeInUp" data-wow-delay=".7s">
-                  <ul>
-                    <li>
-                      <h3 className="pink">
-                        <span className="counter">
-                          {data.homesection7_number1}
-                        </span>
-                      </h3>
-                      <p>{data.homesection7_number1_title}</p>
-                    </li>
-                    <li>
-                      <h3 className="blue">
-                        <span className="counter">
-                          {data.homesection7_number2}
-                        </span>
-                      </h3>
-                      <p>{data.homesection7_number2_title}</p>
-                    </li>
-                    <li>
-                      <h3 className="yellow">
-                        <span className="counter">
-                          {data.homesection7_number3}
-                        </span>
-                      </h3>
-                      <p>{data.homesection7_number3_title}</p>
-                    </li>
-                  </ul>
-                </div>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
