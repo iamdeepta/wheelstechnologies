@@ -3,3 +3,50 @@
   left: 20px !important;
   bottom: 33px !important;
 }
+
+.calendly-badge-widget .calendly-badge-content {
+  padding: 0 17px !important;
+  position: fixed !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  bottom: 31px !important;
+  right: 100px !important;
+  /* top: 49px;
+  right: 26vw !important;
+  height: 38px !important;
+  width: 100px !important;
+  box-shadow: none !important; */
+  border-radius: 6px !important;
+}
+
+.calendly-badge-content span {
+  display: none !important;
+}
+
+@media screen and (max-width: 460px) {
+  .progress-wrap {
+    bottom: 80px !important;
+  }
+
+  .fb_dialog_content iframe {
+    bottom: 77px !important;
+    right: 2px !important;
+  }
+
+  .calendly-badge-widget .calendly-badge-content {
+    padding: 0 17px !important;
+    position: fixed !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    top: 38px !important;
+    right: 10px !important;
+    font-weight: normal !important;
+    width: auto !important;
+    height: 35px !important;
+    box-shadow: none !important;
+  }
+}

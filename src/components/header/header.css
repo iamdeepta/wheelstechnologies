@@ -47,4 +47,8 @@
   .header__padding {
     padding: 0px 0px !important;
   }
+
+  .sidebar__menu {
+    display: none !important;
+  }
 }

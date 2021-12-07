@@ -1,0 +1,117 @@
+.contact_us_hero_bg {
+  background-color: #f4f9fd !important;
+  width: 100%;
+  height: 700px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.contact_form_get_in_touch_text {
+  font-size: 36px;
+}
+
+.contact_form_get_in_touch_des {
+  font-size: 18px;
+}
+
+.contact_form_name_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.contact_form_name,
+.contact_form_email {
+  outline: none !important;
+  border-radius: 4px;
+  height: 50px;
+  width: 47%;
+  padding: 20px 15px;
+  border: 1px solid rgb(173, 173, 173);
+}
+
+.contact_form_name::placeholder,
+.contact_form_email::placeholder,
+.contact_form_message::placeholder {
+  color: rgba(167, 166, 166, 0.767);
+}
+
+.contact_form_name:focus,
+.contact_form_email:focus,
+.contact_form_message:focus {
+  border: 1px solid rgb(75, 75, 216);
+}
+
+.contact_form_message {
+  outline: none !important;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 15px;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 4px;
+}
+
+.contact_form_right_div {
+  background-color: #f4f9fd;
+  padding: 10px 100px;
+  padding-bottom: 55px;
+  height: 640px;
+}
+
+.contact_form_right_office_address_div p:nth-child(1),
+.contact_form_right_phone_number_div p:nth-child(1),
+.contact_form_right_web_address_div p:nth-child(1) {
+  font-size: 30px;
+  color: black;
+  /* font-weight: bold; */
+  text-decoration: underline;
+  margin-top: 70px;
+}
+
+.contact_form_right_office_address_div p:nth-child(2),
+.contact_form_right_phone_number_div p:nth-child(2),
+.contact_form_right_web_address_div p:nth-child(2) {
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.contact_form_right_main_div {
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 460px) {
+  .contact_form_right_div {
+    background-color: #f4f9fd;
+    padding: 10px 40px;
+    padding-bottom: 20px !important;
+    height: auto;
+    width: 94vw;
+    text-align: center;
+  }
+
+  .contact_form_right_office_address_div p:nth-child(1),
+  .contact_form_right_phone_number_div p:nth-child(1),
+  .contact_form_right_web_address_div p:nth-child(1) {
+    font-size: 20px;
+    color: black;
+    /* font-weight: bold; */
+    text-decoration: underline;
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  .contact_form_right_office_address_div p:nth-child(2),
+  .contact_form_right_phone_number_div p:nth-child(2),
+  .contact_form_right_web_address_div p:nth-child(2) {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .contact_form_right_main_div {
+    margin-left: 0px;
+  }
+}

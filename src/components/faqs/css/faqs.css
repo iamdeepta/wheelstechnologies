@@ -1,0 +1,305 @@
+.faq_hero_bg {
+  background-color: #f4f9fd !important;
+  width: 100%;
+  height: 700px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.accordion-button {
+  font-size: 20px !important;
+  font-weight: bold;
+  border: none !important;
+  outline: none !important;
+}
+
+.accordion-body p {
+  color: black;
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.accordion-collapse {
+  border: 0px !important;
+}
+
+.accordion-button::after {
+  display: none !important;
+}
+
+.accordion-button:focus {
+  outline: 0 none !important;
+  box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent !important;
+}
+
+.faq_svg {
+  margin-top: -250px;
+}
+
+#faq_circle1 {
+  animation: faq_circle1 0.6s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_circle1 {
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+#faq_question {
+  animation: faq_question 0.6s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_question {
+  100% {
+    transform: translateY(-60px) rotateY(180deg);
+  }
+}
+
+#faq_circle2 {
+  animation: faq_circle2 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_circle2 {
+  100% {
+    transform: translateY(180px) translateX(20px);
+  }
+}
+
+#faq_circle3,
+#faq_circle4,
+#faq_circle5,
+#faq_circle6,
+#faq_circle7,
+#faq_circle8 {
+  animation: faq_circle3 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_circle3 {
+  100% {
+    transform: translateY(-80px);
+  }
+}
+
+#faq_comments {
+  animation: faq_comments 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_comments {
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+#faq_comments_para1,
+#faq_comments_para2,
+#faq_comments_para3 {
+  animation: faq_para1 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes faq_para1 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#faq_girl_head {
+  animation: faq_girl_head 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_head {
+  100% {
+    transform: translateY(10px) rotateZ(-10deg);
+  }
+}
+
+#faq_girl_hair {
+  animation: faq_girl_hair 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_hair {
+  100% {
+    transform: translateY(25px) rotateZ(-3deg) translateX(4px);
+  }
+}
+
+#faq_girl_body {
+  animation: faq_girl_body 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_body {
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#faq_girl_left_hand,
+#faq_girl_right_hand {
+  animation: faq_girl_left_hand 0.6s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_left_hand {
+  100% {
+    transform: translateY(17px) rotateZ(10deg) translateX(-20px);
+  }
+}
+
+#faq_girl_left_lower_leg {
+  animation: faq_girl_left_lower_leg 0.8s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_left_lower_leg {
+  0% {
+    transform: rotateZ(60deg) translateY(-20px) translateX(-60px);
+  }
+  100% {
+    transform: rotateZ(-20deg) translateX(40px) translateY(40px);
+  }
+}
+
+#faq_girl_right_lower_leg {
+  animation: faq_girl_right_lower_leg 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_right_lower_leg {
+  100% {
+    transform: rotateZ(-10deg) translateX(30px);
+  }
+}
+
+#faq_girl_left_upper_leg,
+#faq_girl_right_upper_leg {
+  animation: faq_girl_left_upper_leg 0.7s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes faq_girl_left_upper_leg {
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#faq_bg,
+#faq_ground {
+  animation: faq_bg 0.8s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes faq_bg {
+  100% {
+    transform: translateX(-60px);
+  }
+}
+
+#faq_f {
+  animation: faq_f 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_f {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+#faq_a {
+  animation: faq_a 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_a {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+#faq_q {
+  animation: faq_q 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes faq_q {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* #faq_comments_para2 {
+  animation: faq_para2 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes faq_para2 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#faq_comments_para3 {
+  animation: faq_para3 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes faq_para3 {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+@media screen and (max-width: 460px) {
+  .faq_svg {
+    margin-top: -300px;
+    width: 100vw;
+  }
+
+  .faq_hero_bg {
+    height: 520px;
+  }
+
+  /* #faq_section {
+    height: 0px !important;
+  } */
+}

@@ -184,7 +184,7 @@ const Newsletter = () => {
 
   return (
     <>
-      <section className="about__area grey-bg-3 pt-40 pb-120 p-relative">
+      <section className="about__area grey-bg-3 pt-40 pb-120 p-relative newsletter_grey_bg">
         <div className="about__shape-2">
           <img
             className="about-2-circle"

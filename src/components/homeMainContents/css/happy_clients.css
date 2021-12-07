@@ -335,4 +335,10 @@
     width: 120vw;
     margin-left: -35px;
   }
+
+  .faq__counter ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

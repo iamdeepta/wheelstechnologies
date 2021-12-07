@@ -105,6 +105,12 @@ const Header = () => {
                           </li>
                         </ul> */}
                       </li>
+                      <li>
+                        <Link to="/contact">Contact</Link>
+                      </li>
+                      <li>
+                        <Link to="/faq">FAQ</Link>
+                      </li>
                       {/* <li className="has-dropdown">
                         <a href="about.html">Pages</a>
                         <ul className="submenu">
