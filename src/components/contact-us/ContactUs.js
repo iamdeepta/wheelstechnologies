@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 import "../homeMainContents/css/hero.css";
 import Newsletter from "../homeMainContents/Newsletter";
 import ContactForm from "./ContactForm";
+import ContactUsSvg from "./ContactUsSvg";
+import "./css/contact.css";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -107,7 +109,8 @@ const ContactUs = () => {
             <div className="col-xxl-6 offset-xxl-1 col-xl-6">
               <div className="hero__thumb-2 mt-80">
                 <div className="hero__thumb-inner p-relative ml-90">
-                  <svg
+                  <ContactUsSvg />
+                  {/* <svg
                     width="600"
                     height="600"
                     viewBox="0 0 1750 1750"
@@ -591,7 +594,7 @@ const ContactUs = () => {
                         </g>
                       </g>
                     </g>
-                  </svg>
+                  </svg> */}
 
                   {/* <img
                     className="hero-2-thumb hero_image1"

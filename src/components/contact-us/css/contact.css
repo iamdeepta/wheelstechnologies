@@ -83,6 +83,250 @@
   margin-left: 100px;
 }
 
+.contact_svg {
+  margin-top: -250px;
+  margin-left: -100px;
+}
+
+#contact_24 {
+  animation: contact_24 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_24 {
+  100% {
+    transform: rotateY(180deg) translateY(-60px);
+  }
+}
+
+#contact_globe_whole {
+  animation: contact_globe_whole 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_globe_whole {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+#contact_globe {
+  animation: contact_globe 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_globe {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+#contact_comments1,
+#contact_comments2 {
+  animation: contact_comments1 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_comments1 {
+  100% {
+    transform: translateY(-70px);
+  }
+}
+
+#contact_comments1_dot1,
+#contact_comments2_dot1 {
+  animation: contact_comments1_dot1 0.6s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.3);
+}
+
+@keyframes contact_comments1_dot1 {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#contact_comments1_dot2,
+#contact_comments2_dot2 {
+  animation: contact_comments1_dot2 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.3);
+}
+
+@keyframes contact_comments1_dot2 {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#contact_comments1_dot3,
+#contact_comments2_dot3 {
+  animation: contact_comments1_dot3 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.3);
+}
+
+@keyframes contact_comments1_dot3 {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#contact_comments1_dot4,
+#contact_comments2_dot4 {
+  animation: contact_comments1_dot4 0.9s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0.3);
+}
+
+@keyframes contact_comments1_dot4 {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#contact_coffee {
+  animation: contact_coffee 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_coffee {
+  100% {
+    transform: translateX(60px);
+  }
+}
+
+#contact_boy_circle {
+  animation: contact_boy_circle 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_boy_circle {
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+#contact_boy_head {
+  animation: contact_boy_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_boy_head {
+  100% {
+    transform: translateY(-10px) rotateZ(-8deg);
+  }
+}
+
+#contact_boy_right_hand {
+  animation: contact_boy_right_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes contact_boy_right_hand {
+  100% {
+    transform: translateY(-5px) rotateZ(-10deg) translateX(-15px);
+  }
+}
+
+#contact_boy_left_wrist {
+  animation: contact_boy_left_wrist 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_boy_left_wrist {
+  100% {
+    transform: rotateZ(-15deg) translateX(-10px);
+  }
+}
+
+#contact_boy_body {
+  animation: contact_boy_body 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_boy_body {
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+#contact_girl_head {
+  animation: contact_girl_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_girl_head {
+  100% {
+    transform: rotateZ(10deg) translateX(40px);
+  }
+}
+
+#contact_girl_right_hand {
+  animation: contact_girl_right_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes contact_girl_right_hand {
+  100% {
+    transform: rotateZ(-10deg) translateY(-40px);
+  }
+}
+
+#contact_girl_body {
+  animation: contact_girl_body 0.7s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes contact_girl_body {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+#contact_leaf1,
+#contact_leaf2 {
+  animation: contact_leaf1 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_leaf1 {
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
+
+#contact_leaf3,
+#contact_leaf4 {
+  animation: contact_leaf3 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes contact_leaf3 {
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
 @media screen and (max-width: 460px) {
   .contact_form_right_div {
     background-color: #f4f9fd;
@@ -113,5 +357,11 @@
 
   .contact_form_right_main_div {
     margin-left: 0px;
+  }
+
+  .contact_svg {
+    margin-top: -250px;
+    margin-left: -70px;
+    width: 130vw;
   }
 }
