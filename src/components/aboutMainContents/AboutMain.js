@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "./Hero.js";
+//import Hero from "./Hero.js";
 //import Services from "./Services.js";
 import Services from "../homeMainContents/Services.js";
-import Features from "./Features.js";
+//import Features from "./Features.js";
 import Faq from "../homeMainContents/Faq";
-import Promotion from "../homeMainContents/Promotion";
+//import Promotion from "../homeMainContents/Promotion";
 import AboutUsSvg from "./AboutUsSvg.js";
 import "./css/about.css";
 import FeatureTwo from "../homeMainContents/FeatureTwo.js";

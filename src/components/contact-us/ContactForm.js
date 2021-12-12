@@ -4,10 +4,18 @@ import AppUrl from "../../classes/AppUrl";
 //import "./css/featured_on.css";
 import { Link } from "react-router-dom";
 import "./css/contact.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     getData();
@@ -44,8 +52,37 @@ const ContactForm = () => {
       });
   }
 
+  async function sendMessage(e) {
+    e.preventDefault();
+    setLoader(true);
+
+    let formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    let result = await fetch(AppUrl.base_url + "sendMessage", {
+      method: "POST",
+      body: formData,
+    });
+
+    result = await result.json();
+
+    if (result.success) {
+      toast.success(result.success);
+      setName("");
+      setEmail("");
+      setMessage("");
+      setLoader(false);
+    } else {
+      toast.error(result.error);
+      setLoader(false);
+    }
+  }
+
   return (
     <>
+      <ToastContainer />
       <section className="services__area pt-80 mt-0 pb-60 p-relative">
         <div className="services__shape-2">
           <img
@@ -83,24 +120,39 @@ const ContactForm = () => {
                     type="text"
                     className="contact_form_name"
                     placeholder="Your Name*"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <input
                     type="text"
                     className="contact_form_email"
                     placeholder="Your Email*"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <textarea
                   className="contact_form_message"
                   rows="10"
                   placeholder="Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
-                <a
-                  href="/contact"
-                  className="w-btn w-btn-blue w-btn-6 w-btn-3 mt-3"
-                >
-                  Send Message
-                </a>
+                {loader ? (
+                  <>
+                    <div className="spinner-border text-primary"></div>
+                  </>
+                ) : (
+                  <>
+                    <a
+                      href="!#"
+                      className="w-btn w-btn-blue w-btn-6 w-btn-3 mt-3"
+                      onClick={(e) => sendMessage(e)}
+                    >
+                      Send Message
+                    </a>
+                  </>
+                )}
               </div>
             </div>
             <div className="col-xxl-5 col-lg-5 col-md-5 contact_form_right_main_div">
