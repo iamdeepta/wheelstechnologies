@@ -1,0 +1,260 @@
+
+    @media screen and (max-width: 600px) {
+        .stuff{
+        width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-top: -50px;
+    display: none;
+    }
+}
+
+#stuff_girl {
+    animation: stuff_girl 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_girl {
+    0% {
+        transform: rotateZ(-7deg);
+    }
+    100% {
+        transform: rotateZ(7deg);
+    }
+}
+
+
+#stuff_boy1 {
+    animation: stuff_boy1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy1 {
+    
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+
+#stuff_boy1_head {
+    animation: stuff_boy1_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy1_head {
+    
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+#stuff_boy1_right_hand {
+    animation: stuff_boy1_right_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy1_right_hand {
+    
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+#stuff_boy1_left_hand {
+    animation: stuff_boy1_left_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy1_left_hand {
+    
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+#stuff_bar {
+    animation: stuff_bar 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_bar {
+    
+    100% {
+        transform: translateX(350px);
+    }
+}
+
+
+#stuff_boy2 {
+    animation: stuff_boy2 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy2 {
+    
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+
+#stuff_boy2_head {
+    animation: stuff_boy2_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy2_head {
+    
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#stuff_boy2_right_hand {
+    animation: stuff_boy2_right_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy2_right_hand {
+    
+    100% {
+        transform: rotateZ(-10deg) translateX(5px);
+    }
+}
+
+
+#stuff_boy2_card {
+    animation: stuff_boy2_card 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_boy2_card {
+    
+    100% {
+        transform: rotateZ(-10deg) translateX(5px);
+    }
+}
+
+#stuff_books{
+    animation: stuff_books 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_books {
+    
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+
+#stuff_dot1, #stuff_dot2, #stuff_dot3, #stuff_dot4, #stuff_dot5, #stuff_dot6, #stuff_dot7, #stuff_dot8, #stuff_dot9{
+    animation: stuff_dot1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_dot1 {
+    
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+
+#stuff_bell, #stuff_bell2{
+    animation: stuff_bell 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_bell {
+    
+    100% {
+        transform: rotateZ(20deg);
+    }
+}
+
+
+#stuff_pie1, #stuff_pie2, #stuff_pie3{
+    animation: stuff_pie1 0.8s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_pie1 {
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#stuff_magnify1{
+    animation: stuff_magnify 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_magnify {
+    
+    100% {
+        transform: rotateZ(20deg);
+    }
+}
+
+
+#stuff_plane{
+    animation: stuff_plane 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_plane {
+    
+    100% {
+        transform: translateX(-120px) translateY(-120px);
+    }
+}
+
+
+#stuff_leaf1, #stuff_leaf2{
+    animation: stuff_leaf1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_leaf1 {
+    
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#stuff_leaf3, #stuff_leaf4,#stuff_leaf5{
+    animation: stuff_leaf1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes stuff_leaf1 {
+    
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+

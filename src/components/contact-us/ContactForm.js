@@ -110,9 +110,8 @@ const ContactForm = () => {
                   Get in touch
                 </h2>
                 <p className="contact_form_get_in_touch_des">
-                  Top rated construction packages we pleasure rationally
-                  encounter consequences interesting who loves or pursue or
-                  desires
+                  Working with globally recognised brands has enabled us to have
+                  offices in multiple locations across the globe.
                 </p>
 
                 <div className="contact_form_name_row">
@@ -162,24 +161,20 @@ const ContactForm = () => {
               >
                 <div className="contact_form_right_div">
                   <div className="contact_form_right_office_address_div">
-                    <p>Office Address</p>
-                    <p>
-                      245 Southern Street, Apartment no. 174 Central Twon, New
-                      Yourk, USA
-                    </p>
+                    <p>Head Office</p>
+                    <p>House#424, Road#07, DOHS Baridhara, Dhaka, Bangladesh</p>
+                    <p>+88-02-8411765</p>
                   </div>
                   <div className="contact_form_right_phone_number_div">
-                    <p>Phone Number</p>
-                    <p>+88018928493</p>
-                    <p>+88018928493</p>
+                    <p>German Office</p>
+                    <p>Stellwerk, str.48, 85386 Moosburg, Germany</p>
+                    <p>+4915783801162</p>
+                    {/* <p>+88018928493</p> */}
                   </div>
                   <div className="contact_form_right_web_address_div">
-                    <p>Web Address</p>
-                    <p>
-                      <a href="https://designhubtechnologies.com">
-                        designhubtechnologies.com
-                      </a>
-                    </p>
+                    <p>New York Office</p>
+                    <p>50th West 34th st suite 7C10 New York NY 10001</p>
+                    <p>+14049964957</p>
                   </div>
                 </div>
                 {/* <a

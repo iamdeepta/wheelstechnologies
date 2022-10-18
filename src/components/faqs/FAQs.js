@@ -58,8 +58,8 @@ const FAQs = () => {
                 </span> */}
                 <h2 className="hero__title-2 contact_us_title">FAQ</h2>
                 <p>
-                  Pleasure rationally encounter consequences are extremely
-                  painful great oppurtunity
+                  We create award-winning websites, cutting-edge mobile
+                  applications and top notch motion video and graphics.
                 </p>
                 {/* <a
                   href="about.html"

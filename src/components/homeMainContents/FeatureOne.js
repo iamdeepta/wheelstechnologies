@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
 import "./css/feature_one.css";
+import DreamSvg from "./DreamSvg";
 
 const FeatureOne = () => {
   const [data, setData] = useState([]);
@@ -47,7 +48,8 @@ const FeatureOne = () => {
                 className="about__thumb-3 wow fadeInLeft"
                 data-wow-delay=".3s"
               >
-                <svg
+                <DreamSvg />
+                {/* <svg
                   width="600"
                   height="600"
                   viewBox="0 0 1750 1750"
@@ -1348,7 +1350,7 @@ const FeatureOne = () => {
                       </g>
                     </g>
                   </g>
-                </svg>
+                </svg> */}
 
                 {/* <img
                   src={AppUrl.image_url + data.homesection3_image}

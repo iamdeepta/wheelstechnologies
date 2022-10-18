@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import "../homeMainContents/css/hero.css";
 import Newsletter from "../homeMainContents/Newsletter";
 import ContactForm from "./ContactForm";
+import ContactSvg from "./ContactSvg";
 import ContactUsSvg from "./ContactUsSvg";
 import "./css/contact.css";
 
@@ -17,8 +18,9 @@ const ContactUs = () => {
   }
   return (
     <>
-      <div className="grey-bg-3 contact_us_hero_bg"></div>
-      <section className="hero__area hero__height-2 p-relative d-flex align-items-center">
+      {/* <div className="grey-bg-3 contact_us_hero_bg"></div> */}
+      {/* <section className="hero__area hero__height-2 p-relative d-flex align-items-center"> */}
+      <section className="hero__area  p-relative d-flex align-items-center pt-150 contact_section">
         {/* <div className="hero__shape-2">
           <img
             className="hero-2-dot"
@@ -54,10 +56,7 @@ const ContactUs = () => {
                   {data.homesection1_category}
                 </span> */}
                 <h2 className="hero__title-2 contact_us_title">Contact Us</h2>
-                <p>
-                  Pleasure rationally encounter consequences are extremely
-                  painful great oppurtunity
-                </p>
+                <p>Please reach to us for any queries</p>
                 {/* <a
                   href="about.html"
                   className="w-btn w-btn-blue w-btn-7 w-btn-6"
@@ -109,7 +108,8 @@ const ContactUs = () => {
             <div className="col-xxl-6 offset-xxl-1 col-xl-6">
               <div className="hero__thumb-2 mt-80">
                 <div className="hero__thumb-inner p-relative ml-90">
-                  <ContactUsSvg />
+                  {/* <ContactUsSvg /> */}
+                  <ContactSvg />
                   {/* <svg
                     width="600"
                     height="600"

@@ -48,12 +48,12 @@ const Testimonial = () => {
                   className="testimonial_image"
                 />
                 <p className="testimonial_message">
-                  I am so happy my dear friend, so absorbed in the exquisite
-                  sense of mere tranquil existence that I neglect my talents.
-                  Thank You.
+                  One of the pioneering companies offering modern cloud based
+                  solutions to its clients. I am very satisfied with their
+                  services.
                 </p>
-                <p className="testimonial_client_name">Deepta Barua</p>
-                <p className="testimonial_designation">Software Engineer</p>
+                <p className="testimonial_client_name">Farhan Shakil Ahmed </p>
+                <p className="testimonial_designation">CEO, Covidsurokkha</p>
               </div>
               <div className="testimonial_card">
                 <img
@@ -62,12 +62,29 @@ const Testimonial = () => {
                   className="testimonial_image"
                 />
                 <p className="testimonial_message">
-                  I am so happy my dear friend, so absorbed in the exquisite
-                  sense of mere tranquil existence that I neglect my talents.
-                  Thank You.
+                  Katex Entertainment maintains the International standards
+                  whenever they are involved in any tech based work.
                 </p>
-                <p className="testimonial_client_name">Deepta Barua</p>
-                <p className="testimonial_designation">Software Engineer</p>
+                <p className="testimonial_client_name">Aktaruzzaman Khan</p>
+                <p className="testimonial_designation">
+                  Head of Marketing, ShoesByEnvy
+                </p>
+              </div>
+              <div className="testimonial_card">
+                <img
+                  src="assets/img/team/home-2/team-1.jpg"
+                  alt="client 1"
+                  className="testimonial_image"
+                />
+                <p className="testimonial_message">
+                  Even after our contract period ended, I could easily reach out
+                  to the customer service team for any kind of queries. They go
+                  out of their ways to accommodate clients.
+                </p>
+                <p className="testimonial_client_name">Rony Rezaul</p>
+                <p className="testimonial_designation">
+                  Managing Director, RonyRezaul
+                </p>
               </div>
             </Slider>
           </div>

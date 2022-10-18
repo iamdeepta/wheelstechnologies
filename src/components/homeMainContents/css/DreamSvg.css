@@ -1,0 +1,181 @@
+.dream_svg{
+    margin-left:0px;
+    margin-top: 10px;
+}
+
+@media  screen and (max-width: 600px) {
+
+    .dream_svg{
+        width: 100vw;
+        height: 250px;
+        margin-left: -20px;
+        margin-top: -30px;
+    }
+    }
+
+
+
+#dream_wheel {
+    animation: dream_wheel 1s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#dream_boy_head {
+    animation: dream_boy_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_boy_head {
+    100% {
+        transform: rotateZ(20deg);
+    }
+}
+
+#dream_boy_hands {
+    animation: dream_boy_hands 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes dream_boy_hands {
+    100% {
+        transform: rotateZ(-20deg) translateY(15px) translateX(-10px);
+    }
+}
+
+
+#dream_boy_right_leg {
+    animation: dream_boy_right_leg 0.7s ease-in-out alternate infinite;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+
+@keyframes dream_boy_right_leg {
+    100% {
+        transform: rotateZ(10deg) translateX(-20px);
+    }
+}
+
+#dream_ideas {
+    animation: dream_ideas 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_ideas {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#dream_books {
+    animation: dream_books 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_books {
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+#dream_like {
+    animation: dream_like 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_like {
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#dream_girl_head {
+    animation: dream_girl_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_girl_head {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+#dream_girl_left_hand {
+    animation: dream_girl_left_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+
+@keyframes dream_girl_left_hand {
+    100% {
+        transform: rotateZ(20deg) translateX(-10px) translateY(10px);
+    }
+}
+
+
+#dream_girl_skirt {
+    animation: dream_girl_skirt 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_girl_skirt {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+#dream_girl_left_leg {
+    animation: dream_girl_left_leg 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_girl_left_leg {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+#dream_leaf1, #dream_leaf4, #dream_leaf5, #dream_leaf6 {
+    animation: dream_leaf1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_leaf1 {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+#dream_leaf2, #dream_leaf3 {
+    animation: dream_leaf1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dream_leaf1 {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}

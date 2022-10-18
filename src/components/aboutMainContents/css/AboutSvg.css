@@ -1,0 +1,238 @@
+
+    .abouts_svg{
+        margin-top: -200px;
+        margin-left: -100px;
+    }
+    @media screen and (max-width: 600px) {
+        .abouts_svg{
+        width: 100vw;
+        height: 300px;
+        margin-left: -20px;
+        margin-top: -80px;
+    }
+}
+
+#about_girl {
+    animation: about_girl 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_girl {
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+#about_girl_head {
+    animation: about_girl_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_girl_head {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#about_girl_right_hand {
+    animation: about_girl_right_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes about_girl_right_hand {
+    100% {
+        transform: rotateZ(-12deg);
+    }
+}
+
+#about_girl_left_hand {
+    animation: about_girl_left_hand 0.7s ease-in-out alternate-reverse infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes about_girl_left_hand {
+    100% {
+        transform: rotateZ(-12deg);
+    }
+}
+
+#about_girl_right_leg {
+    animation: about_girl_right_leg 0.7s ease-in-out alternate infinite;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+
+@keyframes about_girl_right_leg {
+    100% {
+        transform: rotateZ(-8deg);
+    }
+}
+
+
+#about_boy2 {
+    animation: about_boy2 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy2 {
+    100% {
+        transform: translateX(40px);
+    }
+}
+
+
+#about_boy2_head {
+    animation: about_boy2_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy2_head {
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+
+#about_boy2_left_hand {
+    animation: about_boy2_left_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy2_left_hand {
+    100% {
+        transform: rotateZ(40deg) translateX(-20px) translateY(25px);
+    }
+}
+
+#about_boy2_right_hand {
+    animation: about_boy2_right_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy2_right_hand {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+#about_boy1_head {
+    animation: about_boy1_head 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy1_head {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+#about_boy1_left_hand {
+    animation: about_boy1_left_hand 0.7s ease-in-out alternate infinite;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy1_left_hand {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#about_boy1_right_leg {
+    animation: about_boy1_right_leg 0.7s ease-in-out alternate infinite;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+
+@keyframes about_boy1_right_leg {
+    100% {
+        transform: rotateZ(20deg) translateX(-17px) translateY(20px);
+    }
+}
+
+
+#about_search{
+    animation: about_search 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_search {
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#about_bulb{
+    animation: about_bulb 0.7s ease-in-out alternate-reverse infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_bulb {
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#about_msg{
+    animation: about_msg 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_msg {
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#about_bag, #about_tob{
+    animation: about_bag 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_bag {
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+#about_leaf1{
+    animation: about_leaf1 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes about_leaf1 {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+#about_play, #about_para1, #about_para2{
+    animation: about_play 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: scale(0.5);
+}
+
+@keyframes about_play {
+    100% {
+        transform: scale(1);
+    }
+}

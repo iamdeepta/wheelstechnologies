@@ -11,27 +11,32 @@ import FeatureTwo from "../homeMainContents/FeatureTwo.js";
 import Testimonial from "../homeMainContents/Testimonial.js";
 import Newsletter from "../homeMainContents/Newsletter.js";
 import AboutUs from "./AboutUs.js";
+import AboutSvg from "./AboutSvg.js";
 
 const AboutMain = () => {
   return (
     <>
-      <div className="grey-bg-3 contact_us_hero_bg"></div>
-      <section className="hero__area hero__height-2 p-relative d-flex align-items-center">
+      {/* <div className="grey-bg-3 contact_us_hero_bg"></div> */}
+      <section
+        className="hero__area  p-relative d-flex align-items-center about_section"
+        style={{ paddingTop: "150px" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-xxl-5 col-xl-6 col-lg-8">
               <div className="hero__content-2 mt-55">
                 <h2 className="hero__title-2 contact_us_title">About Us</h2>
                 <p>
-                  Pleasure rationally encounter consequences are extremely
-                  painful great oppurtunity
+                  Our dedicated team of creatives is bursting with talent,
+                  experience and passion for what we do.
                 </p>
               </div>
             </div>
             <div className="col-xxl-6 offset-xxl-1 col-xl-6">
               <div className="hero__thumb-2 mt-80">
                 <div className="hero__thumb-inner p-relative ml-90">
-                  <AboutUsSvg />
+                  {/* <AboutUsSvg /> */}
+                  <AboutSvg />
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <section
         className="page__title-area page__title-height d-flex align-items-center fix p-relative z-index-1"
-        data-background="assets/img/page-title/page-title.jpg"
+        data-background="/images/red_bg2.webp"
         style={HeroTitleBg.image_url}
       >
         <div className="page__title-shape">

@@ -1,10 +1,11 @@
 import React from "react";
 import AboutUs1Svg from "./AboutUs1Svg";
+import Stuff from "./Stuff";
 
 const AboutUs = () => {
   return (
     <>
-      <section className="about__area grey-bg-3 pt-40 pb-120 p-relative">
+      <section className="about__area grey-bg-3 pt-40 pb-20 p-relative">
         <div className="about__shape-2">
           <img
             className="about-2-circle"
@@ -24,7 +25,8 @@ const AboutUs = () => {
                 className="about__thumb-3 wow fadeInLeft"
                 data-wow-delay=".3s"
               >
-                <AboutUs1Svg />
+                {/* <AboutUs1Svg /> */}
+                <Stuff />
 
                 {/* <img
                   src={AppUrl.image_url + data.homesection3_image}
@@ -44,9 +46,8 @@ const AboutUs = () => {
                     Best Digital Agency in the Town
                   </h2>
                   <p>
-                    Pleasure rationally encounter consequences that are
-                    extremely painful. Nor again is there anyone who loves or
-                    pursues or desires to obtain
+                    We create award-winning websites, cutting-edge mobile
+                    applications and top notch motion video and graphics.
                   </p>
                 </div>
                 <a href="/" className="w-btn w-btn-blue w-btn-3 w-btn-1">

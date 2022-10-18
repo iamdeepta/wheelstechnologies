@@ -28,7 +28,7 @@ const Blog = () => {
 
   return (
     <>
-      <section className="blog__area pt-90 pb-140 p-relative">
+      <section className="blog__area pt-90 pb-140 p-relative blog_section_mbl">
         <div className="row">
           <div className="col-xxl-8 offset-xxl-2 col-xl-10 offset-xl-1">
             <div

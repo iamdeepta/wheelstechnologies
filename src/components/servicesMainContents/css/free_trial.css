@@ -188,7 +188,7 @@
   color: white;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 600px) {
   .seo_url_text {
     font-size: 17px;
   }
@@ -247,5 +247,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .seo_checker_section_mbl{
+    padding-top: 70px !important;
+    padding-bottom: 60px !important;
   }
 }

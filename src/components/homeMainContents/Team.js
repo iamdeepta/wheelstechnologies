@@ -51,7 +51,7 @@ const Team = () => {
     settings = {
       // dots: true,
       infinite: true,
-      speed: 500,
+      speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
       cssEase: "linear",
@@ -61,7 +61,7 @@ const Team = () => {
     settings = {
       // dots: true,
       infinite: true,
-      speed: 500,
+      speed: 300,
       slidesToShow: 3,
       slidesToScroll: 1,
       cssEase: "linear",
@@ -71,7 +71,7 @@ const Team = () => {
 
   return (
     <>
-      <section className="team__area grey-bg-3 pt-120 pb-195 overflow-y-visible p-relative">
+      <section className="team__area grey-bg-3 pt-120 pb-195 overflow-y-visible p-relative our_works_section_mbl">
         <div className="team__shape">
           <img
             className="team-dot"
@@ -85,8 +85,8 @@ const Team = () => {
           />
         </div>
         <div className="container">
-          <div className="row align-items-end">
-            <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-8">
+          <div className="row align-items-end our_works_header_row_mbl">
+            <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-8 our_works_header_left_mbl">
               <div
                 className="section__title-wrapper mb-70 wow fadeInUp"
                 data-wow-delay=".3s"
@@ -99,52 +99,369 @@ const Team = () => {
                 </h2>
               </div>
             </div>
-            <div className="col-xxl-8 col-xl-7 col-lg-7 col-md-5 col-sm-4">
+            <div className="col-xxl-8 col-xl-7 col-lg-7 col-md-5 col-sm-4 our_works_header_right_mbl">
               <div className="team__more text-sm-end mb-70">
-                <a href="team.html" className="w-btn w-btn-blue w-btn-7">
+                <Link to="/our-concerns" className="w-btn w-btn-blue w-btn-7">
                   View all{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           <Slider {...settings}>
-            {data1.map((item, index) => (
-              <div className="card-wrapper" key={item.homesection6_main_id}>
+            {/* {data1.map((item, index) => ( */}
+            {/* <div className="card-wrapper" key={item.homesection6_main_id}> */}
+
+            <div className="card-wrapper">
+              <a href="https://bazaarface.com" target={"__blank"}>
                 <div className="cards">
                   <div className="card-image">
                     <img
-                      src={AppUrl.image_url + item.homesection6_main_image}
-                      alt={item.homesection6_main_title + " image"}
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/bazaarface_logo.png"}
+                      alt={"work_image"}
                       className="team_image"
                     />
 
-                    <h4 className="team_title">
-                      {item.homesection6_main_title}
-                    </h4>
+                    <h4 className="team_title">Bazaarface</h4>
                     <p className="team_para">
-                      {item.homesection6_main_description}
+                      An online platform where buyer and seller can buy or sell
+                      from both local and international markets
                     </p>
 
-                    <Link to="./work-details" className="team_read_more">
-                      READ MORE
-                    </Link>
-
-                    <Link className="read_more_btn_link" to="#">
-                      <button className="btn btn-success read_more_btn"></button>
-                    </Link>
+                    <a
+                      href="https://bazaarface.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
 
                     <div className="color_bg"></div>
                     <img
-                      src={AppUrl.image_url + item.homesection6_main_image1}
-                      alt={item.homesection6_main_title + " image"}
+                      src={"/images/bazaarface.PNG"}
+                      alt={"work_image"}
                       className="team_image_main"
                     />
                   </div>
                 </div>
-              </div>
-            ))}
+              </a>
+            </div>
 
+            <div className="card-wrapper">
+              <a href="https://letobd.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/leto_logo1.webp"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">L'ETO</h4>
+                    <p className="team_para">
+                      Online shop for mouth watering desserts made with love.
+                    </p>
+
+                    <a
+                      href="https://letobd.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/letobd.PNG"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="https://moishibd.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/moishi_logo1.png"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">Moishi</h4>
+                    <p className="team_para">
+                      Authentic Japanese mochi icecream and other sweets like
+                      cake, baklava, smoothie etc. ordering application.
+                    </p>
+
+                    <a
+                      href="https://moishibd.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/moishibd.PNG"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="http://www.kwgroup-bd.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/kw_logo.png"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">KW Group</h4>
+                    <p className="team_para">
+                      A global leader in apparel manufacturing and outsourcing.
+                    </p>
+
+                    <a
+                      href="http://www.kwgroup-bd.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/kwgroup.PNG"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="https://icinemabd.com/register" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/icinema_logo.webp"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">Icinema</h4>
+                    <p className="team_para">
+                      An online streaming platform where user can enjoy watching
+                      movies, series and listening to music.
+                    </p>
+
+                    <a
+                      href="https://icinemabd.com/register"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/icinema.PNG"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="https://bosphorusbd.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/bosphorus_logo.webp"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">Bosphorus</h4>
+                    <p className="team_para">
+                      A responsive web application for the Bosphorus restaurant
+                      where people can order their desired foods online.
+                    </p>
+
+                    <a
+                      href="https://bosphorusbd.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/bosphorus_big.webp"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="https://designhubtechnologies.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/designhub_logo.png"}
+                      alt={"work_image"}
+                      className="team_image"
+                      style={{ width: "220px" }}
+                    />
+
+                    <h4 className="team_title">Designhub Technologies</h4>
+                    <p className="team_para">
+                      A responsive web application for digital agency company's
+                      portfolio.
+                    </p>
+
+                    <a
+                      href="https://designhubtechnologies.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/designhub.PNG"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="https://covidsurokkha.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/covidsurokkha_logo.webp"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">covidsurokkha</h4>
+                    <p className="team_para">
+                      A covid related informative web appliction which was built
+                      for the wellbeing of people all over Bangladesh.
+                    </p>
+
+                    <a
+                      href="https://covidsurokkha.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/covidsurokkha.PNG"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="card-wrapper">
+              <a href="http://www.ronyrezaul.com" target={"__blank"}>
+                <div className="cards">
+                  <div className="card-image">
+                    <img
+                      //src={AppUrl.image_url + item.homesection6_main_image}
+                      src={"/images/ronyrezaul_logo.webp"}
+                      alt={"work_image"}
+                      className="team_image"
+                    />
+
+                    <h4 className="team_title">Rony Rezaul</h4>
+                    <p className="team_para">
+                      Represents fashion photoshoot conducted by photographer
+                      Rony Rezaul.
+                    </p>
+
+                    <a
+                      href="http://www.ronyrezaul.com"
+                      target={"__blank"}
+                      className="team_read_more"
+                    >
+                      VIEW
+                      <Link className="read_more_btn_link" to="#">
+                        <button className="btn btn-danger read_more_btn"></button>
+                      </Link>
+                    </a>
+
+                    <div className="color_bg"></div>
+                    <img
+                      src={"/images/ronyrezaul.webp"}
+                      alt={"work_image"}
+                      className="team_image_main"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* ))} */}
             {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
@@ -172,7 +489,6 @@ const Team = () => {
                 </div>
               </div>
             </div> */}
-
             {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
@@ -200,7 +516,6 @@ const Team = () => {
                 </div>
               </div>
             </div> */}
-
             {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">
@@ -228,7 +543,6 @@ const Team = () => {
                 </div>
               </div>
             </div> */}
-
             {/* <div className="card-wrapper">
               <div className="cards">
                 <div className="card-image">

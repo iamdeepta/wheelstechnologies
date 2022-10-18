@@ -13,7 +13,7 @@ const Home = () => {
       {/* <BackToTop /> */}
       {/* <Header /> */}
       {/* {window.innerWidth <= 460 ? <Sidebar /> : ""} */}
-      <Sidebar />
+      {/* <Sidebar /> */}
       <HomeMain />
       {/* <Footer /> */}
     </>

@@ -1,0 +1,323 @@
+.contact_svg{
+    margin-left: -50px;
+    margin-top: -350px;
+}
+
+#contact_msg {
+    animation: contact_msg 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_msg {
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+
+#contact_msg_mail {
+    animation: contact_msg_mail 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_msg_mail {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#contact_web {
+    animation: contact_web 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_web {
+    100% {
+        transform:translateY(-80px);
+    }
+}
+
+#contact_globe {
+    animation: contact_globe 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_globe {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#contact_comment {
+    animation: contact_comment 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_comment {
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+#contact_comment_dot1 {
+    animation: contact_comment_dot1 0.5s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_comment_dot1 {
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+#contact_comment_dot2 {
+    animation: contact_comment_dot2 0.6s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_comment_dot2 {
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+#contact_comment_dot3 {
+    animation: contact_comment_dot3 0.7s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_comment_dot3 {
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+#contact_comment_dot4 {
+    animation: contact_comment_dot4 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_comment_dot4 {
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+
+#contact_phone {
+    animation: contact_phone 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_phone {
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+#contact_tel {
+    animation: contact_tel 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_tel {
+    100% {
+        transform: rotateZ(-20deg);
+    }
+}
+
+
+#contact_leaf1, #contact_leaf3 {
+    animation: contact_leaf1 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_leaf1 {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+#contact_leaf2,
+#contact_leaf4 {
+    animation: contact_leaf2 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_leaf2 {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+
+#contact_bg {
+    animation: contact_bg 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_bg {
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+
+#contact_girl_head {
+    animation: contact_girl_head 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_girl_head {
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+#contact_girl_body {
+    animation: contact_girl_body 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_girl_body {
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+#contact_girl_right_hand {
+    animation: contact_girl_right_hand 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_girl_right_hand {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+#contact_boy1_body {
+    animation: contact_boy1_body 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_boy1_body {
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+#contact_boy1_head {
+    animation: contact_boy1_head 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_boy1_head {
+    /* 0%{
+        transform: translateY(15px);
+
+    } */
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+#contact_boy2_body {
+    animation: contact_boy2_body 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_boy2_body {
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+#contact_boy2_head {
+    animation: contact_boy2_head 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_boy2_head {
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+#contact_boy2_left_hand {
+    animation: contact_boy2_left_hand 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_boy2_left_hand {
+    100% {
+        transform: rotateZ(-6deg);
+    }
+}
+
+
+#contact_boy2_right_wrist {
+    animation: contact_boy2_right_wrist 0.8s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes contact_boy2_right_wrist {
+    100% {
+        transform: rotateZ(-20deg) translateY(-25px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact_svg {
+        width: 115vw;
+        margin-top: -200px;
+        height: 350px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -57,12 +57,12 @@
 }
 
 .card-wrapper:hover .read_more_btn_link {
-  top: 375px;
+  top: -8px;
   transition: 0.5s;
 }
 
 .read_more_btn:hover {
-  background-color: #296599;
+  background-color: #e43b3b;
 }
 
 .card-wrapper:not(:hover) {
@@ -105,25 +105,28 @@
 }
 
 .team_read_more {
-  border-bottom: 1px solid #296599;
+  border-bottom: 1px solid #e43b3b;
   margin-top: 30px;
-  color: #296599;
+  color: #e43b3b;
   font-weight: bold;
   font-size: 19px;
+  position: relative;
 }
 
 .read_more_btn_link {
   position: absolute;
   z-index: -999;
   top: 500px;
+  left: -51px;
 }
 
 .read_more_btn {
-  background-color: #296599 !important;
+  background-color: #e43b3b !important;
   width: 150px;
   height: 42px;
   border-radius: 10px;
-  border: 0px solid transparent;
+  border: none;
+  outline: none;
 }
 
 .color_bg {
@@ -132,7 +135,7 @@
   width: 100%;
   height: 180px;
   transform: translateY(-300px);
-  background-color: rgb(89, 89, 158);
+  background-color: #e43b3b;
   top: 0;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -156,10 +159,14 @@
   display: none;
 } */
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 600px) {
   /* .slick-slide {
     width: 95vw !important;
   } */
+
+  .our_works_section_mbl{
+    padding-bottom: 50px !important;
+  }
 
   .slick-list {
     margin-left: 0px !important;
@@ -189,6 +196,7 @@
   .slick-active .team_image_main {
     opacity: 1;
     transition: 1s;
+    width: 85vw !important;
   }
 
   .slick-active .color_bg {
@@ -203,7 +211,36 @@
   }
 
   .card-wrapper:hover .team_read_more {
-    color: #296599;
-    border-bottom: 1px solid #296599;
+    color: #e43b3b;
+    border-bottom: 1px solid #e43b3b;
+  }
+
+  .team_para{
+    text-align: center;
+  }
+
+  .our_works_header_row_mbl{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 50px !important;
+    /* width: 100% !important; */
+    /* flex: 1 !important; */
+  }
+
+  .our_works_header_left_mbl{
+    /* width: 50% !important;
+    flex: 1 !important; */
+    flex-basis: 50% !important;
+  }
+
+  .our_works_header_right_mbl{
+    /* width: 50% !important; */
+    /* margin-top: 20px !important; */
+    /* flex: 1 !important; */
+    flex-basis: 50% !important;
+    text-align: right !important;
+  
   }
 }

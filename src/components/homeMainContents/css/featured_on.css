@@ -12,7 +12,7 @@
 }
 
 .featured_on_floating_purple {
-  background-color: #58547e;
+  background-color: #e43b3b;
   position: absolute;
   z-index: 9;
   top: 790px;
@@ -39,7 +39,7 @@
 .featured_on_text {
   margin-top: 6px;
   margin-right: 10px;
-  color: #58547e;
+  color: #e43b3b;
 }
 
 .featured_on_image {

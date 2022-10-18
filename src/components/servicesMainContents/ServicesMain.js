@@ -8,27 +8,30 @@ import Faq from "../homeMainContents/Faq.js";
 import Newsletter from "../homeMainContents/Newsletter.js";
 import ServicesSvg from "./ServicesSvg.js";
 import "./css/ourservice.css";
+import ServiceSvg from "./ServiceSvg.js";
 
 const ServicesMain = () => {
   return (
     <>
-      <div className="grey-bg-3 contact_us_hero_bg"></div>
-      <section className="hero__area hero__height-2 p-relative d-flex align-items-center">
+      {/* <div className="grey-bg-3 contact_us_hero_bg"></div> */}
+      {/* <section className="hero__area hero__height-2 p-relative d-flex align-items-center"> */}
+      <section className="hero__area p-relative d-flex align-items-center pt-150 services_section">
         <div className="container">
           <div className="row">
             <div className="col-xxl-5 col-xl-6 col-lg-8">
               <div className="hero__content-2 mt-55">
                 <h2 className="hero__title-2 contact_us_title">Our Services</h2>
                 <p>
-                  Pleasure rationally encounter consequences are extremely
-                  painful great oppurtunity
+                  We create award-winning websites, cutting-edge mobile
+                  applications and top notch motion video and graphics.
                 </p>
               </div>
             </div>
             <div className="col-xxl-6 offset-xxl-1 col-xl-6">
               <div className="hero__thumb-2 mt-80">
                 <div className="hero__thumb-inner p-relative ml-90">
-                  <ServicesSvg />
+                  {/* <ServicesSvg /> */}
+                  <ServiceSvg />
                 </div>
               </div>
             </div>

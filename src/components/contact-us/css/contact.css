@@ -1,5 +1,11 @@
+@media screen and (max-width: 600px) {
+  .contact_section{
+    padding-top: 0px !important;
+  }
+}
+
 .contact_us_hero_bg {
-  background-color: #f4f9fd !important;
+  background-color: #fdf4f4 !important;
   width: 100%;
   height: 700px;
   position: absolute;
@@ -59,7 +65,7 @@
   background-color: #f4f9fd;
   padding: 10px 100px;
   padding-bottom: 55px;
-  height: 640px;
+  height: auto;
 }
 
 .contact_form_right_office_address_div p:nth-child(1),

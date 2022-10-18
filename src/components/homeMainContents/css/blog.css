@@ -1,1 +1,5 @@
-
+@media screen and (max-width: 600px) {
+    .blog_section_mbl{
+        padding-bottom: 80px !important;
+    }
+}

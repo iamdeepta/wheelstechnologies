@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/featured_on.css";
+import HeroClients from "./HeroClients";
 
 const FeaturedOn = () => {
   return (
@@ -18,6 +19,8 @@ const FeaturedOn = () => {
           </div>
         </div>
       </a>
+
+      {/* <HeroClients /> */}
     </>
   );
 };

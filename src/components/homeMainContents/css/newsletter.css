@@ -6,13 +6,13 @@
 
 .newsletter_btn_fade {
   cursor: no-drop !important;
-  --primary: #8592bb !important;
+  --primary: #e6c2c2 !important;
 }
 
 .newsletter_btn {
-  --primary: #275efe;
-  --primary-dark: #2055ee;
-  --primary-darkest: #133fc0;
+  --primary: #e43b3b;
+  --primary-dark: #e93c3c;
+  --primary-darkest: #d71717;
   --text: #ffffff;
   --text-opacity: 1;
   --success: #2b3044;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 //import $ from "jquery";
@@ -10,6 +10,15 @@ const Header = () => {
   //     $(".body-overlay").addClass("opened");
   //     console.log("Hello");
   //   });
+  // const [scrollPos, setScrollPos] = useState(false);
+
+  // useEffect(() => {
+  //   if (window.scrollY > 50) {
+  //     setScrollPos(true);
+  //   } else if (window.scrollY <= 4) {
+  //     setScrollPos(false);
+  //   }
+  // }, []);
 
   function sidebarOpen() {
     let element = document.getElementById("sidebar__area");
@@ -30,26 +39,27 @@ const Header = () => {
             <div className="container header_top_inside">
               <i className="fas fa-envelope"></i>
               <span className="email1_text">
-                <a href="mailto:support@designhubtechnologies.com">
-                  Email: support@designhubtechnologies.com
+                <a href="mailto:support@katexentertainment.com">
+                  Email: support@katexentertainment.com
                 </a>
               </span>
             </div>
           </div>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+              <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-12">
                 <div className="logo">
                   <Link to="/">
                     <img
-                      src="/images/logo.png"
+                      src="/katex_logo1.png"
                       alt="logo"
                       className="logo_img"
                     />
+                    <span className="logo_text">Katex Entertainment</span>
                   </Link>
                 </div>
               </div>
-              <div className="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
                 <div className="main-menu main-menu-2 pl-40">
                   <nav id="mobile-menu">
                     <ul>
@@ -79,7 +89,10 @@ const Header = () => {
                       <li>
                         <Link to="/about">About</Link>
                       </li>
-                      <li className="has-dropdown">
+                      <li>
+                        <Link to="/services">Services</Link>
+                      </li>
+                      {/* <li className="has-dropdown">
                         <Link to="/services">Services</Link>
                         <ul className="submenu">
                           <li>
@@ -89,6 +102,9 @@ const Header = () => {
                             <Link to="/services-details">Services Details</Link>
                           </li>
                         </ul>
+                      </li> */}
+                      <li>
+                        <Link to="/our-concerns">Our Concerns</Link>
                       </li>
                       <li className="">
                         <Link to="/blog">Blogs</Link>
@@ -108,9 +124,9 @@ const Header = () => {
                       <li>
                         <Link to="/contact">Contact</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/faq">FAQ</Link>
-                      </li>
+                      </li> */}
                       {/* <li className="has-dropdown">
                         <a href="about.html">Pages</a>
                         <ul className="submenu">

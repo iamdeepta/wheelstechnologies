@@ -330,7 +330,7 @@
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 600px) {
   .hc_svg {
     width: 120vw;
     margin-left: -35px;
@@ -340,5 +340,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .happy_client_section_mbl{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 }

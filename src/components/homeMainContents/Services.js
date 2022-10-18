@@ -46,7 +46,7 @@ const Services = () => {
 
   return (
     <>
-      <section className="services__area grey-bg-3 pt-80 mt-100 pb-60 p-relative">
+      <section className="services__area grey-bg-3 pt-80 mt-100 pb-60 p-relative services_section_mbl">
         <div className="services__shape-2">
           <img
             className="services-2-circle"
@@ -111,14 +111,15 @@ const Services = () => {
                     </div>
                     <div className="services__content-2">
                       <h3 className="services__title-2">
-                        <a href="services-details.html">
-                          {item.homesection2_title}
-                        </a>
+                        <Link to="/services">{item.homesection2_title}</Link>
                       </h3>
-                      <p>{item.homesection2_description}</p>
+                      <p>
+                        {item.homesection2_description.substring(0, 200) +
+                          "..."}
+                      </p>
                     </div>
 
-                    <Link to="/services-details">
+                    <Link to="/services">
                       <span className="services_read_more_btn">
                         <span className="read_more_btn_text">Read More</span>
                         <div className="read_more_white_bg">

@@ -1,5 +1,5 @@
 .fa-arrow-right {
-  color: #2f80ed;
+  color: #e43b3b;
   font-size: 14px;
 }
 
@@ -34,7 +34,7 @@
   left: 0px;
   bottom: 20px;
   padding: 8px;
-  background-color: #2f80ed;
+  background-color: #e43b3b;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   font-size: 15px;
@@ -55,4 +55,11 @@
 .services_icon {
   height: 50px;
   /* object-fit: contain; */
+}
+
+
+@media screen and (max-width: 600px) {
+  .services_section_mbl{
+    margin-top: 50px !important;
+  }
 }

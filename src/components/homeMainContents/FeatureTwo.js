@@ -48,7 +48,13 @@ const FeatureTwo = () => {
 
   return (
     <>
-      <section className="features__area pt-135 pb-120 p-relative">
+      <section
+        className={
+          window.innerWidth > 600
+            ? "features__area pt-135 pb-120 p-relative"
+            : "features__area pt-20 pb-120 p-relative"
+        }
+      >
         <div className="features__shape-2">
           <img
             className="features-2-dot"

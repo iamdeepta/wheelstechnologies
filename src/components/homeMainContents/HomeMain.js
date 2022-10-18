@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Hero from "./Hero.js";
 import FeaturedOn from "./FeaturedOn";
 import Services from "./Services.js";
@@ -13,10 +13,20 @@ import Promotion from "./Promotion.js";
 import Testimonial from "./Testimonial.js";
 import useIsVisible from "../../customHooks/useIsVisible.js";
 import Newsletter from "./Newsletter.js";
+import HeroClients from "./HeroClients.js";
 
 const HomeMain = () => {
   const elemRef = useRef();
   const isVisible = useIsVisible(elemRef);
+
+  const [active_chat, setActiveChat] = useState(false);
+  const activeChat = () => {
+    if (window.scrollY > 50) {
+      setActiveChat(true);
+    }
+  };
+
+  window.addEventListener("scroll", activeChat);
 
   return (
     <>
@@ -24,11 +34,23 @@ const HomeMain = () => {
         <Hero />
         <div ref={elemRef}>
           <FeaturedOn />
-          <Services />
+          {window.innerWidth < 600 && (
+            <>
+              {active_chat && (
+                <>
+                  <HeroClients />
+                </>
+              )}
+            </>
+          )}
+
+          {/* <Services /> */}
         </div>
 
-        {isVisible ? (
+        {/* {isVisible ? ( */}
+        {active_chat ? (
           <>
+            <Services />
             <FeatureOne />
             <FeatureTwo />
 

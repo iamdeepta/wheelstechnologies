@@ -2,28 +2,89 @@
   font-size: 39px !important;
 }
 
+.hero__client ul{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.hero__client ul li{
+            animation: scroll 12s linear infinite;
+        
+        }
+
+        @keyframes scroll {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(calc(-225px * 6));
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            @keyframes scroll {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(calc(-221px * 6));
+            }
+        }
+        }
+
 .covidsurokkha_logo {
-  width: 130px;
+  width: 170px;
   height: auto;
 }
 
-.ronyrezaul_logo {
-  width: 75px;
+.brac_logo {
+  width: 80px;
   height: auto;
 }
 
-.cryptogenies_logo {
-  width: 120px;
+.designhub_logo {
+  width: 220px;
   height: auto;
 }
 
-.shoesbyenvy_logo {
-  width: auto;
-  height: 32px;
+.emirates_logo {
+  width: 100px;
+  height: 60px;
 }
 
 .bosphorus_logo {
-  width: 30px;
+  width: 55px;
+}
+
+.hbcc_logo {
+  width: 105px;
+}
+
+.ipa_logo {
+  width: 105px;
+}
+
+.qatar_logo {
+  width: 65px;
+}
+
+.ukaid_logo {
+  width: 110px;
+}
+
+.ukgovt_logo {
+  width: 60px;
+}
+
+.unilever_logo {
+  width: 90px;
+}
+
+.icinema_logo {
+  width: 45px;
 }
 
 /* hero svg */
@@ -189,15 +250,19 @@
   width: 30px;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 600px) {
   .hero_title {
     font-size: 30px !important;
   }
 
-  .covidsurokkha_logo {
+  .hero_section_clients_mbl{
+    margin-top: 200px !important;
+  }
+
+  /* .covidsurokkha_logo {
     width: 100px;
     height: auto;
-  }
+  } */
 
   .ronyrezaul_logo {
     width: 70px;

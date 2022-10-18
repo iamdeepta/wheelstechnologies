@@ -209,7 +209,7 @@ const FreeTrial = () => {
 
   return (
     <>
-      <section className="cta__area blue-bg-10 pt-140 pb-130 p-relative fix z-index-1">
+      <section className="cta__area blue-bg-10 pt-140 pb-130 p-relative fix z-index-1 seo_checker_section_mbl">
         <div className="cta__shape">
           <img
             className="cta-4-shape"

@@ -3,46 +3,47 @@ import axios from "axios";
 import AppUrl from "../../classes/AppUrl";
 import Typewriter from "typewriter-effect";
 import "./css/hero.css";
+import HeroClients from "./HeroClients";
 
 const Hero = () => {
   const [data, setData] = useState([]);
   //const i = ["hello", "world", "main seo"];
   const [data1, setData1] = useState([]);
 
-  useEffect(() => {
-    getData();
-    getData1();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  //   getData1();
+  // }, []);
 
-  function getData() {
-    axios
-      .get(AppUrl.base_url + "homesection1Get")
-      .then(function (response) {
-        if (response) {
-          setData(response.data);
+  // function getData() {
+  //   axios
+  //     .get(AppUrl.base_url + "homesection1Get")
+  //     .then(function (response) {
+  //       if (response) {
+  //         setData(response.data);
 
-          //console.log(response.data);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+  //         //console.log(response.data);
+  //       }
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // }
 
-  function getData1() {
-    axios
-      .get(AppUrl.base_url + "homesection1MainGet")
-      .then(function (response) {
-        if (response) {
-          setData1(response.data);
+  // function getData1() {
+  //   axios
+  //     .get(AppUrl.base_url + "homesection1MainGet")
+  //     .then(function (response) {
+  //       if (response) {
+  //         setData1(response.data);
 
-          //console.log(response.data);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+  //         //console.log(response.data);
+  //       }
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // }
 
   return (
     <>
@@ -79,11 +80,13 @@ const Hero = () => {
             <div className="col-xxl-5 col-xl-6 col-lg-8">
               <div className="hero__content-2 mt-55">
                 <span className="hero__pre-title">
-                  {data.homesection1_category}
+                  {/* {data.homesection1_category} */}
+                  Analytics
                 </span>
                 <h2 className="hero__title-2 hero_title">
-                  {data.homesection1_title}{" "}
-                  <Typewriter
+                  {/* {data.homesection1_title}{" "} */}
+                  We Provide
+                  {/* <Typewriter
                     options={{
                       strings: data1.map(
                         (item, index) => item.homesection1_main_title
@@ -93,55 +96,39 @@ const Hero = () => {
                       delay: 60,
                       deleteSpeed: 60,
                     }}
+                  /> */}
+                  <Typewriter
+                    options={{
+                      strings: [
+                        "Website Development",
+                        "Shopify Services",
+                        "SEO Services",
+                        "App Development",
+                        "Social Media Marketing",
+                        "Content Writing",
+                        "Content Management",
+                        "Graphics Design",
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      delay: 60,
+                      deleteSpeed: 60,
+                    }}
                   />
                 </h2>
-                <p>{data.homesection1_description}</p>
+                {/* <p>{data.homesection1_description}</p> */}
+                <p>Take Your Business to Next Level Right Now!</p>
                 <a
                   href="about.html"
                   className="w-btn w-btn-blue w-btn-7 w-btn-6"
                 >
                   Contact Us{" "}
                 </a>
-
-                <div className="hero__client mt-60">
-                  <ul>
-                    <li>
-                      <img
-                        src="images/covidsurokkha1.png"
-                        alt="covidsurokkha logo"
-                        className="covidsurokkha_logo"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="images/ronylogo.png"
-                        alt="ronyrezaul logo"
-                        className="ronyrezaul_logo"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="images/cryptogenies1.PNG"
-                        alt="cryptogenies logo"
-                        className="cryptogenies_logo"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="images/shoesbyenvy.PNG"
-                        alt="shoes by envy logo"
-                        className="shoesbyenvy_logo"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="images/bosphorus.webp"
-                        alt="bosphorus logo"
-                        className="bosphorus_logo"
-                      />
-                    </li>
-                  </ul>
-                </div>
+                {window.innerWidth > 600 && (
+                  <>
+                    <HeroClients />
+                  </>
+                )}
               </div>
             </div>
             <div className="col-xxl-6 offset-xxl-1 col-xl-6">

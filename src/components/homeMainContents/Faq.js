@@ -49,7 +49,7 @@ const Faq = () => {
 
   return (
     <>
-      <section className="faq__area pt-140 pb-140">
+      <section className="faq__area pt-140 pb-140 happy_client_section_mbl">
         <div className="container">
           <div className="row">
             <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">

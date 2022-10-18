@@ -1,17 +1,50 @@
 .logo_img_footer {
-  height: 55px;
-  width: 270px;
+  height: 45px;
+  width: 45px;
   margin-left: 0px;
-  margin-top: -9px;
+  margin-top: 2px;
 }
 
 .emails {
-  color: #2f80ed;
+  color: #e43b3b;
 }
+
+.footer_menu_mbl_second_column{
+    display: none;
+  }
+
+  .footer_desktop_contact_menu{
+    display: block;
+  }
 
 @media screen and (max-width: 600px) {
   .logo_img_footer {
     margin-left: 0px;
     margin-top: 0px;
   }
+
+  .footer_menu_mbl{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* gap: 30vw; */
+    font-size: 15px;
+  }
+
+  .footer_menu_mbl_second_column{
+    display: block;
+  }
+
+  .footer_menu_desktop{
+    display: none;
+  }
+
+  .footer__bottom{
+    margin-bottom: 80px;
+  }
+
+  .footer_desktop_contact_menu{
+    display: none;
+  }
+
 }
