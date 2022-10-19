@@ -5,10 +5,19 @@ import React from "react";
 import Sidebar from "../../components/sidebar/Sidebar.js";
 import HomeMain from "../../components/homeMainContents/HomeMain.js";
 //import Footer from "../../components/footer/Footer.js";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Katex Entertainment | Home</title>
+        <meta
+          name="description"
+          content="We create award-winning websites, cutting-edge mobile applications and top notch motion video and graphics."
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
       {/* <Preloader /> */}
       {/* <BackToTop /> */}
       {/* <Header /> */}

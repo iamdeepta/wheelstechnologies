@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./functions/ScrollToTop.js";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ScrollToTop />
-      <App />
+      <HelmetProvider>
+        <ScrollToTop />
+        <App />
+      </HelmetProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
